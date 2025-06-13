@@ -1,0 +1,17 @@
+@use "_variables" as *;
+
+// Landingpage ----- Hero Section
+.hero-section {
+  background-image: url('../images/herobackgroung.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-heading {
+  color: $text-white;
+}
