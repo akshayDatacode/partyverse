@@ -1,10 +1,12 @@
 'use client'
-import LandingPage from '../../pages/LandingPage';
+import VenueListingPage from '@/pages/VenueListingPage';
 
-export default function Venues() {
+const Venues = () => {
   return (
     <>
-      <LandingPage />
+      <VenueListingPage />
     </>
   );
 }
+
+export default Venues;
