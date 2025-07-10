@@ -3,7 +3,7 @@ const HowItWorkSection = () => {
   return (
     <>
       <section className="row mx-0 my-5 py-5 d-flex justify-content-center">
-        <div className="col-md-10 col-12">
+        <div className="col-md-11 col-12">
           <div className="row mx-0">
             <div className="col-md-5 col-12 px-3 px-md-2">
               <h1 className="custom-title">
