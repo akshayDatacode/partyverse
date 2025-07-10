@@ -1,4 +1,5 @@
 const HowItWorkSection = () => {
+  
   return (
     <>
       <section className="row mx-0 my-5 py-5 d-flex justify-content-center">
