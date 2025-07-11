@@ -12,11 +12,11 @@ const Header = () => {
         <Image src={PARTYVERSE} alt="logo" />
       </div>
       <div className="d-flex align-items-center">
-        <div className="header-select me-1">
+        <div className="header-select">
           <SelectDropdown label="City" place_holder="Indore" />
         </div>
         <div className="m-3">
-          <Button label="Login/Sign up" />
+          <Button label="Login/Sign up"/>
         </div>
       </div>
       </div>

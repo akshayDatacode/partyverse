@@ -30,21 +30,23 @@ const HeroSection = () => {
 
   return (
     <section className="row mx-0 hero-section">
-      <div className="col-12 my-0 px-0 text-center">
-        <div className="mb-4">
+      <div className="col-12 my-4 row my-0 px-0 text-center">
+        <div className=" col-12">
           <Stepper steps={steps} currentStep={2} />
         </div>
-        <h1 className="hero-heading">
+        <h1 className="hero-heading my-4">
           Your <span className="text-highlight">Universe</span> of Stress-Free <span className="text-highlight">Celebrations</span>!
         </h1>
-        <div className="col-12 mt-4 hero-content">
+        <div className="col-12 my-4 hero-content">
           <p className="my-0">We’re here to take the chaos out of parties and leave only the fun.</p>
           <p className="my-0">From birthdays and anniversaries to surprise proposals, kitty parties, get together, house parties etc.</p>
         </div>
-        <div className="hero-select bg-white rounded">
+        <div className="col-12 my-4 hero-select">
+        <div className="col-8 bg-white">
         <SelectPartyFilter />
         </div>
-        <div className="mt-5">
+        </div>
+        <div className="my-4 col-12">
         <Button label="Search Party Places" />
         </div>
       </div>

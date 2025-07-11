@@ -1,45 +1,51 @@
 .stepper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 0 400px;
 }
+
 .stepper-item {
+  position: relative;
   display: flex;
-}
-.stepper-top {
-  display: flex;
+  flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 
 .stepper-content {
-  position: relative; /* Allows label to go behind number */
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
+.stepper-number-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .stepper-number {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: #ffff;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   border: 2px solid #6658DE;
   position: relative;
-  z-index: 2; /* Bring number above label */
+  z-index: 2;
 }
 
 .stepper-number.active {
   background-color: #6658DE;
-  color: black;
+  color: white;
 }
 
 .stepper-label {
-  position: absolute;
+  margin-top: 6px;
   color: #6658DE;
   font-size: 14px;
   font-weight: 700;
@@ -47,10 +53,12 @@
 }
 
 .stepper-line {
-  flex: 1;
+  position: absolute;
+  top: 18px; /* Number ka center point (36px / 2) */
+  left: 50%;
   height: 2px;
+  width: 100%;
+  transform: translateX(0%);
   border-top: 2px dashed #6658DE;
-  background: none;
-  margin: 0; /* Remove margin to connect edge to edge */
-  width: 200px;
+  z-index: 1;
 }
