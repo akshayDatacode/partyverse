@@ -151,10 +151,7 @@ const CompletePartySection = () => {
                     <h5 className="mb-2 party-heading">{item.title}</h5>
                     <p className="mb-0 party-content">{item.description}</p>
                     {item.subtitle && <div className="d-flex align-items-center gap-2">
-                      <i
-                        className="bi bi-patch-check-fill"
-                        style={{ fontSize: "14px" , color:"#6658DE"}}
-                      ></i>
+                        <i className="bi bi-check-circle-fill" style={{ fontSize: "14px" , color:" #6658DE"}} ></i>
                       <small className="py-3" style={{fontSize:"12px"}}>{item.subtitle}</small>
                     </div>}
                   </div>
