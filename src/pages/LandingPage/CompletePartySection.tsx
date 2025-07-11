@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Tab from "@/components/Tab"; // Make sure path is correct
+import Tab from "@/components/Tab"; 
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Data for each category
 const categoryData = {
@@ -8,16 +9,19 @@ const categoryData = {
       title: "Elegant Balloon Arches",
       description:
         "Make your entrance unforgettable with artistically crafted balloon arches tailored to your event's theme.",
+    
     },
     {
       title: "Themed Backdrops",
       description:
         "Add visual charm to your photos, entrances, and stage with backdrops tailored to your event's style and theme.",
+      subtitle: "Custom-Made for Your Event Theme",
     },
     {
       title: "Flower Arrangements",
       description:
         "Enhance your event's atmosphere with handcrafted floral centerpieces tailored to your theme, palette, and table layout.",
+      subtitle: "Custom-Made for Your Event Theme",
     },
   ],
   Photography: [
@@ -140,12 +144,19 @@ const CompletePartySection = () => {
             />
 
             {/* Cards for the selected tab */}
-            <div className="row mx-0 mt-5">
+            <div className="row mx-0 gx-2 mt-5">
               {categoryData[activeCategory]?.map((item, index) => (
-                <div className="col-md-4 px-4 mb-4" key={index}>
-                  <div className="p-5 h-100 party-cards">
-                    <h5 className="fw-semibold mb-2">{item.title}</h5>
-                    <p className="mb-0 custom-content">{item.description}</p>
+                <div className="col-md-4 px-0 mb-0" key={index}>
+                  <div className="p-5 party-cards">
+                    <h5 className="mb-2 party-heading">{item.title}</h5>
+                    <p className="mb-0 party-content">{item.description}</p>
+                    {item.subtitle && <div className="d-flex align-items-center gap-2">
+                      <i
+                        className="bi bi-patch-check-fill"
+                        style={{ fontSize: "14px" , color:"#6658DE"}}
+                      ></i>
+                      <small className="py-3" style={{fontSize:"12px"}}>{item.subtitle}</small>
+                    </div>}
                   </div>
                 </div>
               ))}

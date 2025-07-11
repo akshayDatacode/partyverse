@@ -7,25 +7,40 @@
 
   .tab-list {
     display: flex;
+    gap: 50px;
     border-bottom: 2px solid $gray-300;
     width: 100%;
     justify-content: start;
 
+    
     .tab-item {
-      padding: 10px 20px;
-      border: none;
-      background: none;
-      color: $gray-600;
+      padding: 10px 14px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #010101;
+      border: 1px solid #ededed;
+       border-radius: 12px;
+      line-height: 100%;
+      background-color: #ffffff;
       border-bottom: 2px solid transparent;
       transition: all 0.3s ease;
+    
 
       &.active {
-        color: $primary;
-        border-bottom: 2px solid $primary;
+        color: #ffffff;
+        background-color: $primary;
+
+        .tab-item {
+          color: #fff;
+        }
       }
 
       &:hover {
-        color: $primary;
+        color: #ffffff;
+        background-color: $primary;
+        .tab-item {
+          color: #fff;
+        }
       }
     }
   }
