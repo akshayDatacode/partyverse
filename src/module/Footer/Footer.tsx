@@ -22,7 +22,7 @@ const Footer = () =>{
                <p className="footer-paragraph">© 2025 <span className="partyverse">Partyverse</span> All Rights Reserved.</p>
             </div>
             <div className="col-8 footer-section-2 border">
-               <div className="footer-inner-section-2 mt-4 px-2 ">
+               <div className="footer-inner-section-2 mt-4  ">
                <div className="services ">
                   <div className="main-data">Services</div>
                   <span className="sub-data">Venues</span>
