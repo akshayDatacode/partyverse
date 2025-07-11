@@ -27,8 +27,8 @@ const FreeManagerSection = () => {
     <>
       <section className="row mx-0 my-5 py-5 d-flex justify-content-center">
         <div className="col-md-11 col-12">
-          <div className="row mx-0  d-flex justify-content-center">
-            <div className="col-md-6 col-12 px-3 px-md-2">
+          <div className="row mx-0  d-flex justify-content-between">
+            <div className="col-md-5 col-12 px-3 px-md-2">
               <h1 className="custom-title">
                 Get<span> Free</span> Personal
                 <br /> <span>Event Manager</span>
@@ -39,25 +39,28 @@ const FreeManagerSection = () => {
               </p>
               <Button label="Learn More About Our Team" />
             </div>
-            <div className="col-md-6 col-12 px-3 px-md-2 d-flex flex-column gap-4 mt-5 mt-md-0">
+            <div className="col-md-5 col-12 px-3 px-md-2 d-flex flex-column gap-4 mt-5 mt-md-0">
               {eventDetails.map((item, index) => (
-                <div className="d-flex flex-column p-4" key={index}>
-                  <div className="d-flex align-items-start gap-2 mb-2">
-                    <div>
-                      <h3 className="mb-1 fw-semibold d-flex align-items-center gap-2">
-                      <i
-                        className="bi bi-patch-check-fill"
-                        style={{ color:"#6658DE"}}
-                      ></i>
-                        {item.title}
-                      </h3>
-                      <p className="mb-0 custom-content">{item.desc}</p>
-                    </div>
+                <div className="d-flex flex-column" key={index}>
+                  <div className="d-flex align-items-center gap-2 mb-2">
+                    <i
+                      className="bi bi-patch-check-fill fs-4 mt-1"
+                      style={{ color: "#6658DE" }}
+                    ></i>
+                    <h3 className="mb-0 fw-semibold">{item.title}</h3>
                   </div>
+                  <p className="mb-2 ms-4 pe-5 me-5 custom-content">{item.desc}</p>
+
                   <Image
                     src={item.img}
                     alt={item.title}
-                    className="img-fluid py-3 rounded"
+                    height={266}
+                    width={607}
+                    className="img-fluid py-3 px-4 rounded"
+                  />
+                  <hr
+                    className="mt-3 mb-4 mx-0"
+                    style={{ width: "667px", borderTop: "1px solid #dee2e6" }}
                   />
                 </div>
               ))}
