@@ -23,7 +23,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  margin-top: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,9 +91,4 @@ body {
     font-weight: 400;
     color: #3C3C3C;
    }
-}
-
-/*footer section*/
-.footer-section{
-  height: 100vh;
 }
