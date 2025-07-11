@@ -3,11 +3,9 @@
   justify-content: center;
   align-items: center;
 }
-
 .stepper-item {
   display: flex;
 }
-
 .stepper-top {
   display: flex;
   align-items: center;
@@ -20,11 +18,12 @@
   justify-content: center;
 }
 
+
 .stepper-number {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background-color: #ddd;
+  background-color: #ffff;
   display: flex;
   justify-content: center;
   align-items: center;

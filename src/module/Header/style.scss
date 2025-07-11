@@ -10,6 +10,17 @@
     padding: 10px 20px;
 }
 
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    background-color: white;
+    border-bottom: 1px solid #EDEDED ;
+    padding: 5px;
+}
+
 .header-select{
     border-right: 1px solid #CFCFCF;
     display: flex;
