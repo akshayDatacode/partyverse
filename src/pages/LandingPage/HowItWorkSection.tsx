@@ -21,14 +21,14 @@ const HowItWorkSection = () => {
                 ].map((text, index) => (
                   <div
                     key={index}
-                    className="d-flex align-items-start mb-4 p-3 p-md-3 bg-light rounded shadow-sm custom-content step-box"
+                    className="d-flex align-items-start mb-2 p-3 p-md-4 custom-content step-box"
                   >
                     <div
                       className="d-flex justify-content-center align-items-center rounded-circle ratio ratio-1x1 step-number"
                     >
                       {index + 1}
                     </div>
-                    <div className="d-flex flex-column justify-content-center align-items-start px-3">
+                    <div className="d-flex flex-column justify-content-center align-items-start px-4">
                       <p className="mb-0">{text}</p>
                     </div>
                   </div>
