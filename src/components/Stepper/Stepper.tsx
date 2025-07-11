@@ -12,10 +12,10 @@ type StepperProps = {
 
 const Stepper = ({ steps, currentStep }: StepperProps) => {
   return (
-    <div className="stepper mb-5">
+    <div className="stepper ">
       {steps.map((step, index) => (
         <div key={step.number} className="stepper-item">
-          <div className="stepper-content ">
+          <div className="stepper-content">
             <div className="stepper-number-wrapper">
               <div
                 className={`stepper-number ${currentStep === step.number ? 'active' : ''}`}
