@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Select from 'react-select';
+import "./style.scss";
 
 const options = [
   { value: 'chocolate', label: 'Chocolate' },
@@ -8,21 +9,24 @@ const options = [
 ];
 
 type SelectInputProps = {
-
+  place_holder?: string;
 }
 
-const SelectInput = ({ }: SelectInputProps) => {
+const SelectInput = ({place_holder}: SelectInputProps) => {
   const [selectedOption, setSelectedOption] = useState(null);
 
   return (
-    <div>
+    <div className='select-div'>
       <Select
         defaultValue={selectedOption}
-        onChange={() => setSelectedOption}
+        onChange={()=>setSelectedOption}
+        placeholder={place_holder}
         options={options}
+        className="custom-select"
+        classNamePrefix="custom"
       />
     </div>
   );
 }
 
-export default SelectInput
+export default SelectInput;

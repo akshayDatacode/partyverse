@@ -7,28 +7,29 @@ type Step = {
 
 type StepperProps = {
   steps: Step[];
-  currentStep: number; // To indicate the active step
+  currentStep: number;
 };
 
 const Stepper = ({ steps, currentStep }: StepperProps) => {
   return (
-    <div className="stepper">
+    <div className="stepper mb-5">
       {steps.map((step, index) => (
         <div key={step.number} className="stepper-item">
-          <div
-            className={`stepper-number ${currentStep === step.number ? "active" : ""
-              }`}
-          >
-            {step.number}
+          <div className="stepper-content ">
+            <div className="stepper-number-wrapper">
+              <div
+                className={`stepper-number ${currentStep === step.number ? 'active' : ''}`}
+              >
+                {step.number}
+              </div>
+              <div className="stepper-label mt-2">{step.label}</div>
+            </div>
+            {index < steps.length - 1 && (
+              <div
+                className={`stepper-line ${currentStep > step.number ? 'completed' : 'dotted'}`}
+              ></div>
+            )}
           </div>
-          <div className="stepper-label">{step.label}</div>
-          {/* Render the line only if it's not the last step */}
-          {index < steps.length - 1 && (
-            <div
-              className={`stepper-line ${currentStep > step.number ? "completed" : "dotted"
-                }`}
-            ></div>
-          )}
         </div>
       ))}
     </div>

@@ -1,45 +1,56 @@
 .stepper {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stepper-item {
+  display: flex;
+}
+.stepper-top {
+  display: flex;
+  align-items: center;
+}
+
+.stepper-content {
+  position: relative; /* Allows label to go behind number */
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.stepper-item {
-  align-items: center;
-  position: relative;
-}
 
 .stepper-number {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background-color: #ddd;
+  background-color: #ffff;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  border: 2px solid #6658DE;
+  position: relative;
+  z-index: 2; /* Bring number above label */
 }
 
 .stepper-number.active {
-  background-color: #007bff;
-  color: #fff;
+  background-color: #6658DE;
+  color: black;
 }
 
 .stepper-label {
-  margin-left: 10px;
+  position: absolute;
+  color: #6658DE;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .stepper-line {
-  width: 50px;
+  flex: 1;
   height: 2px;
-  background-color: #ddd;
-  margin: 0 15px;
-}
-
-.stepper-line.completed {
-  background-color: #007bff;
-}
-
-.stepper-line.dotted {
-  border-top: 2px dotted #ddd;
+  border-top: 2px dashed #6658DE;
+  background: none;
+  margin: 0; /* Remove margin to connect edge to edge */
+  width: 200px;
 }
