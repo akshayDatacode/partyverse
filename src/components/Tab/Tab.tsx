@@ -16,6 +16,7 @@ const Tab = ({ tabs, activeTabIndex, onTabChange }: TabProps) => {
     <div className="tab-container">
       <div className="tab-list">
         {tabs.map((tab, index) => (
+  
           <button
             key={index}
             className={`tab-item ${activeTabIndex === index ? "active" : ""}`}
@@ -26,6 +27,7 @@ const Tab = ({ tabs, activeTabIndex, onTabChange }: TabProps) => {
           >
             {tab.label}
           </button>
+  
         ))}
       </div>
     </div>

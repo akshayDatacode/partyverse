@@ -1,9 +1,8 @@
 import Button from "@/ui/Button";
-import Image from "next/image"; 
+import Image from "next/image";
 import details from "../../assets/images/details.png";
 import logistics from "../../assets/images/logistics.png";
 import anticipate from "../../assets/images/anticipate.png";
-
 
 const eventDetails = [
   {
@@ -38,25 +37,30 @@ const FreeManagerSection = () => {
                 Your dedicated event assistant takes care of everything so you
                 can enjoy a stress-free celebration.
               </p>
-              <Button label="Learn More About Our Team"/>
+              <Button label="Learn More About Our Team" />
             </div>
             <div className="col-md-6 col-12 px-3 px-md-2 d-flex flex-column gap-4 mt-5 mt-md-0">
-             {eventDetails.map((item, index) => (
-              <div className="d-flex flex-column p-4 rounded shadow-sm" key={index}>
-                <div className="d-flex align-items-start gap-2 mb-2">
-                  <div className="icon-dot bg-primary rounded-circle mt-1"></div>
-                  <div>
-                    <h3 className="mb-1 fw-semibold">{item.title}</h3>
-                    <p className="mb-0 custom-content">{item.desc}</p>
+              {eventDetails.map((item, index) => (
+                <div className="d-flex flex-column p-4" key={index}>
+                  <div className="d-flex align-items-start gap-2 mb-2">
+                    <div>
+                      <h3 className="mb-1 fw-semibold d-flex align-items-center gap-2">
+                      <i
+                        className="bi bi-patch-check-fill"
+                        style={{ color:"#6658DE"}}
+                      ></i>
+                        {item.title}
+                      </h3>
+                      <p className="mb-0 custom-content">{item.desc}</p>
+                    </div>
                   </div>
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    className="img-fluid py-3 rounded"
+                  />
                 </div>
-                <Image
-                  src={item.img}
-                  alt={item.title}
-                  className="img-fluid py-3 rounded"
-                />
-              </div>
-            ))}
+              ))}
             </div>
           </div>
         </div>
