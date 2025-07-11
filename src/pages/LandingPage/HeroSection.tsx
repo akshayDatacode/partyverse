@@ -6,9 +6,9 @@ import { useState } from "react";
 
 const HeroSection = () => {
   const steps = [
-    { number: 1, label: "Step 1" },
-    { number: 2, label: "Step 2" },
-    { number: 3, label: "Step 3" },
+    { number: 1, label: "Search" },
+    { number: 2, label: "Plan a Party" },
+    { number: 3, label: "Book" },
   ];
 
   const [activeTabIndex, setActiveTabIndex] = useState(0);
@@ -37,22 +37,16 @@ const HeroSection = () => {
         <h1 className="hero-heading">
           Your <span className="text-highlight">Universe</span> of Stress-Free <span className="text-highlight">Celebrations</span>!
         </h1>
-        <h2 className="text-light">
-          🎉 Planning a Party?
-        </h2>
         <div className="col-12 mt-4 hero-content">
           <p className="my-0">We’re here to take the chaos out of parties and leave only the fun.</p>
           <p className="my-0">From birthdays and anniversaries to surprise proposals, kitty parties, get together, house parties etc.</p>
         </div>
-        <div className="hero-select">
-          <SelectPartyFilter />
+        <div className="hero-select bg-white rounded">
+        <SelectPartyFilter />
         </div>
-        <Button label="Find Your Party" />
-        <Tab
-          tabs={tabs}
-          activeTabIndex={activeTabIndex}
-          onTabChange={(index) => setActiveTabIndex(index)}
-        />
+        <div className="mt-5">
+        <Button label="Search Party Places" />
+        </div>
       </div>
     </section>
   )
