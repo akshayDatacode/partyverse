@@ -12,7 +12,8 @@ type StepperProps = {
 
 const Stepper = ({ steps, currentStep }: StepperProps) => {
   return (
-    <div className="stepper ">
+    <div className='row mx-0 d-flex align-items-center justify-content-center'>
+    <div className="stepper col-md-6 col-12">
       {steps.map((step, index) => (
         <div key={step.number} className="stepper-item">
           <div className="stepper-content">
@@ -32,6 +33,7 @@ const Stepper = ({ steps, currentStep }: StepperProps) => {
           </div>
         </div>
       ))}
+    </div>
     </div>
   );
 };
