@@ -7,8 +7,8 @@
 
   .tab-list {
     display: flex;
-    gap: 50px;
-    border-bottom: 2px solid $gray-300;
+    gap: 42px;
+    // border-bottom: 2px solid $gray-300;
     width: 100%;
     justify-content: start;
 
@@ -22,7 +22,7 @@
        border-radius: 12px;
       line-height: 100%;
       background-color: #ffffff;
-      border-bottom: 2px solid transparent;
+      // border-bottom: 2px solid transparent;
       transition: all 0.3s ease;
     
 

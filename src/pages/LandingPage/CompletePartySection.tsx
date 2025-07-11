@@ -142,7 +142,10 @@ const CompletePartySection = () => {
               activeTabIndex={activeIndex}
               onTabChange={setActiveIndex}
             />
-
+             <hr
+                    className="mt-3 mb-4 mx-0"
+                    style={{ width: "1024px", borderTop: "1px solid rgb(203, 206, 209)" }}
+                  />
             {/* Cards for the selected tab */}
             <div className="row mx-0 gx-2 mt-5">
               {categoryData[activeCategory]?.map((item, index) => (
