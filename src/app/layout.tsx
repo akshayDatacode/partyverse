@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import '@/assets/scss/style.scss'
 import '@/assets/scss/landingpage.scss'
 import 'react-toastify/dist/ReactToastify.css';
+import Providers from "@/core/Providers";
 // import Providers from "@/core/Providers";
 
 const geistSans = localFont({
@@ -43,10 +44,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {/* <Providers> */}
+        <Providers>
           {children}
           <ToastContainer />
-        {/* </Providers> */}
+        </Providers>
       </body>
     </html>
   );

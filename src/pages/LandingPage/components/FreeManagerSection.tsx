@@ -1,8 +1,8 @@
 import Button from "@/ui/Button";
 import Image from "next/image";
-import details from "../../assets/images/details.png";
-import logistics from "../../assets/images/logistics.png";
-import anticipate from "../../assets/images/anticipate.png";
+import details from "@/assets/images/details.png";
+import logistics from "@/assets/images/logistics.png";
+import anticipate from "@/assets/images/anticipate.png";
 
 const eventDetails = [
   {

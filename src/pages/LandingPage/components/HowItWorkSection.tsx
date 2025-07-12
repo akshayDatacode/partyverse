@@ -1,5 +1,8 @@
+import { RootState } from "@/core/redux/store";
+import { useSelector } from "react-redux";
+
 const HowItWorkSection = () => {
-  
+  const { value } = useSelector((state: RootState) => state?.count);
   return (
     <>
       <section className="row mx-0 my-4 py-4 d-flex justify-content-center">
@@ -7,7 +10,7 @@ const HowItWorkSection = () => {
           <div className="row mx-0">
             <div className="col-md-5 col-12 px-3 px-md-2">
               <h1 className="custom-title">
-                How <span>PartyVerse</span> Works
+                How <span>PartyVerse</span> Works {value}
               </h1>
               <p className="mb-5 custom-content">
                 Book your perfect party in just a few simple steps
