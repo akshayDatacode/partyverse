@@ -30,25 +30,27 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="row mx-0 hero-section">
-      <div className="col-12 my-4 row my-0 px-0 text-center">
-        <div className=" col-12">
+    <section className="mx-0 hero-section">
+      <div className=" my-4 row mx-0 text-center">
+        <div className="col-12 my-2">
           <Stepper steps={steps} currentStep={2} />
         </div>
-        <h1 className="hero-heading my-4">
+        <h1 className="hero-heading px-3 col-12 my-4">
           Your <span className="text-highlight">Universe</span> of Stress-Free <span className="text-highlight">Celebrations</span>!
         </h1>
-        <div className="col-12 my-4 hero-content">
+        <div className="col-12 my-4 px-4 hero-content">
           <p className="my-0">We’re here to take the chaos out of parties and leave only the fun.</p>
           <p className="my-0">From birthdays and anniversaries to surprise proposals, kitty parties, get together, house parties etc.</p>
         </div>
-        <div className="col-12 my-4 hero-select">
-        <div className="col-8 bg-white">
-        <SelectPartyFilter />
-        </div>
+        <div className="col-12 my-4">
+          <div className="row mx-0 hero-select">
+          <div className="col-lg-8 col-12 bg-white">
+            <SelectPartyFilter />
+          </div>
+          </div>
         </div>
         <div className="my-4 col-12">
-        <Button label="Search Party Places" />
+          <Button label="Search Party Places" />
         </div>
       </div>
     </section>

@@ -1,8 +1,7 @@
 .stepper {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  padding: 0 400px;
+  align-items: flex-start; 
 }
 
 .stepper-item {
@@ -58,7 +57,6 @@
   left: 50%;
   height: 2px;
   width: 100%;
-  transform: translateX(0%);
   border-top: 2px dashed #6658DE;
   z-index: 1;
 }
