@@ -56,7 +56,6 @@ export const removeAuth = (): void => {
  * Debounced error handler to show toast notifications.
  */
 const debouncedError = debounce((message: string) => {
-  debugger
   toast.error(message)
 }, 100); // Debounce delay of 1 second
 
@@ -87,9 +86,7 @@ export const setupAxios = (axiosInstance: AxiosInstance): void => {
   axiosInstance.interceptors.response.use(
     (response) => response,
     (error) => {
-      debugger
       if (error.response) {
-        debugger
 
         // Handle specific HTTP status codes
         if (error.response.status === 401) {

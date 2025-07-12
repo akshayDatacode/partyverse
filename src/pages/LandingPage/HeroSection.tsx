@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Stepper from "@/components/Stepper"
 import SelectPartyFilter from "@/module/SearchPartyFilter"
 import Button from "@/ui/Button"
-import axios from "axios";
+import axios from "@/core/axios";
 
 const HeroSection = () => {
 
