@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image"
 import Twitter from "@/assets/images/X Twitter Logo Streamline Logos Solid - Free.png"
 import Instagram from "@/assets/images/Instagram Streamline Feather.png"
@@ -8,12 +9,12 @@ import "./style.scss"
 const Footer = () => {
    return (
       <>
-      <div className="row footer">
+      <div className="row mx-0 footer">
          <div className="col-12">
          <div className="row mx-0 ">
-            <div className="col-md-4 col-12 p-4 footer-section-1">
+            <div className="col-md-4 col-12 p-4 footer-section-1 ">
                <div className="">
-                  <Image src={PARTYVERSE} className="my-3" alt="Logo" />
+                  <Image src={PARTYVERSE} className=" my-3" alt="Logo" />
                   <p className="footer-paragraph my-2">Your one-stop solution for stress-free party planning. We handle the details, you create the memories.</p>
                   <div className="social-media d-flex flex-column gap-3 py-4">
                      <span><Image src={Instagram} alt="" className=" me-1" />Instagram</span>
@@ -22,8 +23,8 @@ const Footer = () => {
                   </div>
                </div>
             </div>
-            <div className="col-md-8 col-12 d-flex flex-column justify-content-between">
-               <div className="d-flex row mt-4 p-md-4 p-2">
+            <div className="col-md-8 col-12 d-flex p-md-5 flex-column justify-content-between ">
+               <div className="d-flex row mx-0 ">
                   <div className="services col-4">
                      <div className="main-data">Services</div>
                      <span className="sub-data">Venues</span>
@@ -53,10 +54,10 @@ const Footer = () => {
          </div>
          </div>
          <div className="col-12">
-            <div className="row mx-0">
-                 <div className="col-md-4 col-12 footer-paragraph p-4 border-end">© 2025 <span className="partyverse">Partyverse</span> All Rights Reserved.</div>
-                 <div className="col-md-8 col-12 footer-paragraph p-4">
-                  <span className="me-5">Privacy Policy</span>
+            <div className="row mx-0 d-flex ">
+                 <div className="col-md-4 footer-paragraph footer-end px-4 pt-md-3 pt-4">© 2025 <span className="partyverse">Partyverse</span> All Rights Reserved.</div>
+                 <div className="col-md-8 footer-paragraph px-4 px-md-5 py-3">
+                  <span className="me-5 ">Privacy Policy</span>
                   <span>Terms of Use</span>
                </div>
             </div>

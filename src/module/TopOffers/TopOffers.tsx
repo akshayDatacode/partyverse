@@ -1,6 +1,7 @@
 import MultiCarousel from "@/ui/Carousel";
 import Image from "next/image";
-import Logistics from "@/assets/images/logistics.png";
+import Logistics from "@/assets/images/03acb0a591338c014fadb4d86a2158c5d77bef82.jpg";
+import "./style.scss";
 
 const TopOffersResponsive = {
   desktop: {
@@ -51,8 +52,6 @@ const TopOffers = () => {
 
   return (
     <div className="top-offers">
-      <h2>Top Offers</h2>
-      <p>Check out our latest offers and discounts!</p>
       <MultiCarousel
         autoPlay={false}
         infinite={false}
@@ -64,18 +63,39 @@ const TopOffers = () => {
       >
         {
           TopOffersData && TopOffersData.map((offer, index) => (
-            <div className="px-2" key={index}>
-              <div className="row mx-0 border border-dark bg-secondary rounded-3">
-                <div className="col-8 px-0 ">
-                  <div className="">
-                    <h1>{offer.percent}</h1>
-                    <p>Get 20% off on your first booking!</p>
+            <div className="px-3" key={index}>
+              <div className="row mx-0 top-offer">
+                <div className="col-6 py-4 px-3">
+                  <div className="d-flex h-100 flex-column justify-content-between ">
+                    <div className="">
+                    <div className="offer-tag">{offer.tag.toUpperCase()}</div>
+                    <h1 className="offer-percent">{offer.percent}</h1>
+                    </div>
+                    <div className="offer-valid">*{offer.valid}</div>
                   </div>
                 </div>
-                <div className="col-4 px-0">
-                  <Image src={Logistics} alt="Offer 1" className="img-fluid" />
+                <div className="col-6 px-0 position-relative" >
+                  <Image
+                    src={Logistics}
+                    alt="Offer 1"
+                    className="w-100 h-100 object-fit-cover top-offer-image"
+                  />
+
+                  {/* Inner shadow overlay */}
+                  <div
+                    className="position-absolute image-inner-shadow top-0 top-offer-image start-0 w-100 h-100"
+                  ></div>
+
+                  {/* Text */}
+                  <span
+                    className="position-absolute top-offer-venue bottom-0 start-50 translate-middle-x text-white px-5 w-100 py-1 "
+                  >
+                    {offer.venue}
+                  </span>
                 </div>
-              </div>
+
+
+              </div> 
             </div>
           ))
         }
