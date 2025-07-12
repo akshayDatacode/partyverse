@@ -97,7 +97,7 @@ const MultiCarousel = ({
         arrows={arrows}
       >
         {children}
-      </Carousel>;
+      </Carousel>
     </>
   );
 }
