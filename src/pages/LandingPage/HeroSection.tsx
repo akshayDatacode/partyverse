@@ -1,8 +1,9 @@
+'use client';
+import { useState } from "react";
+
 import Stepper from "@/components/Stepper"
-import Tab from "@/components/Tab";
 import SelectPartyFilter from "@/module/SearchPartyFilter"
 import Button from "@/ui/Button"
-import { useState } from "react";
 
 const HeroSection = () => {
   const steps = [

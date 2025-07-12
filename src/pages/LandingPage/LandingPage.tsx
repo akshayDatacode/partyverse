@@ -2,8 +2,9 @@
 import HeroSection from "./HeroSection"
 import HowItWorkSection from "./HowItWorkSection"
 import FreeManagerSection from "./FreeManagerSection"
-import CompletePartySection from "./CompletePartySection"
 import PlatformSection from "./PlatformSection"
+import CompletePartySection from "@/pages/LandingPage/CompletePartySection"
+import TopOffersSection from "@/pages/LandingPage/TopOffersSection"
 
 const LandingPage = () => {
   return (
@@ -13,6 +14,7 @@ const LandingPage = () => {
       <FreeManagerSection/>
       <CompletePartySection/>
       <PlatformSection/>
+      <TopOffersSection />
     </>
   )
 }
