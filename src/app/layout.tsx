@@ -1,9 +1,15 @@
+import axios from "axios";
+import { ToastContainer } from 'react-toastify';
+import { setupAxios } from "@/core/auth/AuthHelpers";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+
 import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.css'
 import '@/assets/scss/style.scss'
 import '@/assets/scss/landingpage.scss'
+import 'react-toastify/dist/ReactToastify.css';
+// import Providers from "@/core/Providers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,10 +32,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  //Initialize Axios with the setup
+  const axiosInstance = axios.create({
+    baseURL: process.env.REACT_APP_API_BASE_URL || 'https://api.example.com',
+    timeout: 10000, // Set a timeout for requests
+  });
+  setupAxios(axiosInstance);
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        {/* <Providers> */}
+          {children}
+          <ToastContainer />
+        {/* </Providers> */}
       </body>
     </html>
   );

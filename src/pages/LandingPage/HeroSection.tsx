@@ -1,11 +1,20 @@
 'use client';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Stepper from "@/components/Stepper"
 import SelectPartyFilter from "@/module/SearchPartyFilter"
 import Button from "@/ui/Button"
+import axios from "axios";
 
 const HeroSection = () => {
+
+  useEffect(() => {
+    axios.get('/api/landing-page-data')
+      .then(response => {
+        console.log("Landing page data:", response.data);
+      })
+  }, [])
+
   const steps = [
     { number: 1, label: "Search" },
     { number: 2, label: "Plan a Party" },
@@ -44,9 +53,9 @@ const HeroSection = () => {
         </div>
         <div className="col-12 my-4">
           <div className="row mx-0 hero-select">
-          <div className="col-lg-8 col-12 bg-white">
-            <SelectPartyFilter />
-          </div>
+            <div className="col-lg-8 col-12 bg-white">
+              <SelectPartyFilter />
+            </div>
           </div>
         </div>
         <div className="my-4 col-12">
