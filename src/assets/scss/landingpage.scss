@@ -69,7 +69,7 @@ body {
 
     .step-number {
       background-color: $text-primary;
-      color: #fff;
+      color: $text-white;
     }
   }
 }
@@ -85,7 +85,7 @@ body {
     .party-heading{
       font-size: 20px;
       font-weight:700;
-      color: #000000;
+      color: $text-black;
     }
 
    .party-content{
@@ -100,8 +100,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 50vh;
 }
 .platform-inner-section{
  display: flex;
@@ -114,7 +112,7 @@ body {
 .platform-section-line{
   font-weight: 700;
   font-size: 48px;
-  color: #ffffff;
+  color: $text-white;
   text-align: end;
 }
 

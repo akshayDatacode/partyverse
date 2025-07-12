@@ -9,7 +9,6 @@
     background-color: white;
     z-index: 1000;
 }
-
 .header-inner{
     display: flex;
     justify-content: space-between;
@@ -17,10 +16,10 @@
     width: 100%;
     top: 0;
     background-color: white;
-    border-bottom: 1px solid #EDEDED ;
-    
 }
-
+.header-border{
+   border-bottom: 1px solid #EDEDED ;
+}
 .header-select{
     border-right: 1px solid #CFCFCF;
     display: flex;
@@ -30,7 +29,9 @@
 .hambarger{
     display: none;
 }
+
 /*responsive*/
+
 @media screen and (max-width: 992px) {
   .header-select {
     display: none;
