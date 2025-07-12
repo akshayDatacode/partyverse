@@ -63,8 +63,10 @@ body {
     transition: all 0.3s ease;
   }
 
-  &:hover {
+   &:hover,
+  &.active-step {
     border-color: $text-primary;
+
     .step-number {
       background-color: $text-primary;
       color: #fff;

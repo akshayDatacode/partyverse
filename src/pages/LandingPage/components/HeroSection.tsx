@@ -6,17 +6,17 @@ import SelectPartyFilter from "@/module/SearchPartyFilter"
 import Button from "@/ui/Button"
 import axios from "@/core/axios";
 import { createIncreaseCount } from "../actions";
-import { useAppDispatch } from "@/core/redux/store";
+// import { useAppDispatch } from "@/core/redux/store";
 
 const HeroSection = () => {
-  const dispatch = useAppDispatch()
+  // const dispatch = useAppDispatch()
   
   useEffect(() => {
     axios.get('/api/landing-page-data')
       .then(response => {
         console.log("Landing page data:", response.data);
       })
-    dispatch(createIncreaseCount(342))
+    // dispatch(createIncreaseCount(342))
   }, [])
 
   const steps = [
