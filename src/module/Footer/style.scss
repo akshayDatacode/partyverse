@@ -2,6 +2,7 @@
     display: flex;
     width: 100%;
     height: 50vh;
+    border-top: 1px solid #EDEDED;
 }
 .social-media{
     font-size: 12px;
@@ -12,10 +13,14 @@
     font-size: 14px;
     font-weight: 400;
 }
+.footer-end {
+  border-right: 1px solid #EDEDED;
+}
 .footer-section-1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-right: 1px solid #EDEDED;
 }
 .footer-section-2{
     display: flex;
@@ -24,39 +29,43 @@
 }
 .footer-inner-section-2 {
     display: flex;
-justify-content: space-between;
+    justify-content: space-between;
 }
-
 .services{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-
 .resources{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-
 .company{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
-
 .main-data{
     font-size: 16px;
     font-weight: 600;
 }
-
 .sub-data{
     font-size: 14px;
     font-weight: 400;
     color:#3C3C3C;
 }
-
 .partyverse{
     text-decoration: underline;
     font-weight: 600;
+}
+
+/*responsive*/
+@media screen and (max-width:770px) {
+    .footer-section-1{
+        border-right: none;
+    }
+    .footer-end {
+        border-right: none;
+    }
 }
