@@ -66,12 +66,12 @@ const TopOffers = () => {
             <div className="px-3" key={index}>
               <div className="row mx-0 top-offer">
                 <div className="col-6 py-4 px-3">
-                  <div className="d-flex h-100 flex-column justify-content-between ">
-                    <div className="">
+                  <div className="h-100 row mx-0 justify-content-between ">
+                    <div className="pb-4 col-12">
                     <div className="offer-tag">{offer.tag.toUpperCase()}</div>
                     <h1 className="offer-percent">{offer.percent}</h1>
                     </div>
-                    <div className="offer-valid">*{offer.valid}</div>
+                    <div className="offer-valid col-12">*{offer.valid}</div>
                   </div>
                 </div>
                 <div className="col-6 px-0 position-relative" >
@@ -80,7 +80,6 @@ const TopOffers = () => {
                     alt="Offer 1"
                     className="w-100 h-100 object-fit-cover top-offer-image"
                   />
-
                   {/* Inner shadow overlay */}
                   <div
                     className="position-absolute image-inner-shadow top-0 top-offer-image start-0 w-100 h-100"
@@ -93,8 +92,6 @@ const TopOffers = () => {
                     {offer.venue}
                   </span>
                 </div>
-
-
               </div> 
             </div>
           ))

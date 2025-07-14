@@ -3,27 +3,28 @@ import "./style.scss";
 import Venuecard from "@/assets/images/venuecards.png";
 import Logistic from "@/assets/images/logistics.png"
 import MultiCarousel from "@/ui/Carousel";
+import type { StaticImageData } from "next/image";
 
 type VenueCardProps = {
-  image: string;
+  image?: string | StaticImageData;
   badgeType?: "luxe" | "new" | "promoted" | "";
   discount?: string;
-  rating: number;
-  distance: string;
-  venueName: string;
-  location: string;
-  capacity: number;
-  packages: number;
-  cuisine: string;
+  rating?: number;
+  distance?: string;
+  venueName?: string;
+  location?: string;
+  capacity?: number;
+  packages?: number;
+  cuisine?: string;
 };
 
 const VenueCard = ({
-  image,
+  image="",
   badgeType = "luxe",
   discount = "50%",
   rating = 0,
   distance = "0 KM",
-  venueName,
+  venueName="",
   location="jaipur",
   capacity = 0,
   packages = 0,
