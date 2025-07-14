@@ -42,7 +42,7 @@ const VenueCard = ({
           src={image}
           alt={venueName}
           width={342}
-          height={200}
+          height={286}
           className="img-fluid w-100"
           style={{ objectFit: "cover", height: "200px" }}
         />
