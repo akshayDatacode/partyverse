@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import details from "@/assets/images/details.png";
 import logistics from "@/assets/images/logistics.png";
 import anticipate from "@/assets/images/anticipate.png";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const HowItWorkSection = () => {
@@ -19,19 +19,27 @@ const HowItWorkSection = () => {
   const images = [details, logistics, anticipate, logistics];
 
   const [activeStepIndex, setActiveStepIndex] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
       setActiveStepIndex((prev) => (prev + 1) % steps.length);
     }, 5000);
-    return () => clearTimeout(timer); // clean up
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
   }, [activeStepIndex]);
+
+  const handleStepClick = (index: number) => {
+    setActiveStepIndex(index);
+  };
 
   return (
     <>
       <section className="row mx-0 my-4 py-4 d-flex justify-content-center">
         <div className="col-md-11 col-12">
-          <div className="row mx-0">
+          <div className="row mx-0 d-flex justify-content-between">
             <div className="col-md-5 col-12 px-3 px-md-2">
               <h1 className="custom-title">
                 How <span>PartyVerse</span> Works {value}
@@ -43,6 +51,7 @@ const HowItWorkSection = () => {
                 {steps.map((text, index) => (
                   <div
                     key={index}
+                    onClick={() => handleStepClick(index)}
                     className={`d-flex align-items-start mb-2 p-3 p-md-4 custom-content step-box ${
                       index === activeStepIndex ? "active-step" : ""
                     }`}
@@ -65,7 +74,7 @@ const HowItWorkSection = () => {
                 className="img-fluid rounded shadow"
                 style={{
                   maxHeight: "400px",
-                  width:"840px",
+                  width: "840px",
                   transition: "opacity 0.5s ease-in-out",
                 }}
               />
