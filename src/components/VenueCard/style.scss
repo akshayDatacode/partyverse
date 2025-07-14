@@ -15,16 +15,23 @@
       font-size: 14px;
       font-weight: 500;
       color:#000000;
+      border-radius: 9px;
     }
 
     &.new {
-      background-color: #e0f7ff; // blue
-      color: #0277bd;
+      background-color:#DDF9FF; 
+      font-size: 14px;
+      font-weight: 500;
+      color: #000000;
+      border-radius: 9px;
     }
 
     &.promoted {
-      background-color: #ffe0ec; // pink
-      color: #c2185b;
+      background-color:#D93A3A;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 8px;
     }
   }
 
