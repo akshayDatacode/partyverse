@@ -6,6 +6,7 @@ import PlatformSection from "./PlatformSection"
 import CompletePartySection from "@/pages/LandingPage/components/CompletePartySection"
 import TopOffersSection from "@/pages/LandingPage/components/TopOffersSection"
 import VenueListFilterTiles from "@/pages/LandingPage/components/VenueListFilterTiles"
+import MomentsSection from "./MomentsSection"
 
 const LandingPage = () => {
   return (
@@ -17,6 +18,7 @@ const LandingPage = () => {
       <CompletePartySection />
       <VenueListFilterTiles />
       <PlatformSection />
+      <MomentsSection/>
     </>
   )
 }

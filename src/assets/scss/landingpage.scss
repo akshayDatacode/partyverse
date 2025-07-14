@@ -35,35 +35,35 @@ body {
   font-weight: 700;
 }
 
-.hero-content{
+.hero-content {
   font-size: 16px;
   color: $text-black;
   font-weight: 500;
 }
 
-.hero-select{
+.hero-select {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 //HowItWork Section
 .step-box {
-  border: 1px solid #FBFBFB;
+  border: 1px solid #fbfbfb;
   transition: all 0.3s ease;
-  background-color:#FBFBFB;
+  background-color: #fbfbfb;
   border-radius: 10px;
   cursor: pointer;
 
   .step-number {
-     max-width: 40px;
+    max-width: 40px;
     background-color: #929292;
     color: #ffffff;
     font-weight: "bold";
-    position:static;
+    position: static;
     transition: all 0.3s ease;
   }
 
-   &:hover,
+  &:hover,
   &.active-step {
     border-color: $text-primary;
 
@@ -75,41 +75,41 @@ body {
 }
 
 //CompletePartySection
-.party-cards{
-   background-color:#F4F1F8;
-    border: 1px solid #DFDBFF;
-    border-radius: 20px;
-    height: 200px;
-    width: 416px;
-   
-    .party-heading{
-      font-size: 20px;
-      font-weight:700;
-      color: $text-black;
-    }
+.party-cards {
+  background-color: #f4f1f8;
+  border: 1px solid #dfdbff;
+  border-radius: 20px;
+  height: 200px;
+  width: 416px;
 
-   .party-content{
+  .party-heading {
+    font-size: 20px;
+    font-weight: 700;
+    color: $text-black;
+  }
+
+  .party-content {
     font-size: 14px;
     font-weight: 400;
-    color: #3C3C3C;
-   }
+    color: #3c3c3c;
+  }
 }
 
 /*platform saction*/
-.platform-section{
+.platform-section {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.platform-inner-section{
- display: flex;
+.platform-inner-section {
+  display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 40px;
-  background: linear-gradient(to right, #6658DE, #FF4D4D);
+  background: linear-gradient(to right, #6658de, #ff4d4d);
 }
 
-.platform-section-line{
+.platform-section-line {
   font-weight: 700;
   font-size: 48px;
   color: $text-white;
@@ -118,22 +118,41 @@ body {
 
 /*platform responsive*/
 
-@media screen and (max-width:992px) {
-  .platform-section-line{
+@media screen and (max-width: 992px) {
+  .platform-section-line {
     text-align: center !important;
     font-size: 30px !important;
   }
 }
 
-@media screen and (max-width:576px) {
-  .platform-section-line{
+@media screen and (max-width: 576px) {
+  .platform-section-line {
     text-align: center !important;
     font-size: 26px !important;
   }
 }
 
 /*top offers*/
-.top-offer-heading{
- font-size: 24px;
- font-weight: 700;
+.top-offer-heading {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+//Moments-Section
+.moments {
+  .heading {
+    font-size: 114px;
+    background-image: linear-gradient(
+      180deg,
+      #a69fe5 22%,
+      #6658de 55.44%,
+      #050312 79.33%
+    );
+    background-clip: text;
+    -webkit-background-clip: text; 
+    color: transparent;
+    -webkit-text-fill-color: transparent; 
+     mix-blend-mode: plus-lighter;
+     mix-blend-mode: screen;
+  }
 }
