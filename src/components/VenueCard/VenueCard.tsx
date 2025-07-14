@@ -47,7 +47,7 @@ const VenueCard = ({
           style={{ objectFit: "cover", height: "200px" }}
         />
         {discount && (
-          <span className="badge position-absolute bottom-0 start-0 m-2 discount-badge">
+          <span className="fw-bold position-absolute bottom-0 start-0 p-2 m-2 discount-badge">
             {discount}
           </span>
         )}
@@ -57,13 +57,13 @@ const VenueCard = ({
       <div className="p-3">
         {/* Rating + Distance */}
         <div className="d-flex align-items-center gap-2 mb-2">
-          <span className="badge rating">{rating.toFixed(1)} ★</span>
-          <small className="distance">{distance}</small>
+          <span className="badge fw-medium rating">{rating.toFixed(1)} ★</span>
+          <small className="fw-medium distance">{distance}</small>
         </div>
 
         {/* Name + Location */}
-        <h5 className="mb-1 venue-name">{venueName}</h5>
-        <p className="location">{location}</p>
+        <h5 className="mb-1 fw-bold venue-name">{venueName}</h5>
+        <p className="fw-medium location">{location}</p>
 
         {/* Capacity + Packages */}
         <div className="d-flex gap-2 flex-wrap mb-2">
@@ -76,8 +76,8 @@ const VenueCard = ({
         </div>
 
         {/* Cuisine */}
-        <p className="fw-semibold mb-0 cuisine">
-          Cuisine Served: <span className="text-muted fw-semibold">{cuisine}</span>
+        <p className="mb-0 cuisine">
+          Cuisine Served: <span className="text-muted">{cuisine}</span>
         </p>
       </div>
     </div>
