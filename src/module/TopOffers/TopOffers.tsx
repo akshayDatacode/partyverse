@@ -67,7 +67,7 @@ const TopOffers = () => {
               <div className="row mx-0 top-offer">
                 <div className="col-6 py-4 px-3">
                   <div className="d-flex h-100 flex-column justify-content-between ">
-                    <div className="">
+                    <div className="pb-5">
                     <div className="offer-tag">{offer.tag.toUpperCase()}</div>
                     <h1 className="offer-percent">{offer.percent}</h1>
                     </div>

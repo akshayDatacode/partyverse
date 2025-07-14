@@ -54,7 +54,9 @@ const VenueCategoryTiles = ({
       <MultiCarousel showDots={false} arrows={false} draggable={true} autoPlay={false} partialVisible={true} responsive={VenueCategoryTilesResponsive}>
         {
           venueList && venueList.map((venue, index) => (
+            <div key={index}>
             <VenueCard venueName={venue.title} />
+            </div>
           ))
         }
       </MultiCarousel>
