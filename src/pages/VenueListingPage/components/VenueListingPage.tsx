@@ -43,20 +43,20 @@ const VenueListingPage = () => {
           <div className="col-10">
             <div className="row mx-0">
               <div className="col-12 py-2 m-1">
-                <div className="title">
+                <div className="venue-sentence">
                 Discover top curated places that deliver unforgettable party experiences
                 </div>
-                <div className="sub-title">
+                <div className="venue-sub-sentence">
                 Places which are perfect for your upcoming party.
               </div>
               </div>
               <div className="col-12 py-2 ms-3 d-flex gap-3">
-                <button className="buttons p-2"><Image src={CrossIcon} alt="x" className="me-1 mb-1"/>Budget per Guest 1000 - 1299</button>
-                <button className="buttons p-2"><Image src={CrossIcon} alt="x" className="me-1 mb-1"/>Buffet</button>
-                <button className="buttons p-2"><Image src={CrossIcon} alt="x" className="me-1 mb-1"/>North India</button>
+                <button className="venue-cross-btn p-2"><Image src={CrossIcon} alt="x" className="me-1 mb-1"/>Budget per Guest 1000 - 1299</button>
+                <button className="venue-cross-btn p-2"><Image src={CrossIcon} alt="x" className="me-1 mb-1"/>Buffet</button>
+                <button className="venue-cross-btn p-2"><Image src={CrossIcon} alt="x" className="me-1 mb-1"/>North India</button>
               </div>
               <div className="col-12">
-                <div className="row mx-0 card-border ps-4 mt-3">
+                <div className="row mx-0 venue-card-border ps-4 mt-3">
               {venueList.map((venue, index) => {
                 return (
                   <div key={index} className="col-4">
