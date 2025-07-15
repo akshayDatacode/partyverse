@@ -1,0 +1,9 @@
+@use "_variables" as *;
+
+body {
+  font-family: $font;
+}
+
+.custom-content {
+  font-size: $content-text;
+}
