@@ -39,46 +39,42 @@ const MomentsSection = () => {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
       slidesToSlide: 1,
-      partialVisibilityGutter: 80
+      partialVisibilityGutter: 80,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
       slidesToSlide: 2,
-      partialVisibilityGutter: 180
+      partialVisibilityGutter: 180,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
       slidesToSlide: 1,
-      partialVisibilityGutter: 180
+      partialVisibilityGutter: 180,
     },
   };
   return (
     <>
       <div
-        className="position-relative w-100 text-white moments"
-        style={{ height: "1039px" }}
+        className=" text-white moments"
+        style={{
+          backgroundImage: `url(${MomentsBackground.src})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
       >
-        <Image
-          src={MomentsBackground}
-          alt="Background"
-          fill
-          priority
-          style={{ objectFit: "cover" }}
-        />
-
-        <div className="row mx-0 d-flex justify-content-center align-items-center">
-          <div className="col-12">
-            <div className="text-center">
-              <Image src={PartyVerse} alt="logo" className="mt-3" />
+        <div className="row mx-0 d-flex justify-content-center align-items-center ">
+           <div className="col-12 text-center">
+              <Image src={PartyVerse} alt="logo" className="mt-5" />
+            </div>
+            <div className="col-12 text-center">
               <h1 className="fw-bold text-center heading">Moments.</h1>
             </div>
             <p className="text-white text-center">
               Celebrating every moment of your life.
             </p>
           </div>
-        </div>
         <div className="row mx-0 d-flex justify-content-end">
           <div className="col-md-11 px-0 mt-5">
             <MultiCarousel
@@ -96,9 +92,9 @@ const MomentsSection = () => {
                     alt={`Moment ${index + 1}`}
                     className="img-fluid rounded-4 mb-3"
                   />
-                  <p className="card-text mb-0">{item.title}</p>
-                  <h5 className="restaurant-name fw-bold">{item.restaurant}</h5>
-                  <p className="people text-white-50">{item.people}</p>
+                  <p className="mb-0">{item.title}</p>
+                  <h5 className="fw-bold">{item.restaurant}</h5>
+                  <p className="text-white-50">{item.people}</p>
                 </div>
               ))}
             </MultiCarousel>
