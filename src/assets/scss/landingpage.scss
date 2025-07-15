@@ -14,7 +14,6 @@ body {
 
 .custom-content {
   font-size: $content-text;
-  font-weight: 400;
 }
 
 // Landingpage ----- Hero Section
@@ -139,6 +138,7 @@ body {
 
 //Moments-Section
 .moments {
+  // background-image: url('/assets/images/MomentsBackground.png');
   .heading {
     font-size: 114px;
     background-image: linear-gradient(
@@ -148,10 +148,37 @@ body {
       #050312 79.33%
     );
     background-clip: text;
-    -webkit-background-clip: text; 
+    -webkit-background-clip: text;
     color: transparent;
-    -webkit-text-fill-color: transparent; 
-     mix-blend-mode: plus-lighter;
-     mix-blend-mode: screen;
+    -webkit-text-fill-color: transparent;
+    mix-blend-mode: plus-lighter;
+    mix-blend-mode: screen;
+  }
+}
+
+//Testimonial-section
+.trusted-host {
+  img {
+    border: 2px solid white;
+    margin-left: -20px;
+  }
+  .trusted-user {
+    font-size: 18px;
+    .highlight {
+      color: $primary;
+    }
+  }
+}
+
+.reviews {
+  background-color: $primary;
+  .testimonial-card {
+    .review-text {
+      font-size: 23px;
+      color: #000000;
+    }
+    h6 {
+      font-size: 14px;
+    }
   }
 }
