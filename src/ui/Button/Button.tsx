@@ -8,7 +8,7 @@ type ButtonProps = {
 const Button = ({ label , backgroundColor=""}: ButtonProps) => {
   return (
     <>
-      <button type="button" className={`btn custom-button-primary ${backgroundColor === "white"? "bg-white-btn":""} ${backgroundColor === "transparent"? "bg-transparent-btn":""}`}>
+      <button type="button" className={`btn custom-button-primary ${backgroundColor === "white"? "bg-white-btn p-md-2 p-1":""} ${backgroundColor === "transparent"? "bg-transparent-btn p-md-2 p-1":""}`}>
         {label}
       </button>
     </>

@@ -42,7 +42,7 @@ const VenueCategoryTiles = ({
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
+      partialVisibilityGutter: 0 // this is needed to tell the amount of px that should be visible.
     }
   }
 

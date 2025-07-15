@@ -1,8 +1,8 @@
-
+@use "../../assets/scss/variables" as *;
 .top-offer{
    border-radius: 20px;
    background-color: #ECEAFF;
-   color: black;
+   color: $text-black;
 }
 .top-offer-image{
     border-bottom-right-radius: 20px;
