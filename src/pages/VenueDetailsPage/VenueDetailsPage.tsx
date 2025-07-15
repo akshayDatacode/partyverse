@@ -257,7 +257,35 @@ const VenueDetailsPage = () => {
              </div>
             </div>
           </div>
-        
+         
+         {/* Amenities section */}
+         <div className="row mx-0">
+          <h4>Amenities</h4>
+          <div className="col-12">
+             <h6>EXPERIENCES</h6>
+             <div>
+              {/* badges */}
+             </div>
+          </div>
+          <div className="col-12">
+             <h6>AMBEMINCE</h6>
+             <div>
+              {/* badges */}
+             </div>
+          </div>
+          <div className="col-12">
+             <h6>FOOD AND BEVERAGES OPTIONS</h6>
+             <div>
+              {/* badges */}
+             </div>
+          </div>
+         </div>
+
+         {/*Similar Places */}
+         <div className="row mx-0">
+           <h4>Similar Places</h4>
+           
+         </div>
     </>
   );
 };
