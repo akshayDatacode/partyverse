@@ -172,4 +172,13 @@ body {
 
 .reviews {
   background-color: $primary;
+  .testimonial-card {
+    .review-text {
+      font-size: 23px;
+      color: #000000;
+    }
+    h6 {
+      font-size: 14px;
+    }
+  }
 }
