@@ -6,10 +6,11 @@ import Venue3 from "@/assets/images/venue-img3.jpg";
 import Venue4 from "@/assets/images/venue-img4.jpg";
 import PartyArea from '@/assets/images/partyarea.jpg'
 import EntirePlace from '@/assets/images/entireplace.jpg'
-import PartyPackage from '@/assets/images/PartyPackage.png'
+import PartyPackage from '@/assets/images/partypackage.png'
 import PlayIcon from '@/assets/images/playicon.png'
 import Tab from "@/components/Tab";
 import { useState } from "react";
+import PartyPackageCard from "@/components/PartyPackageCard";
 
 const VenueDetailsPage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -159,133 +160,134 @@ const VenueDetailsPage = () => {
       <div className="row mx-0">
         <div className="col-12">
           <div>
-             <h4>Party Area</h4>
+            <h4>Party Area</h4>
           </div>
-            <Tab
-              tabs={partyAreaTabs}
-              activeTabIndex={activePartyTab}
-              onTabChange={setActivePartyTab}
-            />
+          <Tab
+            tabs={partyAreaTabs}
+            activeTabIndex={activePartyTab}
+            onTabChange={setActivePartyTab}
+          />
         </div>
       </div>
       <div className="row mx-0">
-      {/* Key highlight */}
-      <div className="col-md-4">
-      <h5>Key highlights</h5>
-      </div>
-      {/* video */}
-       <div className="col-md-8">
-        <div className="row mx-0 d-flex justify-content-center">
-          <div className="col-md-4 col-12">
-            <h5>Video of Party Area</h5>
-             <img
+        {/* Key highlight */}
+        <div className="col-md-4">
+          <h5>Key highlights</h5>
+        </div>
+        {/* video */}
+        <div className="col-md-8">
+          <div className="row mx-0 d-flex justify-content-center">
+            <div className="col-md-4 col-12">
+              <h5>Video of Party Area</h5>
+              <img
                 src={PartyArea.src}
                 alt="Venue 5"
                 className="img-fluid rounded-4"
-                style={{height:'423px',width:'460px'}}
+                style={{ height: '423px', width: '460px' }}
               />
-          </div>
-          <div className="col-md-4 col-12">
-            <h5>Video of entire place</h5>
-               <img
+            </div>
+            <div className="col-md-4 col-12">
+              <h5>Video of entire place</h5>
+              <img
                 src={EntirePlace.src}
                 alt="Venue 5"
                 className="img-fluid rounded-4 "
-               style={{height:'423px',width:'460px'}}
+                style={{ height: '423px', width: '460px' }}
               />
+            </div>
           </div>
         </div>
       </div>
-      </div>
 
-    {/* party packages */}
-    <div className="row mx-0">
+      {/* party packages */}
+      <div className="row mx-0">
         <div className="col-12">
           <div>
-             <h4>Party Packages</h4>
+            <h4>Party Packages</h4>
           </div>
-            <Tab
-              tabs={partyAreaTabs}
-              activeTabIndex={activePartyTab}
-              onTabChange={setActivePartyTab}
-            />
+          <Tab
+            tabs={partyAreaTabs}
+            activeTabIndex={activePartyTab}
+            onTabChange={setActivePartyTab}
+          />
         </div>
       </div>
 
-        {/* Right Grid of 4 Images */}
-          <div className="row g-3">
-            {/* upper */}
-            <div className="col-6 border party-package">
-             <h4>Silver Package</h4>
-             <div>
-              <img
-                src={PartyPackage.src}
-                alt="Venue 5"
-                className="img-fluid rounded-4 "
-              />
-             </div>
-            </div>
-            <div className="col-6 border party-package">
-            <h4>Gold Package</h4>
-            <div>
-              <img
-                src={PartyPackage.src}
-                alt="Venue 5"
-                className="img-fluid rounded-4 "
-              />
-             </div>
-            </div>
-            {/* lower */}
-            <div className="col-6 border party-package">
-            <h4>Gold Plus Party Package</h4>
-            <div>
-              <img
-                src={PartyPackage.src}
-                alt="Venue 5"
-                className="img-fluid rounded-4 "
-              />
-             </div>
-            </div>
-            <div className="col-6 border party-package">
-            <h4>Platinum Package</h4>
-            <div>
-              <img
-                src={PartyPackage.src}
-                alt="Venue 5"
-                className="img-fluid rounded-4 "
-              />
-             </div>
-            </div>
+      {/* Right Grid of 4 Images */}
+      <div className="row g-3">
+        {/* upper */}
+        <div className="col-6 border party-package">
+          <h4>Silver Package</h4>
+          <div>
+            <PartyPackageCard />
+            <img
+              src={PartyPackage.src}
+              alt="Venue 5"
+              className="img-fluid rounded-4 "
+            />
           </div>
-         
-         {/* Amenities section */}
-         <div className="row mx-0">
-          <h4>Amenities</h4>
-          <div className="col-12">
-             <h6>EXPERIENCES</h6>
-             <div>
-              {/* badges */}
-             </div>
+        </div>
+        <div className="col-6 border party-package">
+          <h4>Gold Package</h4>
+          <div>
+            <img
+              src={PartyPackage.src}
+              alt="Venue 5"
+              className="img-fluid rounded-4 "
+            />
           </div>
-          <div className="col-12">
-             <h6>AMBEMINCE</h6>
-             <div>
-              {/* badges */}
-             </div>
+        </div>
+        {/* lower */}
+        <div className="col-6 border party-package">
+          <h4>Gold Plus Party Package</h4>
+          <div>
+            <img
+              src={PartyPackage.src}
+              alt="Venue 5"
+              className="img-fluid rounded-4 "
+            />
           </div>
-          <div className="col-12">
-             <h6>FOOD AND BEVERAGES OPTIONS</h6>
-             <div>
-              {/* badges */}
-             </div>
+        </div>
+        <div className="col-6 border party-package">
+          <h4>Platinum Package</h4>
+          <div>
+            <img
+              src={PartyPackage.src}
+              alt="Venue 5"
+              className="img-fluid rounded-4 "
+            />
           </div>
-         </div>
+        </div>
+      </div>
 
-         {/*Similar Places */}
-         <div className="row mx-0">
-           <h4>Similar Places</h4>
-           
-         </div>
+      {/* Amenities section */}
+      <div className="row mx-0">
+        <h4>Amenities</h4>
+        <div className="col-12">
+          <h6>EXPERIENCES</h6>
+          <div>
+            {/* badges */}
+          </div>
+        </div>
+        <div className="col-12">
+          <h6>AMBEMINCE</h6>
+          <div>
+            {/* badges */}
+          </div>
+        </div>
+        <div className="col-12">
+          <h6>FOOD AND BEVERAGES OPTIONS</h6>
+          <div>
+            {/* badges */}
+          </div>
+        </div>
+      </div>
+
+      {/*Similar Places */}
+      <div className="row mx-0">
+        <h4>Similar Places</h4>
+
+      </div>
     </>
   );
 };

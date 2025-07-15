@@ -6,6 +6,7 @@ import VenueCard from "@/components/VenueCard";
 import CrossIcon from "@/assets/images/x.png";
 import Button from "@/ui/Button";
 import { useState } from "react";
+import VenueFilterBadge from "@/components/VenueFilter/VenueFilterBadge";
 
 const VenueList = [
   { title: "Venue 1", description: "Description for Venue 1" },
@@ -25,14 +26,9 @@ const VenueListingPage = () => {
       </div>
       <div className="col-12 px-0 px-md-2">
         <div className="row mx-0 position-relative ">
-          <div className="d-none d-lg-block col-lg-2 bg-white">
+          <div className={`bg-white col-lg-2 col-8 ${!showFilters ? 'd-none d-lg-block' : 'd-block d-lg-none position-absolute z-3'}`}>
             <VenuListFilter setShowFilters={setShowFilters} showFilters={showFilters} />
           </div>
-          {showFilters && (
-            <div className="d-block d-lg-none position-absolute bg-white z-3 col-8">
-              <VenuListFilter setShowFilters={setShowFilters} showFilters={showFilters} />
-            </div>
-          )}
           <div className="col-12 col-md-10">
             <div className="row mx-0">
               <div className="col-12 py-2 m-1 px-2 ">
@@ -47,21 +43,14 @@ const VenueListingPage = () => {
                 </div>
               </div>
               <div className="col-12 py-2 ms-md-3 ms-1 d-flex gap-3 flex-wrap">
-                <button className="venue-cross-badge badge p-2">
-                  <Image src={CrossIcon} alt="x" className="me-1 mb-1" />Budget per Guest 1000 - 1299
-                </button>
-                <button className="venue-cross-badge badge p-2">
-                  <Image src={CrossIcon} alt="x" className="me-1 mb-1" />Buffet
-                </button>
-                <button className="venue-cross-badge badge p-2">
-                  <Image src={CrossIcon} alt="x" className="me-1 mb-1" />North India
-                </button>
+                <VenueFilterBadge label={'Budget per Guest 1000 - 1299'} />
+                <VenueFilterBadge label={'Buffet'} />
               </div>
-              <div className="col-12">
+              <div className="col-12 mb-5">
                 <div className="row mx-0 venue-filter-cards ps-md-4 p-0  mt-3">
                   {VenueList && VenueList.map((venue, index) => (
-                    <div key={index} className="col-lg-4 col-md-6 col-12 pb-4 mx-0 px-0 px-md-2">
-                      <VenueCard venueName={venue.title} />
+                    <div key={index} className="col-lg-4 col-md-6 col-12 mx-0 px-0 py-3 p-md-3">
+                      <VenueCard badgeType={'roof'} venueName={venue.title} />
                     </div>
                   ))}
                 </div>
@@ -70,7 +59,7 @@ const VenueListingPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

@@ -1,36 +1,45 @@
 @use "../scss/variables" as *;
 
 .venue-sentence {
-    font-size: 24px;
-    font-weight: 700;
+  font-size: 24px;
+  font-weight: 700;
 }
+
 .venue-sub-sentence {
-    font-size: 16px;
-    font-weight: 500;
+  font-size: 16px;
+  font-weight: 500;
 }
+
 .venue-cross-badge {
-    font-size: 14px;
-    font-weight: 400;
-    border-radius: 8px;
-    color: $text-black;
-    border: 1px solid #F3F2FF;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 8px;
+  color: $text-black;
+  border: 1px solid #F3F2FF;
 }
+
 .venue-filter-cards {
-    border-left: 1px solid #D9D9D9;
+  border-left: 1px solid #D9D9D9;
 }
+
 .venue-filter-heading {
-    font-weight: 700;
-    font-size: 16px;
+  font-weight: 700;
+  font-size: 16px;
 }
+
 .venue-filter-items {
-    font-weight: 400;
-    font-size: 14px !important;
-    color: #838383 !important;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px !important;
+  color: #838383 !important;
 }
+
 .venue-filter-sub-heading {
-    font-weight: 400;
-    font-size: 14px !important;
+  font-weight: 400;
+  font-size: 14px !important;
 }
+
 /* radio button */
 input[type="radio"] {
   appearance: none;
@@ -38,46 +47,58 @@ input[type="radio"] {
   -moz-appearance: none;
   width: 14px;
   height: 14px;
-  border: 2px solid #838383; /* default border color */
+  border: 2px solid #838383;
+  /* default border color */
   border-radius: 50%;
   position: relative;
   cursor: pointer;
   outline: none;
-  background-color: $white; /* default background */
+  background-color: $white;
+  /* default background */
   transition: all 0.2s;
 }
+
 input[type="radio"]:checked {
-  border-color: $primary; /* border color when checked (blue) */
-  background-color: $primary; /* ✅ blue background when checked */
+  border-color: $primary;
+  /* border color when checked (blue) */
+  background-color: $primary;
+  /* ✅ blue background when checked */
 }
+
 input[type="radio"]::before {
   content: "";
   display: block;
-  width: 14px; /* tick icon size */
+  width: 14px;
+  /* tick icon size */
   height: 14px;
-  background-image: url('../images/Check--Streamline-Unicons.svg.png'); /* ✅ path to your tick image */
+  background-image: url('../images/Check--Streamline-Unicons.svg.png');
+  /* ✅ path to your tick image */
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0; /* hide by default */
+  opacity: 0;
+  /* hide by default */
 }
 
 input[type="radio"]:checked::before {
-  opacity: 1; /* show tick when checked */
+  opacity: 1;
+  /* show tick when checked */
 }
-.filter-btn{
+
+.filter-btn {
   display: none;
 }
 
 /*responsive*/
 @media screen and (max-width:992px) {
-   .venu-filter-list{
+  .venu-filter-list {
     display: none;
-   }
-   .venue-filter-cards{
+  }
+
+  .venue-filter-cards {
     border: none;
-   }
+  }
 }

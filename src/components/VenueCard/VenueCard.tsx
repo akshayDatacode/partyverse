@@ -4,10 +4,10 @@ import Venuecard from "@/assets/images/venuecards.png";
 import Logistic from "@/assets/images/logistics.png"
 import MultiCarousel from "@/ui/Carousel";
 import type { StaticImageData } from "next/image";
-
+import { BadgePercent } from "lucide-react";
 type VenueCardProps = {
   image?: string | StaticImageData;
-  badgeType?: "luxe" | "new" | "promoted" | "";
+  badgeType?: "luxe" | "new" | "promoted" | "roof";
   discount?: string;
   rating?: number;
   distance?: string;
@@ -19,19 +19,19 @@ type VenueCardProps = {
 };
 
 const VenueCard = ({
-  image="",
+  image = "",
   badgeType = "luxe",
   discount = "50%",
   rating = 0,
   distance = "0 KM",
-  venueName="",
-  location="jaipur",
+  venueName = "",
+  location = "jaipur",
   capacity = 0,
   packages = 0,
-  cuisine="indian",
+  cuisine = "indian",
 }: VenueCardProps) => {
-  
-   const CardImageResponsive = {
+
+  const CardImageResponsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 1,
@@ -71,7 +71,7 @@ const VenueCard = ({
               className="img-fluid w-100"
               style={{ objectFit: "cover", height: "200px" }}
             />
-              <Image
+            <Image
               src={image || Logistic}
               alt={venueName}
               width={342}
@@ -81,8 +81,8 @@ const VenueCard = ({
             />
           </MultiCarousel>
           {discount && (
-            <span className="fw-bold position-absolute bottom-0 start-0 p-2 m-2 discount-badge">
-              {discount}
+            <span className="fw-bold position-absolute bottom-0 start-0 p-2 m-2 discount-badge d-flex align-items-center gap-1">
+              <BadgePercent size={18} fill="white" color="#6658DE" /> {` Flat ${discount} off`}
             </span>
           )}
         </div>
