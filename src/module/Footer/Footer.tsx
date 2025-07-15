@@ -23,8 +23,8 @@ const Footer = () => {
                   </div>
                </div>
             </div>
-            <div className="col-md-8 col-12 d-flex p-md-5 flex-column justify-content-between ">
-               <div className="d-flex row mx-0 ">
+            <div className="col-md-8 col-12 mt-md-4">
+               <div className="row mx-0 justify-content-between p-md-4">
                   <div className="services col-4">
                      <div className="main-data">Services</div>
                      <span className="sub-data">Venues</span>
@@ -57,7 +57,7 @@ const Footer = () => {
             <div className="row mx-0 d-flex ">
                  <div className="col-md-4 footer-paragraph footer-end px-4 pt-md-3 pt-4">© 2025 <span className="partyverse">Partyverse</span> All Rights Reserved.</div>
                  <div className="col-md-8 footer-paragraph px-4 px-md-5 py-3">
-                  <span className="me-5 ">Privacy Policy</span>
+                  <span className="me-5">Privacy Policy</span>
                   <span>Terms of Use</span>
                </div>
             </div>

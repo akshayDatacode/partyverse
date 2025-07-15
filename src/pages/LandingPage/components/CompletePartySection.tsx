@@ -1,6 +1,6 @@
 'use client';
 import { useState } from "react";
-import Tab from "@/components/Tab"; 
+import Tab from "@/components/Tab";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Data for each category
@@ -10,7 +10,7 @@ const categoryData = {
       title: "Elegant Balloon Arches",
       description:
         "Make your entrance unforgettable with artistically crafted balloon arches tailored to your event's theme.",
-    
+
     },
     {
       title: "Themed Backdrops",
@@ -115,8 +115,10 @@ const categoryData = {
   ],
 };
 
+type CategoryKey = keyof typeof categoryData;
+
 const CompletePartySection = () => {
-  const categories = Object.keys(categoryData);
+  const categories = Object.keys(categoryData) as CategoryKey[];
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeCategory, setActiveCategory] = useState(categories[0]);
 
@@ -143,10 +145,9 @@ const CompletePartySection = () => {
               activeTabIndex={activeIndex}
               onTabChange={setActiveIndex}
             />
-             <hr
-                    className="mt-3 mb-4 mx-0"
-                    style={{ width: "1024px", borderTop: "1px solid rgb(203, 206, 209)" }}
-                  />
+            <hr className="mt-3 mb-4 mx-0"
+              style={{ width: "1024px", borderTop: "1px solid rgb(203, 206, 209)" }}
+            />
             {/* Cards for the selected tab */}
             <div className="row mx-0 gx-2 mt-5">
               {categoryData[activeCategory]?.map((item, index) => (
@@ -154,9 +155,9 @@ const CompletePartySection = () => {
                   <div className="p-5 party-cards">
                     <h5 className="mb-2 party-heading">{item.title}</h5>
                     <p className="mb-0 party-content">{item.description}</p>
-                    {item.subtitle && <div className="d-flex align-items-center gap-2">
-                        <i className="bi bi-check-circle-fill" style={{ fontSize: "14px" , color:" #6658DE"}} ></i>
-                      <small className="py-3" style={{fontSize:"12px"}}>{item.subtitle}</small>
+                    {'subtitle' in item && item.subtitle && <div className="d-flex align-items-center gap-2">
+                      <i className="bi bi-check-circle-fill" style={{ fontSize: "14px", color: " #6658DE" }} ></i>
+                      <small className="py-3" style={{ fontSize: "12px" }}>{item?.subtitle}</small>
                     </div>}
                   </div>
                 </div>
