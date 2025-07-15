@@ -9,7 +9,10 @@ import { useState } from "react";
 
 const VenueDetailsPage = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [activeSectionTab, setActiveSectionTab] = useState(0);
+  const [activePartyTab, setActivePartyTab] = useState(0);
 
+  // Tabs that are above images
   const tabItems = [
     {
       label: "Direction",
@@ -27,6 +30,32 @@ const VenueDetailsPage = () => {
       label: "Support - Call Partyverse",
       onClick: () => console.log("Support clicked"),
     },
+  ];
+
+  //  Tabs that are below images
+  const sectionTabs = [
+    { label: "Overview", onClick: () => console.log("Overview clicked") },
+    {
+      label: "Party Packages",
+      onClick: () => console.log("Party Packages clicked"),
+    },
+    { label: "Amenities", onClick: () => console.log("Amenities clicked") },
+    {
+      label: "Property Rules",
+      onClick: () => console.log("Property Rules clicked"),
+    },
+  ];
+  //  Tabs of party area
+  const partyAreaTabs = [
+    {
+      label: "Inside Seating",
+      onClick: () => console.log("Inside Seating clicked"),
+    },
+    {
+      label: "Outside Seating",
+      onClick: () => console.log("Outside Seating clicked"),
+    },
+    { label: "Rooftop", onClick: () => console.log("Rooftop clicked") },
   ];
 
   return (
@@ -107,6 +136,31 @@ const VenueDetailsPage = () => {
                 className="img-fluid rounded-4 w-100 h-100"
               />
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Tabs below image grid */}
+      <div className="row mx-0">
+        <div className="col-12">
+          <Tab
+            tabs={sectionTabs}
+            activeTabIndex={activeSectionTab}
+            onTabChange={setActiveSectionTab}
+          />
+        </div>
+      </div>
+
+      {/* Party Area */}
+      <div className="row mx-0">
+        <div className="col-12">
+          <h4>Party Area</h4>
+          <div className="col-12">
+            <Tab
+              tabs={partyAreaTabs}
+              activeTabIndex={activePartyTab}
+              onTabChange={setActivePartyTab}
+            />
           </div>
         </div>
       </div>
