@@ -1,9 +1,9 @@
 import "../../assets/scss/venuedetailspage.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Venue1 from "@/assets/images/venu-img1.jpg"
-import Venue2 from "@/assets/images/venu-img2.jpg"
-import Venue3 from "@/assets/images/venu-img3.jpg"
-import Venue4 from "@/assets/images/venu-img4.jpg"
+import Venue1 from "@/assets/images/venue-img1.jpg";
+import Venue2 from "@/assets/images/venue-img2.jpg";
+import Venue3 from "@/assets/images/venue-img3.jpg";
+import Venue4 from "@/assets/images/venue-img4.jpg";
 import Tab from "@/components/Tab";
 import { useState } from "react";
 
@@ -65,13 +65,53 @@ const VenueDetailsPage = () => {
         </div>
       </div>
 
-      {/* Images */}
+      {/* Images section*/}
       <div className="row mx-0">
-        <div className="col-12">
-         
+        <div className="col-md-6 col-12">
+          <img
+            src={Venue1.src}
+            alt="Venue 1"
+            className="img-fluid rounded-4  w-100 h-100"
+          />
+        </div>
+        {/* Right Grid of 4 Images */}
+        <div className="col-md-6 col-12">
+          <div className="row g-3">
+            {/* upper */}
+            <div className="col-6">
+              <img
+                src={Venue2.src}
+                alt="Venue 2"
+                className="img-fluid rounded-4 w-100 h-100"
+              />
+            </div>
+            <div className="col-6">
+              <img
+                src={Venue3.src}
+                alt="Venue 3"
+                className="img-fluid rounded-4 w-100 h-100"
+              />
+            </div>
+            {/* lower */}
+            <div className="col-6">
+              <img
+                src={Venue4.src}
+                alt="Venue 4"
+                className="img-fluid rounded-4 w-100 h-100"
+              />
+            </div>
+            <div className="col-6">
+              <img
+                src={Venue1.src}
+                alt="Venue 5"
+                className="img-fluid rounded-4 w-100 h-100"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </>
   );
 };
+
 export default VenueDetailsPage;
