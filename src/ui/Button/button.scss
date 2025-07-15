@@ -1,18 +1,20 @@
+@use "../../assets/scss/variables" as *;
+
 .custom-button-primary {
-    background-color: #6658DE !important;
-    color: #ffffff;
+    background-color: $primary !important;
+    color: $text-white;
     border-radius: 8px;
 }
 .bg-white-btn{
-    background-color: white !important;
-    color: #6658DE!important;
+    background-color: $white !important;
+    color: $text-primary !important;
     font-weight: 700;
     font-size: 16px;
 }
 
 .bg-transparent-btn{
     background-color: transparent !important;
-    border: 1px solid white !important;
+    border: 1px solid $text-white !important;
     font-weight: 700;
     font-size: 16px;
 }

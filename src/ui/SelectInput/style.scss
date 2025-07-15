@@ -1,3 +1,5 @@
+@use "../../assets/scss/variables" as *;
+
 /* style.scss */
 .select-div{
   text-align: start;
@@ -6,22 +8,22 @@
 .custom__control {
   border: none !important;
   box-shadow: none !important;
-  background-color: white !important;
+  background-color: $white !important;
 }
 
 /* Text inside the selected value */
 .custom__single-value {
-  color: black !important;
+  color: $text-black !important;
 }
 
 /* Options in dropdown */
 .custom__option {
-  color: black !important;
+  color: $text-black !important;
 }
 
 /* Dropdown indicator icon (arrow) */
 .custom__indicator {
-  color: #6658DE !important;
+  color: $text-primary !important;
 }
 
 /* Remove border on hover */
@@ -37,7 +39,7 @@
 
 /* Placeholder text style */
 .custom__placeholder {
-  color: black !important;   // Change to your desired color
+  color: $text-black !important;   // Change to your desired color
   font-weight: 500;         // Example: make it semi-bold
   font-size: 18px;          // Example: change font size
 }

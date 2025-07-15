@@ -17,29 +17,29 @@
       padding: 10px 14px;
       font-size: 20px;
       font-weight: 500;
-      color: #010101;
+      color: $text-black;
       border: 1px solid #ededed;
        border-radius: 12px;
       line-height: 100%;
-      background-color: #ffffff;
+      background-color: $white;
       // border-bottom: 2px solid transparent;
       transition: all 0.3s ease;
     
 
       &.active {
-        color: #ffffff;
+        color: $text-white;
         background-color: $primary;
 
         .tab-item {
-          color: #fff;
+          color: $text-white;
         }
       }
 
       &:hover {
-        color: #ffffff;
+        color: $text-white;
         background-color: $primary;
         .tab-item {
-          color: #fff;
+          color: $text-white;
         }
       }
     }

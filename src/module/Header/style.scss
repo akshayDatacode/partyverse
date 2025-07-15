@@ -1,10 +1,11 @@
+@use "../../assets/scss/variables" as *;
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed  !important;
     top: 0;
-    background-color: white;
+    background-color: $white;
     z-index: 1000;
 }
 .header-inner{
@@ -26,6 +27,12 @@
 }
 .hambarger{
     display: none;
+}
+.header-margin-bottom{
+  margin-bottom: 80px;
+}
+.header-highest{
+  z-index: 99999;
 }
 
 /*responsive*/

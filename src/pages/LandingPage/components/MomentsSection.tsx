@@ -51,7 +51,7 @@ const MomentsSection = () => {
       breakpoint: { max: 464, min: 0 },
       items: 1,
       slidesToSlide: 1,
-      partialVisibilityGutter: 180,
+      partialVisibilityGutter: 0,
     },
   };
   return (

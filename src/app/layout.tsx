@@ -8,6 +8,7 @@ import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.css'
 import '@/assets/scss/style.scss'
 import '@/assets/scss/landingpage.scss'
+import '@/assets/scss/venueList.scss'
 import 'react-toastify/dist/ReactToastify.css';
 import Providers from "@/core/Providers";
 import Header from "@/module/Header";

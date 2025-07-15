@@ -55,7 +55,7 @@ body {
   .step-number {
     max-width: 40px;
     background-color: #929292;
-    color: #ffffff;
+    color: $text-white;
     font-weight: "bold";
     position: static;
     transition: all 0.3s ease;
@@ -63,10 +63,10 @@ body {
 
   &:hover,
   &.active-step {
-    border-color: $text-primary;
+    border-color: $primary;
 
     .step-number {
-      background-color: $text-primary;
+      background-color: $primary;
       color: $text-white;
     }
   }
@@ -159,7 +159,7 @@ body {
 //Testimonial-section
 .trusted-host {
   img {
-    border: 2px solid white;
+    border: 2px solid $white;
     margin-left: -20px;
   }
   .trusted-user {
@@ -175,7 +175,7 @@ body {
   .testimonial-card {
     .review-text {
       font-size: 23px;
-      color: #000000;
+      color: $text-black;
     }
     h6 {
       font-size: 14px;

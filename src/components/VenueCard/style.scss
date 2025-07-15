@@ -1,22 +1,23 @@
+@use "../../assets/scss/variables" as *;
+
 .venue-card {
   transition: all 0.3s ease;
   border: 1px solid #f0f0f0;
   border-radius: 20px;
   box-shadow: 1px 5px 9px 2px #00000008;
 
- 
   .tag-badge {
     font-weight: 600;
     font-size: 0.7rem;
     border-radius: 12px;
-      z-index: 10;
+    z-index: 1;
     text-transform: uppercase;
 
     &.luxe {
       background: linear-gradient(92.21deg, #FFE28E 2.18%, #FFF6DA 78.17%, #FFE28E 99.5%);
       font-size: 14px;
       font-weight: 500;
-      color:#000000;
+      color: $text-black;
       border-radius: 9px;
     }
 
@@ -24,13 +25,13 @@
       background-color:#DDF9FF; 
       font-size: 14px;
       font-weight: 500;
-      color: #000000;
+      color: $text-black;
       border-radius: 9px;
     }
 
     &.promoted {
       background-color:#D93A3A;
-      color: #FFFFFF;
+      color: $text-white;
       font-size: 12px;
       font-weight: 700;
       border-radius: 8px;
@@ -38,24 +39,24 @@
   }
 
   .discount-badge {
-    background: linear-gradient(90deg, #6658DE 0%, rgba(55, 48, 120, 0) 100%);
-    color: #FFFFFF;
+    background: linear-gradient(90deg, $text-primary 0%, rgba(55, 48, 120, 0) 100%);
+    color: $text-white;
     font-size: 16px;
   
   }
 
   .rating{
     background: #FFD251;
-    color:#010101;
+    color: $text-black;
     font-size:14px;
   }
   .distance{
     font-size: 12px;
-    color: #6658DE;
+    color: $text-primary;
   }
 
   .venue-name{
-    color: #000000;
+    color: $text-black;
     font-size: 16px;
   }
   .location{
@@ -63,10 +64,10 @@
   }
   .capacity{
     border: 1px solid;
-    border-color: #6658DE;
+    border-color: $text-primary;
     border-radius: 8px;
     font-size: 14px;
-    color: #000000;
+    color: $text-black;
   }
   .cuisine{
     font-size: 14px;

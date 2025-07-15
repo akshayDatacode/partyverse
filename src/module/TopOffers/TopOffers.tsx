@@ -17,7 +17,7 @@ const TopOffersResponsive = {
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    partialVisibilityGutter: 30 // this is needed to tell the amount of px that should be visible.
+    partialVisibilityGutter: 0 // this is needed to tell the amount of px that should be visible.
   }
 }
 
@@ -65,7 +65,7 @@ const TopOffers = () => {
           TopOffersData && TopOffersData.map((offer, index) => (
             <div className="px-3" key={index}>
               <div className="row mx-0 top-offer">
-                <div className="col-6 py-4 px-3">
+                <div className="col-6 py-md-4 py-2 px-md-3 px-1">
                   <div className="h-100 row mx-0 justify-content-between ">
                     <div className="pb-4 col-12">
                     <div className="offer-tag">{offer.tag.toUpperCase()}</div>
