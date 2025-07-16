@@ -13,8 +13,6 @@ const VenuDetailsImageSection = ({
 }) => {
   return (
     <>
-		<div className="row mx-0 d-flex justify-content-center align-items-center">
-        <div className="col-md-11">
       <div className="row mx-0">
         {imageData.map((data, index) => {
           return (
@@ -47,8 +45,6 @@ const VenuDetailsImageSection = ({
           );
         })}
       </div>
-			</div>
-			</div>
     </>
   );
 };
