@@ -8,3 +8,65 @@ body {
   font-size: $content-text;
 }
 
+.food-type-names{
+   font-size: 15px;
+   font-weight: 500;
+   color: $text-primary;
+}
+.partyverse-score-badge{
+  border-radius: 10px;
+  color: $text-white;
+  background-color: $primary;
+  font-size: 20px;
+}
+.partyverse-score{
+  font-size: 13px;
+  color: $text-primary;
+}
+.place-name{
+  font-weight: 500;
+  color: $text-black;
+  font-size: 14px;
+}
+.km{
+  color: #898989;
+}
+.pure-veg-badge{
+  background-color: #45D064;
+  border-radius: 20px;
+  font-size: 24px;
+}
+.venue-details-main-image{
+  border-radius: 10px;
+}
+.venue-details-sub-image{
+  border-radius: 10px;
+}
+.key-highlight{
+  font-size: 20px;
+}
+.highlight-icons{
+  border-radius: 20px;
+  background-color: #F8F8F8;
+}
+.highlight-icons-data{
+  font-size: 16px;
+}
+.highlight-icons-subdata{
+  font-size: 12px;
+}
+.amenities-heading{
+  font-weight: 600;
+  font-size: 24px;
+}
+.amenities-sub-heading{
+  font-size: 14px;
+  color: $text-primary;
+  font-weight: 400;
+}
+.amenities-badge{
+  background-color: #F6F5FF;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+}
