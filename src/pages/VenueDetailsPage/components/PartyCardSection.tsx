@@ -14,6 +14,7 @@ const packages = [
     originalPrice: 500,
     discountLabel: "Flat 20% off",
     tagLabel: "Recommended",
+    vegetarian: true,
   },
   {
     title: "Gold Package",
@@ -28,6 +29,7 @@ const packages = [
     originalPrice: 360,
     discountLabel: "Flat 20% off",
     tagLabel: "Budget",
+    vegetarian: false,
   },
   {
     title: "Silver Package",
@@ -43,31 +45,29 @@ const packages = [
     originalPrice: 350,
     discountLabel: "Flat 30% off",
     tagLabel: "Best Seller",
+    vegetarian: true,
   },
 ];
 
 const PartyCardSection = () => {
   return (
     <>
-      <div className="row mx-0 d-flex justify-content-center align-items-center">
-        <div className="col-md-11">
-          <div className="row mx-0">
-            {packages.map((pkg, index) => (
-              <div key={index} className="col-md-6 col-12 mb-4 p-3">
-                <div className="p-3 party-package-card">
-                <PartyPackageCard
-                  title={pkg.title}
-                  items={pkg.items}
-                  price={pkg.price}
-                  originalPrice={pkg.originalPrice}
-                  discountLabel={pkg.discountLabel}
-                  tagLabel={pkg.tagLabel}
-                />
-                </div>
-              </div>
-            ))}
+      <div className="row mx-0 px-0">
+        {packages.map((pkg, index) => (
+          <div key={index} className="col-md-6 col-12 my-1">
+            <div className="party-package-card my-2">
+              <PartyPackageCard
+                title={pkg.title}
+                items={pkg.items}
+                price={pkg.price}
+                originalPrice={pkg.originalPrice}
+                discountLabel={pkg.discountLabel}
+                tagLabel={pkg.tagLabel}
+                vegetarian={pkg.vegetarian}
+              />
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </>
   );

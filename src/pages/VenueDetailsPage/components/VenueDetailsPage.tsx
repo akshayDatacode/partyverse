@@ -39,24 +39,24 @@ const HighlightIconData = [
   },
   {
     ImageUrl: capacityIcon,
-    IconData: "100 Guest",
-    IconSubData: "Capacity"
+    IconData: "28",
+    IconSubData: "Tables"
   }, {
     ImageUrl: capacityIcon,
-    IconData: "100 Guest",
-    IconSubData: "Capacity"
+    IconData: "Yes",
+    IconSubData: "Separate Area"
   }, {
     ImageUrl: capacityIcon,
-    IconData: "100 Guest",
-    IconSubData: "Capacity"
+    IconData: "Yes",
+    IconSubData: "AC"
   }, {
     ImageUrl: capacityIcon,
-    IconData: "100 Guest",
-    IconSubData: "Capacity"
+    IconData: "Yes",
+    IconSubData: "Valet Parking"
   }, {
     ImageUrl: capacityIcon,
-    IconData: "100 Guest",
-    IconSubData: "Capacity"
+    IconData: "1500 sq ft",
+    IconSubData: "Area"
   }
 ];
 
@@ -118,59 +118,57 @@ const VenueDetailsPage = () => {
 
   return (
     <>
-      <div className="p-3">
-        {/* Upperheading */}
-        <VenuDetailsTopSection />
+      <div className="row mx-0 align-items-center justify-content-center py-3">
+        <div className="col-md-11 col-12 ">
+          {/* Upperheading */}
+          <VenuDetailsTopSection />
 
-        {/* Tabs */}
-       <div className="row mx-0 d-flex justify-content-center align-items-center">
-        <div className="col-md-11">
-          <TabSection
-            tabItems={tabItems}
-            activeIndex={activeIndex}
-            setActiveIndex={setActiveIndex} />
+          {/* Tabs */}
+          <div className="mx-2 px-1">
+            <TabSection
+              tabItems={tabItems}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex} />
+          </div>
+
+          {/* Images section*/}
+          <VenuDetailsImageSection imageData={imageData} />
+
+          {/* Tabs below image grid */}
+          <div className="mx-2 px-1">
+            <TabSection
+              tabItems={sectionTabs}
+              activeIndex={activeSectionTab}
+              setActiveIndex={setActiveSectionTab}
+            />
+          </div>
+
+          {/* Party Area */}
+          < PartySection label="Party Area"
+            partyAreaTabs={partyAreaTabs}
+            activePartyTab={activePartyTab}
+            setActivePartyTab={setActivePartyTab} />
+
+
+          {/* Key highlight section*/}
+          <KeyHighlightSection HighlightIconData={HighlightIconData} videoData={videoData} />
+
+          {/* party packages */}
+          <PartySection label="Party Packages"
+            partyAreaTabs={partyAreaTabs}
+            activePartyTab={activePartyTab}
+            setActivePartyTab={setActivePartyTab} />
+
+          {/*Package Card Section */}
+          <PartyCardSection />
+
+          {/* Amenities section */}
+          <AmenitiesSection />
+
+          {/*Similar Places */}
+          <SimilarPlaceSection />
         </div>
-        </div>
-
-        {/* Images section*/}
-        <VenuDetailsImageSection imageData={imageData} />
-
-        {/* Tabs below image grid */}
-         <div className="row mx-0 d-flex justify-content-center align-items-center">
-        <div className="col-md-11">
-          <TabSection
-            tabItems={sectionTabs}
-            activeIndex={activeSectionTab}
-            setActiveIndex={setActiveSectionTab}
-          />
-        </div>
-        </div>
-
-        {/* Party Area */}
-        < PartySection label="Party Area"
-          partyAreaTabs={partyAreaTabs}
-          activePartyTab={activePartyTab}
-          setActivePartyTab={setActivePartyTab} />
-
-
-        {/* Key highlight section*/}
-        <KeyHighlightSection HighlightIconData={HighlightIconData} videoData={videoData} />
-
-        {/* party packages */}
-        <PartySection label="Party Packages"
-          partyAreaTabs={partyAreaTabs}
-          activePartyTab={activePartyTab}
-          setActivePartyTab={setActivePartyTab} />
-        
-        {/*Package Card Section */}
-        <PartyCardSection/>
-
-        {/* Amenities section */}
-        <AmenitiesSection/>
-
-        {/*Similar Places */}
-        <SimilarPlaceSection/>
-       </div>
+      </div>
     </>
   );
 };
