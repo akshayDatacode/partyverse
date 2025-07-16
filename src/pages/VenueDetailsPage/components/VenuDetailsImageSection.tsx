@@ -13,8 +13,8 @@ const VenuDetailsImageSection = ({
 }) => {
   return (
     <>
-      <div className="row mx-0">
-        {imageData.map((data, index) => {
+      <div className="row mx-0 my-3">
+        {imageData && imageData.map((data, index) => {
           return (
             <>
               <div className="col-md-6 col-12 py-2" key={index}>
@@ -24,11 +24,9 @@ const VenuDetailsImageSection = ({
                   className="img-fluid w-100 h-100 venue-details-main-image"
                 />
               </div>
-              {/* Right Grid of 4 Images */}
               <div className="col-md-6 col-12 px-0">
                 <div className="row mx-0">
-                  {/* upper */}
-                  {data.childrenImage.map((item, i) => {
+                  {data?.childrenImage.map((item, i) => {
                     return (
                       <div className="col-6 p-2" key={i}>
                         <Image

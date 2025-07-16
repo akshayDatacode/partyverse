@@ -52,8 +52,8 @@ const packages = [
 const PartyCardSection = () => {
   return (
     <>
-      <div className="row mx-0 px-0">
-        {packages.map((pkg, index) => (
+      <div className="row mx-0 pb-3 ">
+        {packages && packages.map((pkg, index) => (
           <div key={index} className="col-md-6 col-12 my-1">
             <div className="party-package-card my-2">
               <PartyPackageCard

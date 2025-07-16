@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 
 import "@/assets/scss/venuedetailspage.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,21 +6,14 @@ import Venue1 from "@/assets/images/venue-img1.jpg";
 import Venue2 from "@/assets/images/venue-img2.jpg";
 import Venue3 from "@/assets/images/venue-img3.jpg";
 import Venue4 from "@/assets/images/venue-img4.jpg";
-import PartyArea from '@/assets/images/partyarea.jpg'
-import EntirePlace from '@/assets/images/entireplace.jpg'
-import PartyPackage from '@/assets/images/partypackage.png'
-import PlayIcon from '@/assets/images/playicon.png'
-import Tab from "@/components/Tab";
-import PartyPackageCard from "@/components/PartyPackageCard";
-import capacityIcon from "@/assets/images/Bitwig--Streamline-Simple-Icons.svg.png";
 import VenuDetailsTopSection from "./VenueDetailsTopSection";
-import TabSection from "./TabSection";
 import VenuDetailsImageSection from "./VenuDetailsImageSection";
-import KeyHighlightSection from "./KeyHighlightSection";
-import PartySection from "./PartySection";
+import PartySection from "./PartyAreaSection";
 import AmenitiesSection from "./AmenitiesSection";
-import PartyCardSection from "./PartyCardSection";
 import SimilarPlaceSection from "./SimilarPlaceSection";
+import PartyPackageSection from "./PartyPackageSection";
+import Tab from "@/components/Tab";
+import BadgeTag from "@/components/BadgeTag";
 
 const imageData = [{
   parentImage: Venue1,
@@ -29,46 +21,13 @@ const imageData = [{
     Venue2, Venue3, Venue4, Venue1
   ]
 }
-]
-
-const HighlightIconData = [
-  {
-    ImageUrl: capacityIcon,
-    IconData: "100 Guest",
-    IconSubData: "Capacity"
-  },
-  {
-    ImageUrl: capacityIcon,
-    IconData: "28",
-    IconSubData: "Tables"
-  }, {
-    ImageUrl: capacityIcon,
-    IconData: "Yes",
-    IconSubData: "Separate Area"
-  }, {
-    ImageUrl: capacityIcon,
-    IconData: "Yes",
-    IconSubData: "AC"
-  }, {
-    ImageUrl: capacityIcon,
-    IconData: "Yes",
-    IconSubData: "Valet Parking"
-  }, {
-    ImageUrl: capacityIcon,
-    IconData: "1500 sq ft",
-    IconSubData: "Area"
-  }
-];
-
-const videoData = [
-  { heading: "Video of Party Area", image: PartyArea },
-  { heading: "Video of entire place", image: EntirePlace }
 ];
 
 const VenueDetailsPage = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  //const [activeIndex, setActiveIndex] = useState(0);
   const [activeSectionTab, setActiveSectionTab] = useState(0);
-  const [activePartyTab, setActivePartyTab] = useState(0);
+  const [activePartyAreaTab, setActivePartyAreaTab] = useState(0);
+  const [activePartyPackageTab, setActivePartyPackageTab] = useState(0);
 
   // Tabs that are above images
   const tabItems = [
@@ -103,6 +62,7 @@ const VenueDetailsPage = () => {
       onClick: () => console.log("Property Rules clicked"),
     },
   ];
+
   //  Tabs of party area
   const partyAreaTabs = [
     {
@@ -123,15 +83,13 @@ const VenueDetailsPage = () => {
           {/* Upperheading */}
           <VenuDetailsTopSection />
 
-          {/* Tabs */}
-          <div className="mx-2 px-1">
-            <div className="row mx-0 my-3">
-              <div className="col-12 p-0">
-                <Tab
-                  tabs={tabItems}
-                  activeTabIndex={activeIndex}
-                  onTabChange={setActiveIndex}
-                />
+          {/* Badge tabs */}
+          <div className="row mx-0 my-3">
+            <div className="col-12">
+              <div className="d-flex overflow-auto flex-nowrap py-2 hide-scrollbar">
+                {tabItems && tabItems.map((item, index) => (
+                  <BadgeTag label={item.label} icon="" key={index} />
+                ))}
               </div>
             </div>
           </div>
@@ -140,34 +98,29 @@ const VenueDetailsPage = () => {
           <VenuDetailsImageSection imageData={imageData} />
 
           {/* Tabs below image grid */}
-          <div className="mx-2 px-1">
-            <TabSection
-              tabItems={sectionTabs}
-              activeIndex={activeSectionTab}
-              setActiveIndex={setActiveSectionTab}
-            />
+          <div className="row mx-0 my-3">
+            <div className="col-12">
+              <Tab
+                tabs={sectionTabs}
+                activeTabIndex={activeSectionTab}
+                onTabChange={setActiveSectionTab}
+              />
+            </div>
           </div>
 
           {/* Party Area */}
           <PartySection label="Party Area"
             partyAreaTabs={partyAreaTabs}
-            activePartyTab={activePartyTab}
-            setActivePartyTab={setActivePartyTab}
+            activePartyTab={activePartyAreaTab}
+            setActivePartyTab={setActivePartyAreaTab}
           />
-
-
-          {/* Key highlight section*/}
-          <KeyHighlightSection HighlightIconData={HighlightIconData} videoData={videoData} />
 
           {/* party packages */}
-          <PartySection label="Party Packages"
+          <PartyPackageSection label="Party Packages"
             partyAreaTabs={partyAreaTabs}
-            activePartyTab={activePartyTab}
-            setActivePartyTab={setActivePartyTab}
+            activePartyTab={activePartyPackageTab}
+            setActivePartyTab={setActivePartyPackageTab}
           />
-
-          {/*Package Card Section */}
-          <PartyCardSection />
 
           {/* Amenities section */}
           <AmenitiesSection />
