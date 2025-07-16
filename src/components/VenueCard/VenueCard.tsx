@@ -1,13 +1,20 @@
 import Image from "next/image";
 import "./style.scss";
 import Venuecard from "@/assets/images/venuecards.png";
-import Logistic from "@/assets/images/logistics.png"
+import Logistic from "@/assets/images/logistics.png";
 import MultiCarousel from "@/ui/Carousel";
 import type { StaticImageData } from "next/image";
 import { BadgePercent } from "lucide-react";
 type VenueCardProps = {
   image?: string | StaticImageData;
-  badgeType?: "luxe" | "new" | "promoted" | "roof";
+  badgeType?:
+    | "luxe"
+    | "new"
+    | "promoted"
+    | "roof"
+    | "fine dine"
+    | "rooftop"
+    | "cafe";
   discount?: string;
   rating?: number;
   distance?: string;
@@ -16,6 +23,7 @@ type VenueCardProps = {
   capacity?: number;
   packages?: number;
   cuisine?: string;
+  pricePerGuest?: number;
 };
 
 const VenueCard = ({
@@ -29,24 +37,24 @@ const VenueCard = ({
   capacity = 0,
   packages = 0,
   cuisine = "indian",
+  pricePerGuest = 360,
 }: VenueCardProps) => {
-
   const CardImageResponsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 1,
-      slidesToSlide: 1
+      slidesToSlide: 1,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 1,
-      slidesToSlide: 1
+      slidesToSlide: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1
-    }
+      slidesToSlide: 1,
+    },
   };
   return (
     <>
@@ -62,7 +70,12 @@ const VenueCard = ({
 
         {/* Image */}
         <div className="position-relative">
-          <MultiCarousel responsive={CardImageResponsive} arrows={false} autoPlay={false} draggable={true} >
+          <MultiCarousel
+            responsive={CardImageResponsive}
+            arrows={false}
+            autoPlay={false}
+            draggable={true}
+          >
             <Image
               src={image || Venuecard}
               alt={venueName}
@@ -82,7 +95,8 @@ const VenueCard = ({
           </MultiCarousel>
           {discount && (
             <span className="fw-bold position-absolute bottom-0 start-0 p-2 m-2 discount-badge d-flex align-items-center gap-1">
-              <BadgePercent size={18} fill="white" color="#6658DE" /> {` Flat ${discount} off`}
+              <BadgePercent size={18} fill="white" color="#6658DE" />{" "}
+              {` Flat ${discount} off`}
             </span>
           )}
         </div>
@@ -95,6 +109,9 @@ const VenueCard = ({
               {rating.toFixed(1)} ★
             </span>
             <small className="fw-medium distance">{distance}</small>
+            <div className="fw-bold price-per-guest">
+              ₹{pricePerGuest} / Guest
+            </div>
           </div>
 
           {/* Name + Location */}
