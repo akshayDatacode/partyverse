@@ -41,7 +41,7 @@ const SimilarPlaceSection = () => {
 
   return (
     <>
-      <div className="row mx-0 d-flex justify-content-center align-items-center">
+      <div className="row mx-0 py-5  d-flex justify-content-center align-items-center">
         <div className="col-md-11">
           <div className="row mx-0">
             <div className="col-12 mb-3">
