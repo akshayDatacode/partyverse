@@ -125,10 +125,15 @@ const VenueDetailsPage = () => {
 
           {/* Tabs */}
           <div className="mx-2 px-1">
-            <TabSection
-              tabItems={tabItems}
-              activeIndex={activeIndex}
-              setActiveIndex={setActiveIndex} />
+            <div className="row mx-0 my-3">
+              <div className="col-12 p-0">
+                <Tab
+                  tabs={tabItems}
+                  activeTabIndex={activeIndex}
+                  onTabChange={setActiveIndex}
+                />
+              </div>
+            </div>
           </div>
 
           {/* Images section*/}
@@ -144,10 +149,11 @@ const VenueDetailsPage = () => {
           </div>
 
           {/* Party Area */}
-          < PartySection label="Party Area"
+          <PartySection label="Party Area"
             partyAreaTabs={partyAreaTabs}
             activePartyTab={activePartyTab}
-            setActivePartyTab={setActivePartyTab} />
+            setActivePartyTab={setActivePartyTab}
+          />
 
 
           {/* Key highlight section*/}
@@ -157,7 +163,8 @@ const VenueDetailsPage = () => {
           <PartySection label="Party Packages"
             partyAreaTabs={partyAreaTabs}
             activePartyTab={activePartyTab}
-            setActivePartyTab={setActivePartyTab} />
+            setActivePartyTab={setActivePartyTab}
+          />
 
           {/*Package Card Section */}
           <PartyCardSection />

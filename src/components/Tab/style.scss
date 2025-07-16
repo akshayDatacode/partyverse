@@ -6,25 +6,29 @@
   align-items: center;
 
   .tab-list {
+
+    // Dynamically apply spacing using the `data-tab-spacing` attribute
+    .tab-spacing {
+      margin-right: var(--tab-spacing, 8px);
+    }
+
     display: flex;
-    gap: 42px;
     // border-bottom: 2px solid $gray-300;
     width: 100%;
     justify-content: start;
 
-    
     .tab-item {
       padding: 10px 14px;
       font-size: 20px;
       font-weight: 500;
       color: $text-black;
       border: 1px solid #ededed;
-       border-radius: 12px;
+      border-radius: 12px;
       line-height: 100%;
       background-color: $white;
       // border-bottom: 2px solid transparent;
       transition: all 0.3s ease;
-    
+
 
       &.active {
         color: $text-white;
@@ -38,6 +42,7 @@
       &:hover {
         color: $text-white;
         background-color: $primary;
+
         .tab-item {
           color: $text-white;
         }

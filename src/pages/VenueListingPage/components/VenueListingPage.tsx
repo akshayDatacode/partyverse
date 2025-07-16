@@ -3,7 +3,6 @@ import Image from "next/image";
 import SelectPartyFilter from "@/module/SearchPartyFilter";
 import VenuListFilter from "./VenuListFilter";
 import VenueCard from "@/components/VenueCard";
-import CrossIcon from "@/assets/images/x.png";
 import Button from "@/ui/Button";
 import { useState } from "react";
 import VenueFilterBadge from "@/components/VenueFilter/VenueFilterBadge";

@@ -1,5 +1,5 @@
 'use client'
-import VenueListingPage from '@/pages/VenueListingPage/components';
+import VenueListingPage from '@/pages/VenueListingPage';
 
 const Venues = () => {
   return (

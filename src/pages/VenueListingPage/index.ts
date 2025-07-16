@@ -1,0 +1,1 @@
+export { default } from '@/pages/VenueListingPage/components/VenueListingPage'
