@@ -7,7 +7,7 @@ import type { StaticImageData } from "next/image";
 import { BadgePercent } from "lucide-react";
 type VenueCardProps = {
   image?: string | StaticImageData;
-  badgeType?: "luxe" | "new" | "promoted" | "roof";
+  badgeType?: "luxe" | "new" | "promoted" | "roof"|"fine dine"|"rooftop"|"cafe";
   discount?: string;
   rating?: number;
   distance?: string;

@@ -25,7 +25,7 @@ const packages = [
       { quantity: 2, name: "Breads" },
     ],
     price: 500,
-    originalPrice:360,
+    originalPrice: 360,
     discountLabel: "Flat 20% off",
     tagLabel: "Budget",
   },
@@ -49,19 +49,23 @@ const packages = [
 const PartyCardSection = () => {
   return (
     <>
-      <div className="row gap-3">
-         {packages.map((pkg, index) => (
-        <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
-          <PartyPackageCard
-            title={pkg.title}
-            items={pkg.items}
-            price={pkg.price}
-            originalPrice={pkg.originalPrice}
-            discountLabel={pkg.discountLabel}
-            tagLabel={pkg.tagLabel}
-          />
+      <div className="row mx-0 d-flex justify-content-center align-items-center">
+        <div className="col-md-11">
+          <div className="row gap-3">
+            {packages.map((pkg, index) => (
+              <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
+                <PartyPackageCard
+                  title={pkg.title}
+                  items={pkg.items}
+                  price={pkg.price}
+                  originalPrice={pkg.originalPrice}
+                  discountLabel={pkg.discountLabel}
+                  tagLabel={pkg.tagLabel}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
       </div>
     </>
   );

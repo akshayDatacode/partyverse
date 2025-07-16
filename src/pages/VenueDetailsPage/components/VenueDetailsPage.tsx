@@ -21,6 +21,7 @@ import KeyHighlightSection from "./KeyHighlightSection";
 import PartySection from "./PartySection";
 import AmenitiesSection from "./AmenitiesSection";
 import PartyCardSection from "./PartyCardSection";
+import SimilarPlaceSection from "./SimilarPlaceSection";
 
 const imageData = [{
   parentImage: Venue1,
@@ -122,23 +123,27 @@ const VenueDetailsPage = () => {
         <VenuDetailsTopSection />
 
         {/* Tabs */}
-        <div className="p-2">
+       <div className="row mx-0 d-flex justify-content-center align-items-center">
+        <div className="col-md-11">
           <TabSection
             tabItems={tabItems}
             activeIndex={activeIndex}
             setActiveIndex={setActiveIndex} />
+        </div>
         </div>
 
         {/* Images section*/}
         <VenuDetailsImageSection imageData={imageData} />
 
         {/* Tabs below image grid */}
-        <div className="p-2">
+         <div className="row mx-0 d-flex justify-content-center align-items-center">
+        <div className="col-md-11">
           <TabSection
             tabItems={sectionTabs}
             activeIndex={activeSectionTab}
             setActiveIndex={setActiveSectionTab}
           />
+        </div>
         </div>
 
         {/* Party Area */}
@@ -164,11 +169,8 @@ const VenueDetailsPage = () => {
         <AmenitiesSection/>
 
         {/*Similar Places */}
-        <div className="row mx-0">
-          <h4>Similar Places</h4>
-           
-        </div>
-      </div>
+        <SimilarPlaceSection/>
+       </div>
     </>
   );
 };
