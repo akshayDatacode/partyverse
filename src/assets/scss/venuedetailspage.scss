@@ -4,7 +4,32 @@ body {
   font-family: $font;
 }
 
+//upper section
 .custom-content {
   font-size: $content-text;
 }
 
+.location{
+  font-size: 14px;
+}
+
+.food{
+  font-size:15px;
+  color: $primary;
+}
+.number-badge{
+  font-size: 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: $primary;
+}
+.score{
+  color: $primary;
+  font-size: 13px;
+}
+
+.pure-veg{
+  font-size: $content-text;
+  background-color:#45D064;
+  border-radius: 20px;
+}

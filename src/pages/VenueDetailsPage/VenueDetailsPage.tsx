@@ -4,10 +4,10 @@ import Venue1 from "@/assets/images/venue-img1.jpg";
 import Venue2 from "@/assets/images/venue-img2.jpg";
 import Venue3 from "@/assets/images/venue-img3.jpg";
 import Venue4 from "@/assets/images/venue-img4.jpg";
-import PartyArea from '@/assets/images/partyarea.jpg'
-import EntirePlace from '@/assets/images/entireplace.jpg'
-import PartyPackage from '@/assets/images/partypackage.png'
-import PlayIcon from '@/assets/images/playicon.png'
+import PartyArea from "@/assets/images/partyarea.jpg";
+import EntirePlace from "@/assets/images/entireplace.jpg";
+import PartyPackage from "@/assets/images/partypackage.png";
+import PlayIcon from "@/assets/images/playicon.png";
 import Tab from "@/components/Tab";
 import { useState } from "react";
 import PartyPackageCard from "@/components/PartyPackageCard";
@@ -65,32 +65,49 @@ const VenueDetailsPage = () => {
 
   return (
     <>
+    <div className="row mx-0 d-flex justify-content-center align-items-center">
+      <div className="col-md-11 px-0">
       {/* Upperheading */}
       <div className="row mx-0 pt-5">
         {/* Left Section */}
         <div className="col-md-7 col-12">
           <h3 className="fw-bold custom-content">Eatery Royale</h3>
           <div className="d-flex gap-2 mb-2">
-            <span>Janakpuri</span>
-            <span className="text-muted">1.4 KM</span>
-            <span className="badge bg-dark p-2 ms-5">4</span>
-            <p>Party Score</p>
+            <span className="location">Janakpuri</span>
+            <span className="text-muted location">1.4 KM</span>
+            <span
+              className="fw-bold d-flex justify-content-center align-items-center p-2 ms-5 number-badge"
+              style={{ height: "40px", width: "40px" }}
+            >
+              4
+            </span>
+            <p className="fw-bold score">
+              Party
+              <br />
+              Score
+            </p>
           </div>
           <div>
-            <p>North Indian,Chinese,Fast Food,Street Food,Desserts</p>
+            <p className="mb-3 food">
+              North Indian,Chinese,Fast Food,Street Food,Desserts
+            </p>
           </div>
         </div>
         {/* Right Section */}
         <div className="col-md-5 col-12 d-flex justify-content-md-end justify-content-start align-items-center mt-3 mt-md-0">
-          <div className="px-3 py-1 bg-success text-white rounded-pill fw-semibold">
+          <div className="px-4 py-2 text-white fw-bold pure-veg">
             100% Pure Veg
           </div>
         </div>
       </div>
+      </div>
+      </div>
 
       {/* Tabs */}
-      <div className="row mx-0">
-        <div className="col-12">
+      <div className="row mx-0  d-flex justify-content-center align-items-center">
+        <div className="col-md-11 px-0">
+           <div className="row mx-0">
+        <div className="col-12 px-0">
           <Tab
             tabs={tabItems}
             activeTabIndex={activeIndex}
@@ -98,8 +115,13 @@ const VenueDetailsPage = () => {
           />
         </div>
       </div>
+        </div>
+      </div>
+     
 
       {/* Images section*/}
+      <div className="row mx-0 py-4 d-flex justify-content-center align-items-center">
+        <div className="col-md-11 px-0">
       <div className="row mx-0">
         <div className="col-md-6 col-12">
           <img
@@ -109,7 +131,7 @@ const VenueDetailsPage = () => {
           />
         </div>
         {/* Right Grid of 4 Images */}
-        <div className="col-md-6 col-12">
+        <div className="col-md-6 col-12 px-0">
           <div className="row g-3">
             {/* upper */}
             <div className="col-6">
@@ -144,10 +166,14 @@ const VenueDetailsPage = () => {
           </div>
         </div>
       </div>
+       </div>
+      </div>
 
       {/* Tabs below image grid */}
+      <div className="row mx-0 d-flex justify-content-center align-items-center">
+      <div className="col-md-11 px-0">
       <div className="row mx-0">
-        <div className="col-12">
+        <div className="col-12 px-0 mb-5">
           <Tab
             tabs={sectionTabs}
             activeTabIndex={activeSectionTab}
@@ -155,11 +181,15 @@ const VenueDetailsPage = () => {
           />
         </div>
       </div>
+      </div>
+      </div>
 
       {/* Party Area */}
+      <div className="row mx-0 d-flex justify-content-center align-items-center">
+      <div className="col-md-11 px-0">
       <div className="row mx-0">
-        <div className="col-12">
-          <div>
+        <div className="col-12 px-0 mb-4">
+          <div className="mb-3">
             <h4>Party Area</h4>
           </div>
           <Tab
@@ -171,19 +201,19 @@ const VenueDetailsPage = () => {
       </div>
       <div className="row mx-0">
         {/* Key highlight */}
-        <div className="col-md-4">
+        <div className="col-md-4 px-0">
           <h5>Key highlights</h5>
         </div>
         {/* video */}
-        <div className="col-md-8">
+        <div className="col-md-8 px-0">
           <div className="row mx-0 d-flex justify-content-center">
             <div className="col-md-4 col-12">
-              <h5>Video of Party Area</h5>
+             <h5>Video of Party Area</h5>
               <img
                 src={PartyArea.src}
                 alt="Venue 5"
                 className="img-fluid rounded-4"
-                style={{ height: '423px', width: '460px' }}
+                style={{ height: "423px", width: "460px" }}
               />
             </div>
             <div className="col-md-4 col-12">
@@ -192,17 +222,21 @@ const VenueDetailsPage = () => {
                 src={EntirePlace.src}
                 alt="Venue 5"
                 className="img-fluid rounded-4 "
-                style={{ height: '423px', width: '460px' }}
+                style={{ height: "423px", width: "460px" }}
               />
             </div>
           </div>
         </div>
       </div>
+      </div>
+      </div>
 
       {/* party packages */}
+      <div className="row mx-0 d-flex justify-content-center align-items-center">
+      <div className="col-md-11 px-0">
       <div className="row mx-0">
-        <div className="col-12">
-          <div>
+        <div className="col-12 px-0 mb-4">
+          <div className="mb-3">
             <h4>Party Packages</h4>
           </div>
           <Tab
@@ -217,7 +251,7 @@ const VenueDetailsPage = () => {
       <div className="row g-3">
         {/* upper */}
         <div className="col-6 border party-package">
-          <h4>Silver Package</h4>
+          <h5>Silver Package</h5>
           <div>
             <PartyPackageCard />
             <img
@@ -228,7 +262,7 @@ const VenueDetailsPage = () => {
           </div>
         </div>
         <div className="col-6 border party-package">
-          <h4>Gold Package</h4>
+          <h5>Gold Package</h5>
           <div>
             <img
               src={PartyPackage.src}
@@ -239,7 +273,7 @@ const VenueDetailsPage = () => {
         </div>
         {/* lower */}
         <div className="col-6 border party-package">
-          <h4>Gold Plus Party Package</h4>
+          <h5>Gold Plus Party Package</h5>
           <div>
             <img
               src={PartyPackage.src}
@@ -249,7 +283,7 @@ const VenueDetailsPage = () => {
           </div>
         </div>
         <div className="col-6 border party-package">
-          <h4>Platinum Package</h4>
+          <h5>Platinum Package</h5>
           <div>
             <img
               src={PartyPackage.src}
@@ -259,34 +293,37 @@ const VenueDetailsPage = () => {
           </div>
         </div>
       </div>
+      </div>
+      </div>
 
       {/* Amenities section */}
+      <div className="row mx-0 d-flex justify-content-center align-items-center">
+      <div className="col-md-11 px-0">
       <div className="row mx-0">
-        <h4>Amenities</h4>
+        <h4 className="mb-4">Amenities</h4>
         <div className="col-12">
-          <h6>EXPERIENCES</h6>
-          <div>
-            {/* badges */}
-          </div>
+          <p>EXPERIENCES</p>
+          <div>{/* badges */}</div>
         </div>
         <div className="col-12">
-          <h6>AMBEMINCE</h6>
-          <div>
-            {/* badges */}
-          </div>
+          <p>AMBEMINCE</p>
+          <div>{/* badges */}</div>
         </div>
         <div className="col-12">
-          <h6>FOOD AND BEVERAGES OPTIONS</h6>
-          <div>
-            {/* badges */}
-          </div>
+          <p>FOOD AND BEVERAGES OPTIONS</p>
+          <div>{/* badges */}</div>
         </div>
+      </div>
+      </div>
       </div>
 
       {/*Similar Places */}
+      <div className="row mx-0 d-flex justify-content-center align-items-center">
+      <div className="col-md-11 px-0">
       <div className="row mx-0">
         <h4>Similar Places</h4>
-
+      </div>
+      </div>
       </div>
     </>
   );
