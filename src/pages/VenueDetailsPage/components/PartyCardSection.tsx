@@ -51,9 +51,10 @@ const PartyCardSection = () => {
     <>
       <div className="row mx-0 d-flex justify-content-center align-items-center">
         <div className="col-md-11">
-          <div className="row gap-3">
+          <div className="row mx-0">
             {packages.map((pkg, index) => (
-              <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
+              <div key={index} className="col-md-6 col-12 mb-4 p-3">
+                <div className="p-3 party-package-card">
                 <PartyPackageCard
                   title={pkg.title}
                   items={pkg.items}
@@ -62,6 +63,7 @@ const PartyCardSection = () => {
                   discountLabel={pkg.discountLabel}
                   tagLabel={pkg.tagLabel}
                 />
+                </div>
               </div>
             ))}
           </div>

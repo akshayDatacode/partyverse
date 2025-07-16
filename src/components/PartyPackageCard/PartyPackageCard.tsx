@@ -24,38 +24,49 @@ const PartyPackageCard = ({
   tagLabel,
 }: PartyPackageCardProps) => {
   return (
-    <div className="border rounded-4 p-3 party-package-card">
+    <div className="p-4">
       {/* Title & Tag */}
-      <div className="d-flex justify-content-between align-items-center mb-2">
-        <h6 className="m-0 fw-bold d-flex align-items-center">{title}</h6>
+      <div className="row mx-0 mb-2">
+      <div className="col-6">
+        <h5 className="m-0 fw-bold d-flex align-items-center">{title}</h5>
+        </div>
+        <div className="col-6 d-flex justify-content-end">
         {tagLabel && (
-          <span className="badge bg-warning text-dark text-capitalize">
+          <span className="badge text-dark text-capitalize badge-tag">
             {tagLabel}
           </span>
         )}
       </div>
-
-      {/* Items */}
-      <small className="text-muted">Includes</small>
-      <div className="d-flex flex-column w-50 gap-2 my-2">
-        {items.map((item, idx) => (
-          <div key={idx} className="badge bg-light border text-dark">
-            {item.quantity} {item.name}
-          </div>
-        ))}
       </div>
 
+      {/* Items */}
+      <div className="row mx-0">
+        <div className="col-6">
+      <small style={{fontSize:"12px"}}>Includes</small>
+      <ul className="list-unstyled my-2">
+        {items.map((item, idx) => (
+          <li className="mb-3">
+          <span key={idx} className="text-dark mx-2 list-content" style={{fontSize:"14px"}}>
+            {item.quantity} {item.name}
+          </span>
+          </li>
+        ))}
+      </ul>
+      </div>
+       
+    
+     <div className="col-6 d-flex justify-content-end align-items-end flex-column">
       {/* Pricing */}
-      <div className="d-flex justify-content-end align-items-center my-3">
+      <div className=" my-3">
         <div>
           {discountLabel && (
-            <span className="badge mb-1 bg-success discount-badge">
+            <h6 className="px-4 rounded fw-bold text-white mb-1 discount-badge">
               {discountLabel}
-            </span>
+            </h6>
           )}
-          <div className="fw-semibold">
+          <div className="fw-bold" style={{fontSize:"20px"}}>
             {originalPrice && (
-              <del className="text-muted me-2">₹{originalPrice}</del>
+              <del className="text-muted fw-semibold me-2">₹{originalPrice}</del>
             )}
             ₹{price} / <span className="fw-bold">Guest</span>
           </div>
@@ -63,10 +74,12 @@ const PartyPackageCard = ({
       </div>
 
       {/* Action Buttons */}
-      <div className="d-flex justify-content-end gap-2 mt-2">
+      <div className="mt-2" >
         <Button label="View Menu" backgroundColor="white" />
         <Button label="Book Now"/>
       </div>
+    </div>
+    </div>
     </div>
   );
 };
