@@ -25,7 +25,7 @@ const VenueListingPage = () => {
       </div>
       <div className="col-12 px-0 px-md-2">
         <div className="row mx-0 position-relative ">
-          <div className={`bg-white col-lg-2 col-8 ${!showFilters ? 'd-none d-lg-block' : 'd-block d-lg-none position-absolute z-3'}`}>
+          <div className={`bg-white col-lg-2 col-12 ${!showFilters ? 'd-none d-lg-block' : 'd-block d-lg-none position-absolute z-3'}`}>
             <VenuListFilter setShowFilters={setShowFilters} showFilters={showFilters} />
           </div>
           <div className="col-12 col-md-10">
@@ -42,8 +42,11 @@ const VenueListingPage = () => {
                 </div>
               </div>
               <div className="col-12 py-2 ms-md-3 ms-1 d-flex gap-3 flex-wrap">
-                <VenueFilterBadge label={'Budget per Guest 1000 - 1299'} />
-                <VenueFilterBadge label={'Buffet'} />
+                {["Budget per Guest 1000 - 1299","Buffet","North India"].map((item,index)=>{
+                  return(
+                    <VenueFilterBadge label={item} key={index}/>
+                  )
+                })}
               </div>
               <div className="col-12 mb-5">
                 <div className="row mx-0 venue-filter-cards ps-md-4 p-0  mt-3">

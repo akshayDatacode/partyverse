@@ -69,19 +69,19 @@ const AmenitiesData = [
 const AmenitiesSection = () => {
   return (
     <>
-      <div className="row mx-0 pb-2 mb-4 amenities">
+      <div className="row mx-0 py-md-4 py-3 amenities">
         <h4 className="amenities-heading py-2">Amenities</h4>
-        {AmenitiesData.map((data, index) => {
+        {AmenitiesData && AmenitiesData.map((data, index) => {
           return (
             <>
-              <div className="col-12 py-2" key={index}>
-                <h6 className="amenities-sub-heading py-2 my-2">
+              <div className="col-12 py-2 my-1" key={index}>
+                <h6 className="amenities-sub-heading">
                   {data.mainHeading}
                 </h6>
-                <div className="d-flex">
-                  {data.badgesData.map((item, i) => {
+                <div className="d-flex flex-wrap py-1 ">
+                  {data?.badgesData.map((item, i) => {
                     return (
-                      <span key={i}>
+                      <span key={i} className="py-1">
                         <BadgeTag label={item.data} />
                       </span>
                     );

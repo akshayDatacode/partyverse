@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  white-space: nowrap;
 
   .tab-list {
 
@@ -48,5 +49,14 @@
         }
       }
     }
+  }
+}
+/*hide scrollbar*/
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
   }
 }

@@ -17,7 +17,7 @@ const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
           onClick={() => setShowFilters(false)}
         />
       )}
-      <div className="p-2 position-relative bg-white z-md-n1 z-3">
+      <div className="p-2 position-relative bg-white z-md-n1 z-3 ">
         <div className="pb-5">
           <div className="venue-filter-heading pb-2 d-flex justify-content-between">
             <div>

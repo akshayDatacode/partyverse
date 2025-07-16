@@ -19,14 +19,14 @@ const KeyHighlightSection = ({
 }) => {
   return (
     <>
-      <div className="row mx-0 py-3">
+      <div className="row mx-0 py-1">
         {/* Key highlight */}
-        <div className="col-2 px-0 mx-0">
-          <h5 className="key-highlight-heading px-2 mx-1">Key highlights</h5>
+        <div className="col-xxl-2 col-lg-3 col-md-4 col-12 px-0 mx-0">
+          <h5 className="key-highlight-heading px-0 mx-0 text-md-start text-center">Key highlights</h5>
           <div className="row mx-0">
             <div className="col-12 p-0">
               <div className="row mx-0">
-                {HighlightIconData.map((data, index) => {
+                { HighlightIconData && HighlightIconData.map((data, index) => {
                   return (
                     <div
                       className="col-6 d-flex flex-column align-items-center ps-0 text-start justify-content-center my-2"
@@ -51,12 +51,12 @@ const KeyHighlightSection = ({
           </div>
         </div>
         {/* video */}
-        <div className="col-md-10">
-          <div className="row mx-0 d-flex justify-content-end align-item-center party-videos px-5">
+        <div className="col-xxl-10 col-lg-9 col-md-8 col-12 mx-0 px-0">
+          <div className="row mx-0 party-videos px-lg-5 px-0">
             {videoData.map((data, index) => {
               return (
-                <div className="col-md-6 col-12 " key={index}>
-                  <h5 className="key-highlight-heading pb-2 ps-1">{data.heading}</h5>
+                <div className="col-md-6 col-12 my-3 my-md-0 d-flex flex-column justify-content-md-end justify-content-center align-items-center" key={index}>
+                  <h5 className="key-highlight-heading text-md-start text-center w-100 px-2">{data.heading}</h5>
                   <Image
                     src={data.image}
                     alt={`${data.image}`}

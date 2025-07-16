@@ -7,7 +7,7 @@ body {
 .custom-content {
   font-size: $content-text;
 }
-
+/*Venue Details Top Section*/
 .food-type-names{
    font-size: 15px;
    font-weight: 500;
@@ -36,15 +36,28 @@ body {
   border-radius: 20px;
   font-size: 24px;
 }
+
+/*Party Area Section*/
+.party-area-heading{
+   font-size: 24px;
+   font-weight: 600;
+   line-height: 100%;
+   letter-spacing: 0%;
+   color: $text-black;
+}
+
+/*Venue Detail Image Section*/
 .venue-details-main-image{
   border-radius: 10px;
 }
 .venue-details-sub-image{
   border-radius: 10px;
 }
+
+/* Party Package Section*/
 .key-highlight-heading{
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 20px !important;
+  font-weight: 400 !important;
 }
 .highlight-icons{
   border-radius: 20px;
@@ -56,6 +69,18 @@ body {
 .highlight-icons-subdata{
   font-size: 12px;
 }
+.party-videos{
+  border-left: 1px solid #EDEDED;
+}
+.party-package-heading{
+   font-size: 24px;
+   font-weight: 600;
+   line-height: 100%;
+   letter-spacing: 0%;
+   color: $text-black;
+}
+
+/*Amenities Section*/
 .amenities-heading{
   font-weight: 600;
   font-size: 24px;
@@ -74,6 +99,23 @@ body {
   border-bottom: 1px solid #EDEDED;
   border-top: 1px solid #EDEDED;
 }
-.party-videos{
-  border-left: 1px solid #EDEDED;
+
+/*hide scrollbar*/
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 }
+
+/*responsive*/
+@media screen and (max-width: 768px) {
+  .pure-veg-badge {
+    font-size: 16px !important;
+  }
+}
+
+
+

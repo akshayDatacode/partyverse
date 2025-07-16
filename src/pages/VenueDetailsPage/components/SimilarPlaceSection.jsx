@@ -41,11 +41,11 @@ const SimilarPlaceSection = () => {
 
   return (
     <>
-      <div className="row mx-0">
+      <div className="row mx-0 py-4">
         <div className="col-12 mb-3">
           <h4>Similar Places</h4>
         </div>
-        {venues.map((venue, index) => (
+        {venues && venues.map((venue, index) => (
           <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
             <VenueCard {...venue} />
           </div>
