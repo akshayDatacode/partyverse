@@ -17,7 +17,7 @@ const VenuDetailsImageSection = ({
         {imageData && imageData.map((data, index) => {
           return (
             <>
-              <div className="col-md-6 col-12 py-2" key={index}>
+              <div className="col-md-6 col-12 py-md-2 py-3" key={index}>
                 <Image
                   src={data.parentImage}
                   alt="Venue 1"
@@ -28,7 +28,7 @@ const VenuDetailsImageSection = ({
                 <div className="row mx-0">
                   {data?.childrenImage.map((item, i) => {
                     return (
-                      <div className="col-6 p-2" key={i}>
+                      <div className="col-6 p-md-2 mb-md-0 mb-3" key={i}>
                         <Image
                           src={item}
                           alt={`Venue ${index}`}

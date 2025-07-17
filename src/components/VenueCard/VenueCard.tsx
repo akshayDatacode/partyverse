@@ -58,7 +58,7 @@ const VenueCard = ({
   };
   return (
     <>
-      <div className="bg-white position-relative overflow-hidden venue-card">
+      <div className="bg-white mx-md-3 position-relative overflow-hidden venue-card">
         {/* Badge */}
         {badgeType && (
           <span
@@ -94,7 +94,7 @@ const VenueCard = ({
             />
           </MultiCarousel>
           {discount && (
-            <span className="fw-bold position-absolute bottom-0 start-0 p-2 m-2 discount-badge d-flex align-items-center gap-1">
+            <span className="fw-bold position-absolute bottom-0 start-0 p-2 mb-3 discount-badge d-flex align-items-center gap-1">
               <BadgePercent size={18} fill="white" color="#6658DE" />{" "}
               {` Flat ${discount} off`}
             </span>

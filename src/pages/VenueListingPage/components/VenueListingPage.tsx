@@ -30,7 +30,7 @@ const VenueListingPage = () => {
           </div>
           <div className="col-12 col-md-10">
             <div className="row mx-0">
-              <div className="col-12 py-2 m-1 px-2 ">
+              <div className="col-12 py-2 m-md-1 ">
                 <div className="d-block d-lg-none mb-2" onClick={() => setShowFilters(true)}>
                   <Button label="Filters" />
                 </div>

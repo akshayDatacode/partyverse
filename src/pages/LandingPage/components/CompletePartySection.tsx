@@ -128,10 +128,10 @@ const CompletePartySection = () => {
   }));
 
   return (
-    <section className="row mx-0 my-5 py-5 d-flex justify-content-center">
+    <section className="row mx-0 d-flex justify-content-center">
       <div className="col-md-11 col-12">
         <div className="row mx-0">
-          <div className="col-12 px-3 px-md-2">
+          <div className="col-12">
             <h1 className="custom-title">
               Complete Your <span>Party</span>
             </h1>
@@ -148,11 +148,12 @@ const CompletePartySection = () => {
             <hr className="mt-3 mb-4 mx-0"
               style={{ width: "1024px", borderTop: "1px solid rgb(203, 206, 209)" }}
             />
+            </div>
             {/* Cards for the selected tab */}
-            <div className="row mx-0 gx-2 mt-5">
+            <div className="row mx-0 my-3 px-0 d-flex justify-content-center">
               {categoryData[activeCategory]?.map((item, index) => (
-                <div className="col-md-4 px-0 mb-0" key={index}>
-                  <div className="p-5 party-cards">
+                <div className="col-md-4 col-11 mb-4 px-0 px-md-3 mb-md-0" key={index}>
+                  <div className="p-md-5 p-4 w-100 h-100 party-cards">
                     <h5 className="mb-2 party-heading">{item.title}</h5>
                     <p className="mb-0 party-content">{item.description}</p>
                     {'subtitle' in item && item.subtitle && <div className="d-flex align-items-center gap-2">
@@ -163,7 +164,6 @@ const CompletePartySection = () => {
                 </div>
               ))}
             </div>
-          </div>
         </div>
       </div>
     </section>
