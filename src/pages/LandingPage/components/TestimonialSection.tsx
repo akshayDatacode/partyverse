@@ -54,7 +54,7 @@ const TestimonialSection = () => {
       <section className="row mx-0 my-5 py-5 d-flex justify-content-center">
         <div className="col-md-11 col-12 px-4 px-md-0">
           <div className="row mx-0 ">
-            <div className="col-md-6 px-0 px-md-2">
+            <div className="col-md-7 px-0 px-md-2">
               <h1 className="custom-title">
                 What <span>people</span> say about us
               </h1>
@@ -63,26 +63,27 @@ const TestimonialSection = () => {
               </p>
               <Button label="Lets Plan your Party too" />
             </div>
-            <div className="col-md-6 col-12 px-3"> 
-            <div className="row mx-0 d-flex flex-md-row flex-column justify-content-center trusted-host">
-            <div className="col-md-6 col-12 mt-4 px-0">
-              {[User1, User2, User3, User4, User5].map((img, i) => (
-                <Image
-                  key={i}
-                  src={img}
-                  alt="user"
-                  height={68}
-                  width={68}
-                  className="rounded-circle"
-                />
-              ))}
-             <div className="col-md-6 col-12 ms-md-4 mt-md-0 mt-3 px-0">
-              <span className="fw-bold trusted-user">
-                Trusted by 320+ Party <span className="highlight">Hosts</span>
-              </span>
+            <div className="col-md-5 col-12 mt-5 mt-md-0 px-md-3 px-0">
+              <div className="row mx-0 d-flex  justify-content-center align-items-center trusted-host">
+                <div className="col-md-6 col-12 px-0">
+                  {[User1, User2, User3, User4, User5].map((img, i) => (
+                    <Image
+                      key={i}
+                      src={img}
+                      alt="user"
+                      height={68}
+                      width={68}
+                      className="rounded-circle"
+                    />
+                  ))}
+                </div>
+                 <div className="col-md-6 col-12 mt-md-0 mt-3 px-0">
+                    <span className="fw-bold trusted-user">
+                      Trusted by 320+ Party{" "}
+                      <span className="highlight">Hosts</span>
+                    </span>
+                  </div>
               </div>
-            </div>
-            </div>
             </div>
           </div>
         </div>

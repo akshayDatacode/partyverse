@@ -1,0 +1,21 @@
+.venue-category-tiles {
+  .luxe {
+    display: inline-block;
+    background: linear-gradient(92.21deg, #FFE28E 2.18%, #FFF6DA 78.17%, #FFE28E 99.5%);
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+    border-radius: 8px;
+    padding: 4px 8px;
+  }
+
+  .new {
+    display: inline-block;
+    background-color: #DDF9FF;
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+    border-radius: 8px;
+    padding: 4px 8px;
+  }
+}
