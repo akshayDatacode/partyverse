@@ -47,7 +47,7 @@ const VenueCategoryTiles = ({
   }
 
   return (
-    <div className="venue-category-tiles">
+    <div className="mb-5 venue-category-tiles">
       {/* Add your category tiles here */}
       <h1>{categoryTitle}</h1>
       <p>{description}</p>

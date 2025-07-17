@@ -40,7 +40,7 @@ const HowItWorkSection = () => {
       <section className="row mx-0 my-4 py-4 d-flex justify-content-center">
         <div className="col-md-11 col-12">
           <div className="row mx-0 d-flex justify-content-between">
-            <div className="col-md-5 col-12 px-3 px-md-2">
+            <div className="col-md-5 col-12">
               <h1 className="custom-title">
                 How <span>PartyVerse</span> Works {value}
               </h1>
@@ -67,7 +67,7 @@ const HowItWorkSection = () => {
                 ))}
               </div>
             </div>
-            <div className="col-md-7 col-12 px-3 px-md-2 d-flex justify-content-center align-items-center">
+            <div className="col-md-7 col-12 px-md-2 mt-4 d-flex justify-content-center align-items-center">
               <Image
                 src={images[activeStepIndex]}
                 alt={`Step ${activeStepIndex + 1}`}

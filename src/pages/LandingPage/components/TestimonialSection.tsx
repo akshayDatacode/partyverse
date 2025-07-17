@@ -52,9 +52,9 @@ const TestimonialSection = () => {
   return (
     <>
       <section className="row mx-0 my-5 py-5 d-flex justify-content-center">
-        <div className="col-md-11 col-12">
+        <div className="col-md-11 col-12 px-4 px-md-0">
           <div className="row mx-0 ">
-            <div className="col-md-6 px-3 px-md-2">
+            <div className="col-md-6 px-0 px-md-2">
               <h1 className="custom-title">
                 What <span>people</span> say about us
               </h1>
@@ -63,7 +63,9 @@ const TestimonialSection = () => {
               </p>
               <Button label="Lets Plan your Party too" />
             </div>
-            <div className="col-6 d-flex justify-content-center trusted-host">
+            <div className="col-md-6 col-12 px-3"> 
+            <div className="row mx-0 d-flex flex-md-row flex-column justify-content-center trusted-host">
+            <div className="col-md-6 col-12 mt-4 px-0">
               {[User1, User2, User3, User4, User5].map((img, i) => (
                 <Image
                   key={i}
@@ -74,53 +76,57 @@ const TestimonialSection = () => {
                   className="rounded-circle"
                 />
               ))}
-              <span className="ms-4 fw-bold py-4 trusted-user">
+             <div className="col-md-6 col-12 ms-md-4 mt-md-0 mt-3 px-0">
+              <span className="fw-bold trusted-user">
                 Trusted by 320+ Party <span className="highlight">Hosts</span>
               </span>
+              </div>
+            </div>
+            </div>
             </div>
           </div>
         </div>
-        </section>
-        <div className="row mx-0 py-5 my-5 d-flex justify-content-end reviews">
-          <div className="col-md-11 col-12 px-0">
-            <MultiCarousel
-              responsive={TestimonialResponsive}
-              arrows={false}
-              autoPlay={false}
-              draggable={true}
-              showDots={false}
-              partialVisible={true}
-            >
-              {testimonials.map((item, index) => (
-                <div
-                  className="bg-white p-5 rounded-4 mx-2 testimonial-card"
-                  key={index}
-                >
-                  <p className="fw-medium review-text">{item.text}</p>
-                  <div className="d-flex align-items-center mt-3">
-                    <Image
-                      src={QuoteIcon}
-                      alt="quote"
-                      height={36}
-                      width={46}
-                      className="me-2"
-                    />
-                    <div className="d-flex justify-content-end w-100 me-3">
-                      <h6 className="fw-bold">{item.name}</h6>
-                    </div>
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      height={62}
-                      width={62}
-                      className="rounded-circle ms-auto"
-                    />
+      </section>
+      <div className="row mx-0 py-md-5 py-4 d-flex justify-content-end reviews">
+        <div className="col-md-11 col-12 px-md-0 px-4">
+          <MultiCarousel
+            responsive={TestimonialResponsive}
+            arrows={false}
+            autoPlay={false}
+            draggable={true}
+            showDots={false}
+            partialVisible={true}
+          >
+            {testimonials.map((item, index) => (
+              <div
+                className="bg-white p-md-5 p-4 rounded-4 mx-md-2 testimonial-card"
+                key={index}
+              >
+                <p className="fw-medium review-text">{item.text}</p>
+                <div className="d-flex align-items-center mt-3">
+                  <Image
+                    src={QuoteIcon}
+                    alt="quote"
+                    height={36}
+                    width={46}
+                    className="me-2"
+                  />
+                  <div className="d-flex justify-content-end w-100 me-3">
+                    <h6 className="fw-bold">{item.name}</h6>
                   </div>
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    height={62}
+                    width={62}
+                    className="rounded-circle ms-auto"
+                  />
                 </div>
-              ))}
-            </MultiCarousel>
-          </div>
+              </div>
+            ))}
+          </MultiCarousel>
         </div>
+      </div>
     </>
   );
 };

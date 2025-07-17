@@ -43,7 +43,8 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="hero-section px-2 mt-4">
+    <section className="row mx-0 hero-section">
+     <div className="col-md-11 col-12">
       <div className="row mx-0 text-center">
         <div className="col-12 py-2">
           <Stepper steps={steps} currentStep={2} />
@@ -65,6 +66,7 @@ const HeroSection = () => {
         <div className="col-12 pt-4">
           <Button label="Search Party Places" />
         </div>
+      </div>
       </div>
     </section>
   )
