@@ -55,7 +55,7 @@ const KeyHighlightSection = ({
           <div className="row mx-0 party-videos px-lg-5 px-0">
             {videoData.map((data, index) => {
               return (
-                <div className="col-md-6 col-12 my-3 my-md-0 d-flex flex-column justify-content-md-end justify-content-center align-items-center" key={index}>
+                <div className="col-md-6 col-12 px-0 px-md-2 my-3 my-md-0 d-flex flex-column justify-content-md-end justify-content-center align-items-center" key={index}>
                   <h5 className="key-highlight-heading text-md-start text-center w-100 px-2">{data.heading}</h5>
                   <Image
                     src={data.image}

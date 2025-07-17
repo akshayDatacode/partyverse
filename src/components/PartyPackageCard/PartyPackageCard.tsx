@@ -28,16 +28,16 @@ const PartyPackageCard = ({
   vegetarian = false,
 }: PartyPackageCardProps) => {
   return (
-    <div className="p-3 m-2">
+    <div className="p-3 m-md-2">
       {/* Title & Tag */}
       <div className="row mx-0">
-        <div className="col-6 d-flex align-item-center">
+        <div className="col-6 px-0 px-md-2 d-flex align-item-center">
           {vegetarian && <span className="d-flex align-items-center justify-content-center me-2"><Image src={vegeterianIcon} alt="vegeraterian-icon" /></span>}
           <h5 className="m-0 fw-bold d-flex align-items-center">{title}</h5>
         </div>
         <div className="col-6 d-flex justify-content-end">
           {tagLabel && (
-            <span className="badge text-dark text-capitalize badge-tag">
+            <span className="badge d-flex align-items-center text-dark text-capitalize badge-tag">
               {tagLabel}
             </span>
           )}
@@ -46,7 +46,7 @@ const PartyPackageCard = ({
 
       {/* Items */}
       <div className="row mx-0">
-        <div className="col-6">
+        <div className="col-6 px-0 px-md-2">
           <div className="my-2 package-includes">Includes</div>
           <ul className="list-unstyled my-2">
             {items && items.map((item, id) => (
@@ -62,7 +62,7 @@ const PartyPackageCard = ({
         <div className="col-6 d-flex justify-content-end align-items-end flex-column">
           {/* Pricing */}
           
-          <div className="my-3">
+          <div className="my-md-3 my-2">
             <div>
               {discountLabel && (
                 <h6 className="px-4 rounded fw-bold text-white mb-1 discount-badge">
