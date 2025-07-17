@@ -50,7 +50,7 @@ const VenueCategoryTiles = ({
   return (
     <div className="mb-5 venue-category-tiles">
       {/* Add your category tiles here */}
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-flex justify-content-between align-md-items-center align-items-start">
         <div>
           <span
             className={`categotry-tag mb-2`}
@@ -59,7 +59,7 @@ const VenueCategoryTiles = ({
           </span>
           <p className="mb-3">{description}</p>
         </div>
-        <div className="d-flex align-items-center me-5">
+        <div className="d-flex align-items-center me-md-5 me-0 text-nowrap">
           <Button label="View All" backgroundColor="white" />
         </div>
       </div>
@@ -74,7 +74,7 @@ const VenueCategoryTiles = ({
       >
         {venueList &&
           venueList.map((venue, index) => (
-            <div key={index} className="me-4">
+            <div key={index} className="me-md-4 ms-md-0 mx-0">
               <VenueCard venueName={venue.title} />
             </div>
           ))}

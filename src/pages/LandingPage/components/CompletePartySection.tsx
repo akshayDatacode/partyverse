@@ -146,7 +146,7 @@ const CompletePartySection = () => {
               onTabChange={setActiveIndex}
             />
             <hr className="mt-3 mb-4 mx-0"
-              style={{ width: "1024px", borderTop: "1px solid rgb(203, 206, 209)" }}
+              style={{ borderTop: "1px solid rgb(203, 206, 209)" }}
             />
             </div>
             {/* Cards for the selected tab */}

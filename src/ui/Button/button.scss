@@ -5,19 +5,21 @@
     color: $text-white;
     border-radius: 8px;
 }
-.bg-white-btn{
+
+.bg-white-btn {
     background-color: $white !important;
     color: $text-primary !important;
     font-weight: 700;
     font-size: 16px;
 }
 
-.bg-transparent-btn{
+.bg-transparent-btn {
     background-color: transparent !important;
     border: 1px solid $text-white !important;
     font-weight: 700;
     font-size: 16px;
 }
-.border-primary{
+
+.border-primary {
     border: 1px solid #6658DE !important;
 }

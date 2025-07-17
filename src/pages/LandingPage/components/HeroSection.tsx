@@ -43,30 +43,30 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="row mx-0 hero-section">
-     <div className="col-md-11 col-12">
-      <div className="row mx-0 text-center">
-        <div className="col-12 py-2">
-          <Stepper steps={steps} currentStep={2} />
-        </div>
-        <h1 className="col-12 hero-heading py-3">
-          Your <span className="text-highlight">Universe</span> of Stress-Free <span className="text-highlight">Celebrations</span>!
-        </h1>
-        <div className="col-12 hero-content py-3">
-          <p className="my-0">We’re here to take the chaos out of parties and leave only the fun.</p>
-          <p className="my-0">From birthdays and anniversaries to surprise proposals, kitty parties, get together, house parties etc.</p>
-        </div>
-        <div className="col-12 py-4">
-          <div className="row mx-0 hero-select w-100">
-            <div className="col-lg-9 col-12 bg-white">
-              <SelectPartyFilter />
+    <section className="row mx-0 hero-section my-md-5 my-3 py-md-5 py-3">
+      <div className="col-md-11 col-12 mt-3">
+        <div className="row mx-0 text-center">
+          <div className="col-12 py-2">
+            <Stepper steps={steps} currentStep={2} />
+          </div>
+          <h1 className="col-12 hero-heading py-3">
+            Your <span className="text-highlight">Universe</span> of Stress-Free <span className="text-highlight">Celebrations</span>!
+          </h1>
+          <div className="col-12 hero-content py-3">
+            <p className="my-0">We’re here to take the chaos out of parties and leave only the fun.</p>
+            <p className="my-0">From birthdays and anniversaries to surprise proposals, kitty parties, get together, house parties etc.</p>
+          </div>
+          <div className="col-12 py-4">
+            <div className="row mx-0 hero-select w-100">
+              <div className="col-lg-9 col-12 bg-white">
+                <SelectPartyFilter />
+              </div>
             </div>
           </div>
+          <div className="col-12 pt-4">
+            <Button label="Search Party Places" />
+          </div>
         </div>
-        <div className="col-12 pt-4">
-          <Button label="Search Party Places" />
-        </div>
-      </div>
       </div>
     </section>
   )

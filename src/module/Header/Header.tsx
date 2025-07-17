@@ -9,8 +9,8 @@ import "./style.scss";
 const Header = () => {
   return (
     <>
-    <header className="row mx-0 px-md-4 px-2 align-items-center justify-content-center position-fixed w-100 header-highest bg-white">
-      <div className="col-12 header-border py-lg-1 py-3 d-flex align-items-center justify-content-between">
+    <header className="row mx-0 align-items-center justify-content-center position-fixed w-100 header-highest bg-white">
+      <div className="col-12 header-border py-lg-1 py-3 px-4 d-flex align-items-center justify-content-between">
         <div className="">
           <Link href={"/"}><Image src={PARTYVERSE} alt="logo" /></Link>
         </div>

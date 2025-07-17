@@ -56,55 +56,57 @@ const MomentsSection = () => {
   };
   return (
     <>
-      <div
-        className=" text-white moments"
-        style={{
-          backgroundImage: `url(${MomentsBackground.src})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="row mx-0 d-flex justify-content-center align-items-center ">
-          <div className="col-12 text-center">
-            <Image src={PartyVerse} alt="logo" className="mt-5" />
+      <div className="my-3 py-3 my-md-5 py-md-5">
+        <div
+          className="text-white moments"
+          style={{
+            backgroundImage: `url(${MomentsBackground.src})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="row mx-0 d-flex justify-content-center align-items-center ">
+            <div className="col-12 text-center">
+              <Image src={PartyVerse} alt="logo" className="mt-5" />
+            </div>
+            <div className="col-12 px-4 text-center">
+              <h1 className="fw-bold text-center moment-heading">Moments.</h1>
+            </div>
+            <p className="text-white text-center">
+              Celebrating every moment of your life.
+            </p>
           </div>
-          <div className="col-12 px-4 text-center">
-            <h1 className="fw-bold text-center moment-heading">Moments.</h1>
-          </div>
-          <p className="text-white text-center">
-            Celebrating every moment of your life.
-          </p>
-        </div>
-        <div className="row mx-0 d-flex justify-content-md-end justify-content-center">
-          <div className="col-md-11 px-0 mt-5">
-            <MultiCarousel
-              responsive={MomentResponsive}
-              arrows={false}
-              autoPlay={false}
-              draggable={true}
-              showDots={false}
-              partialVisible={true}
-            >
-              {carouselImages.map((item, index) => (
-                <div className="row mx-0 d-flex justify-content-start align-items-start">
-                  <div className="col-12 px-0">
-                    <div
-                      className="px-4 px-md-0 d-flex flex-column"
-                      key={index}
-                    >
-                      <Image
-                        src={item.src}
-                        alt={`Moment ${index + 1}`}
-                        className="img-fluid rounded-4 mb-3"
-                      />
-                      <p className="mb-0 text-left">{item.title}</p>
-                      <h5 className="fw-bold">{item.restaurant}</h5>
-                      <p className="text-white-50 mb-5">{item.people}</p>
+          <div className="row mx-0 d-flex justify-content-md-end justify-content-center">
+            <div className="col-md-11 px-0 mt-5">
+              <MultiCarousel
+                responsive={MomentResponsive}
+                arrows={false}
+                autoPlay={false}
+                draggable={true}
+                showDots={false}
+                partialVisible={true}
+              >
+                {carouselImages.map((item, index) => (
+                  <div className="row mx-0 d-flex justify-content-start align-items-start">
+                    <div className="col-12 px-0">
+                      <div
+                        className="px-4 px-md-0 d-flex flex-column"
+                        key={index}
+                      >
+                        <Image
+                          src={item.src}
+                          alt={`Moment ${index + 1}`}
+                          className="img-fluid rounded-4 mb-3"
+                        />
+                        <p className="mb-0 text-left">{item.title}</p>
+                        <h5 className="fw-bold">{item.restaurant}</h5>
+                        <p className="text-white-50 mb-5">{item.people}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </MultiCarousel>
+                ))}
+              </MultiCarousel>
+            </div>
           </div>
         </div>
       </div>
