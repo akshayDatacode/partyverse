@@ -3,7 +3,7 @@ import VenueCategoryTiles from "@/module/VenueCategoryTiles";
 const VenueListFilterTiles = () => {
     return (
         <div className="row mx-0 d-flex justify-content-end my-5 py-5">
-            <div className="col-md-11 col-12 px-4">
+            <div className="col-md-11 col-12 px-0">
                 {/* Example filter tiles */}
                 <VenueCategoryTiles
                     categoryTitle="Top Locations"

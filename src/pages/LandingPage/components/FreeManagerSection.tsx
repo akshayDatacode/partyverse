@@ -25,7 +25,7 @@ const eventDetails = [
 
 const FreeManagerSection = () => {
 
-   const MomentResponsive = {
+  const MomentResponsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 1,
@@ -56,48 +56,50 @@ const FreeManagerSection = () => {
                 Get<span> Free</span> Personal
                 <br /> <span>Event Manager</span>
               </h1>
-              <p className="mb-4 me-md-5 pe-md-5 custom-content">
+              <p className="mb-4 me-md-5 pe-md-5 fs-24 font-style-regular vertical-align-middle fw-normal lh-100 ls-0">
                 Your dedicated event assistant takes care of everything so you
                 can enjoy a stress-free celebration.
               </p>
               <Button label="Learn More About Our Team" />
             </div>
-            <div className="col-md-5 col-12 d-flex flex-column gap-4 mt-5 mt-md-0">
-               <MultiCarousel
-              responsive={MomentResponsive}
-              arrows={false}
-              autoPlay={true}
-              draggable={false}
-              showDots={false}
-              partialVisible={true}
-            >
-              {eventDetails.map((item, index) => (
-                <div className="d-flex flex-column" key={index}>
-                  <div className="d-flex align-items-center gap-2 mb-2">
-                    <i
-                      className="bi bi-patch-check-fill fs-4 mt-1"
-                      style={{ color: "#6658DE" }}
-                    ></i>
-                    <h3 className="mb-0 fw-semibold">{item.title}</h3>
+            <div className="col-md-6 col-12 d-flex flex-column gap-4 px-0 mt-5 mt-md-0">
+              <MultiCarousel
+                responsive={MomentResponsive}
+                arrows={false}
+                autoPlay={true}
+                draggable={false}
+                showDots={false}
+                partialVisible={false}
+              >
+                {eventDetails.map((item, index) => (
+                  <div className="row mx-0 d-flex" key={index}>
+                    <div className="col-1 px-0">
+                      <i
+                        className="bi bi-patch-check-fill fs-3 mt-1 text-highlight"
+                      />
+                    </div>  
+                    <div className="col-11 px-0">
+                      <div className="d-flex align-items-center gap-2 mb-2">
+                        <h3 className="mb-0 fw-semibold">{item.title}</h3>
+                      </div>
+                      <p className="mb-2 fw-normal fs-24 lh-100 ls-0 font-style-regular">
+                        {item.desc}
+                      </p>
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        height={266}
+                        width={607}
+                        className="img-fluid py-3 rounded"
+                      />
+                      <hr
+                        className="mt-3 mb-4 mx-0"
+                        style={{ width: "667px", borderTop: "1px solid #dee2e6" }}
+                      />
+                    </div>
                   </div>
-                  <p className="mb-2 ms-4 pe-5 me-5 custom-content">
-                    {item.desc}
-                  </p>
+                ))}
 
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    height={266}
-                    width={607}
-                    className="img-fluid py-3 px-4 rounded"
-                  />
-                  <hr
-                    className="mt-3 mb-4 mx-0"
-                    style={{ width: "667px", borderTop: "1px solid #dee2e6" }}
-                  />
-                </div>
-              ))}
-             
               </MultiCarousel>
             </div>
           </div>

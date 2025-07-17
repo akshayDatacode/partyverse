@@ -32,13 +32,13 @@ const VenueCategoryTiles = ({
   const VenueCategoryTilesResponsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
-      partialVisibilityGutter: 30, // this is needed to tell the amount of px that should be visible.
+      items: 3,
+      partialVisibilityGutter: 90, // this is needed to tell the amount of px that should be visible.
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 4,
-      partialVisibilityGutter: 30, // this is needed to tell the amount of px that should be visible.
+      items: 3,
+      partialVisibilityGutter: 90, // this is needed to tell the amount of px that should be visible.
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -50,21 +50,20 @@ const VenueCategoryTiles = ({
   return (
     <div className="mb-5 venue-category-tiles">
       {/* Add your category tiles here */}
-      <h1
-        className={`${
-          categoryTitle === "Luxe Collection"
-            ? "luxe"
-            : categoryTitle === "Newly Opened"
-            ? "new"
-            : ""
-        }`}
-      >
-        {categoryTitle}
-      </h1>
-      <span >
-        <Button label="View ALL" backgroundColor="white" />
-      </span>
-      <p>{description}</p>
+      <div className="d-flex justify-content-between align-items-center">
+        <div>
+          <span
+            className={`categotry-tag mb-2`}
+          >
+            {categoryTitle}
+          </span>
+          <p className="mb-3">{description}</p>
+        </div>
+        <div className="d-flex align-items-center me-5">
+          <Button label="View All" backgroundColor="white" />
+        </div>
+      </div>
+
       <MultiCarousel
         showDots={false}
         arrows={false}
@@ -75,7 +74,7 @@ const VenueCategoryTiles = ({
       >
         {venueList &&
           venueList.map((venue, index) => (
-            <div key={index}>
+            <div key={index} className="me-4">
               <VenueCard venueName={venue.title} />
             </div>
           ))}

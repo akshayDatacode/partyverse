@@ -57,7 +57,7 @@ const HeroSection = () => {
           <p className="my-0">From birthdays and anniversaries to surprise proposals, kitty parties, get together, house parties etc.</p>
         </div>
         <div className="col-12 py-4">
-          <div className="row mx-0 hero-select">
+          <div className="row mx-0 hero-select w-100">
             <div className="col-lg-9 col-12 bg-white">
               <SelectPartyFilter />
             </div>

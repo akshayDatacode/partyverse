@@ -8,13 +8,13 @@ import { BadgePercent } from "lucide-react";
 type VenueCardProps = {
   image?: string | StaticImageData;
   badgeType?:
-    | "luxe"
-    | "new"
-    | "promoted"
-    | "roof"
-    | "fine dine"
-    | "rooftop"
-    | "cafe";
+  | "luxe"
+  | "new"
+  | "promoted"
+  | "roof"
+  | "fine dine"
+  | "rooftop"
+  | "cafe";
   discount?: string;
   rating?: number;
   distance?: string;
@@ -58,11 +58,11 @@ const VenueCard = ({
   };
   return (
     <>
-      <div className="bg-white mx-md-3 position-relative overflow-hidden venue-card">
+      <div className='bg-white position-relative overflow-hidden venue-card'>
         {/* Badge */}
         {badgeType && (
           <span
-            className={`badge  position-absolute top-0 start-0 m-2 px-3 py-2 tag-badge ${badgeType}`}
+            className={`badge position-absolute top-0 start-0 m-2 px-3 py-2 tag-badge ${badgeType}`}
           >
             {badgeType.charAt(0).toUpperCase() + badgeType.slice(1)}
           </span>
@@ -94,8 +94,8 @@ const VenueCard = ({
             />
           </MultiCarousel>
           {discount && (
-            <span className="fw-bold position-absolute bottom-0 start-0 p-2 mb-3 discount-badge d-flex align-items-center gap-1">
-              <BadgePercent size={18} fill="white" color="#6658DE" />{" "}
+            <span className="fw-bold w-75 position-absolute bottom-0 start-0 ps-2 pe-2 mb-3 discount-badge d-flex align-items-center">
+              <BadgePercent size={18} fill="white" color="#6658DE" className="me-2" />
               {` Flat ${discount} off`}
             </span>
           )}

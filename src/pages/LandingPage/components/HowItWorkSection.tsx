@@ -52,7 +52,7 @@ const HowItWorkSection = () => {
                   <div
                     key={index}
                     onClick={() => handleStepClick(index)}
-                    className={`d-flex align-items-start mb-2 p-3 p-md-4 custom-content step-box ${
+                    className={`d-flex align-items-center mb-2 p-3 p-md-3 step-box ${
                       index === activeStepIndex ? "active-step" : ""
                     }`}
                   >
@@ -60,14 +60,14 @@ const HowItWorkSection = () => {
                     <div className="d-flex justify-content-center align-items-center rounded-circle ratio ratio-1x1 step-number">
                       {index + 1}
                     </div>
-                    <div className="d-flex flex-column justify-content-center align-items-start px-4">
-                      <p className="mb-0">{text}</p>
+                    <div className="d-flex flex-column justify-content-center align-items-start ps-4 custom-content">
+                      <span className="mb-0">{text}</span>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="col-md-7 col-12 px-md-2 mt-4 d-flex justify-content-center align-items-center">
+            <div className="col-md-5 col-12 px-md-2 mt-4 d-flex justify-content-center align-items-center">
               <Image
                 src={images[activeStepIndex]}
                 alt={`Step ${activeStepIndex + 1}`}

@@ -7,6 +7,7 @@ body {
 .custom-title {
   font-size: $heading-text;
   font-weight: 700;
+
   span {
     color: $text-primary;
   }
@@ -14,6 +15,9 @@ body {
 
 .custom-content {
   font-size: $content-text;
+  line-height: 100%;
+  letter-spacing: 0;
+  font-weight: 500;
 }
 
 // Landingpage ----- Hero Section
@@ -44,6 +48,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 //HowItWork Section
 .step-box {
   border: 1px solid #fbfbfb;
@@ -97,6 +102,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .platform-inner-section {
   display: flex;
   align-items: center;
@@ -136,15 +142,14 @@ body {
 
 //Moments-Section
 .moments {
+
   // background-image: url('/assets/images/MomentsBackground.png');
   .moment-heading {
     font-size: 114px;
-    background-image: linear-gradient(
-      180deg,
-      #a69fe5 22%,
-      #6658de 55.44%,
-      #050312 79.33%
-    );
+    background-image: linear-gradient(180deg,
+        #a69fe5 22%,
+        #6658de 55.44%,
+        #050312 79.33%);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -159,10 +164,12 @@ body {
   img {
     border: 2px solid $white;
     margin-left: -20px;
-    
+
   }
+
   .trusted-user {
     font-size: 18px;
+
     .highlight {
       color: $primary;
     }
@@ -171,11 +178,13 @@ body {
 
 .reviews {
   background-color: $primary;
+
   .testimonial-card {
     .review-text {
       font-size: 23px;
       color: $text-black;
     }
+
     h6 {
       font-size: 14px;
     }
@@ -188,17 +197,19 @@ body {
     .moment-heading {
       font-size: 65px;
     }
-    p{
+
+    p {
       font-size: 14px;
     }
   }
 }
 
 @media (max-width: 576px) {
-  .custom-title{
+  .custom-title {
     font-size: 42px;
   }
-  .custom-content{
+
+  .custom-content {
     font-size: 20px;
   }
 }
