@@ -47,7 +47,11 @@ const HeroSection = () => {
       <div className="col-md-11 col-12 mt-3">
         <div className="row mx-0 text-center">
           <div className="col-12 py-2">
-            <Stepper steps={steps} currentStep={2} />
+            <div className="row mx-0 align-items-center justify-content-center">
+              <div className="col-md-6 col-12">
+                <Stepper steps={steps} currentStep={2} />
+              </div>
+            </div>
           </div>
           <h1 className="col-12 hero-heading py-3">
             Your <span className="text-highlight">Universe</span> of Stress-Free <span className="text-highlight">Celebrations</span>!
