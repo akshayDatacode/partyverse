@@ -15,10 +15,10 @@ const PartyPackageSection = ({ label, partyAreaTabs, activePartyTab, setActivePa
     return (
         <>
             <div className="row mx-0">
-                <div className="col-12 my-3">
-                    <div className="my-3">
+                <div className="col-12">
+                    <div className="my-2">
                         <h4 className="party-package-heading">{label}</h4>
-                        <div className="row mx-0 my-3">
+                        <div className="row mx-0 ">
                             <div className="col-12 p-0">
                                 <Tab
                                     tabs={partyAreaTabs}

@@ -4,11 +4,13 @@
     background-color: $primary !important;
     color: $text-white;
     border-radius: 8px;
+    border: 1px solid $primary;
 }
 
 .bg-white-btn {
     background-color: $white !important;
     color: $text-primary !important;
+    border: 1px solid $text-white !important;
     font-weight: 700;
     font-size: 16px;
 }
@@ -22,4 +24,14 @@
 
 .border-primary {
     border: 1px solid #6658DE !important;
+}
+
+/*responsive*/
+@media screen and (max-width:992px) {
+    .bg-white-btn{
+        font-size: 14px;
+    }
+    .bg-transparent-btn{
+        font-size: 14px;
+    }
 }

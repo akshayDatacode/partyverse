@@ -1,7 +1,7 @@
 const VenuDetailsTopSection = () => {
   return (
     <>
-      <div className="row mx-0 justify-content-between align-items-center mb-3">
+      <div className="row mx-0 justify-content-between align-items-center">
         <div className="col-md-7 col-12 ">
           <div className="d-flex gap-4">
             <div className="">
@@ -19,13 +19,13 @@ const VenuDetailsTopSection = () => {
             </div>
           </div>
           <div>
-            <p className="food-type-names">
+            <span className="food-type-names py-1">
               North Indian, Chinese, Fast Food, Street Food, Desserts
-            </p>
+            </span>
           </div>
         </div>
         <div className="col-md-5 col-12 d-flex justify-content-md-end justify-content-start align-items-center ">
-          <div className="pure-veg-badge fw-bold px-3 px-md-4 py-2 text-white">
+          <div className="pure-veg-badge fw-bold px-3 px-md-4 py-2 my-2 text-white">
             100% Pure Veg
           </div>
         </div>

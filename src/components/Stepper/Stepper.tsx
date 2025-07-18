@@ -19,7 +19,7 @@ const Stepper = ({ steps, currentStep }: StepperProps) => {
           <div className="stepper-content">
             <div className="stepper-number-wrapper">
               <div
-                className={`stepper-number ${currentStep === step.number ? 'active' : ''}`}
+                className={`stepper-number ${currentStep >= step.number ? 'active' : ''}`}
               >
                 {step.number}
               </div>
