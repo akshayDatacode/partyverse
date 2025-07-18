@@ -14,7 +14,7 @@ const Footer = () => {
                <div className="row mx-0 d-flex justify-content-between align-items-center">
                   <div className="col-12 px-0">
                      <div className="row mx-0 ">
-                        <div className="col-md-4 col-12 ps-md-0 pe-md-4 px-3 py-md-4 py-3 footer-section-1 ">
+                        <div className="col-md-4 col-12 ps-md-0 pe-md-4 px-4 py-md-4 py-3 footer-section-1 ">
                            <div className="">
                               <Image src={PARTYVERSE} className=" my-3" alt="Logo" />
                               <p className="footer-paragraph my-2">Your one-stop solution for stress-free party planning. We handle the details, you create the memories.</p>
@@ -55,10 +55,10 @@ const Footer = () => {
                         </div>
                      </div>
                   </div>
-                  <div className="col-12">
-                     <div className="row mx-0 d-flex ">
-                        <div className="col-md-4 footer-paragraph footer-end px-4 pt-md-3 pt-4">© 2025 <span className="partyverse">Partyverse</span> All Rights Reserved.</div>
-                        <div className="col-md-8 footer-paragraph px-4 px-md-5 py-3">
+                  <div className="col-12 px-md-0 px-4 my-md-0 my-4">
+                     <div className="row mx-0 d-flex">
+                        <div className="col-md-4 footer-paragraph footer-end px-0">© 2025 <span className="partyverse">Partyverse</span> All Rights Reserved.</div>
+                        <div className="col-md-8 footer-paragraph px-md-5 px-0 py-2 py-md-0">
                            <span className="me-5">Privacy Policy</span>
                            <span>Terms of Use</span>
                         </div>

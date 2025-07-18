@@ -8,19 +8,21 @@ import TopOffersSection from "@/pages/LandingPage/components/TopOffersSection"
 import VenueListFilterTiles from "@/pages/LandingPage/components/VenueListFilterTiles"
 import MomentsSection from "./MomentsSection"
 import TestimonialSection from "./TestimonialSection"
+import QuickAction from "@/components/QuickAction"
 
 const LandingPage = () => {
   return (
     <>
       <HeroSection />
+      <QuickAction />
       <TopOffersSection />
       <HowItWorkSection />
       <FreeManagerSection />
       <CompletePartySection />
       <VenueListFilterTiles />
       <PlatformSection />
-      <MomentsSection/>
-      <TestimonialSection/>
+      <MomentsSection />
+      <TestimonialSection />
     </>
   )
 }
