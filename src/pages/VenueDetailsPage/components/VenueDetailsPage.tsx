@@ -78,15 +78,15 @@ const VenueDetailsPage = () => {
 
   return (
     <>
-      <div className="row mx-0 align-items-center justify-content-center py-3">
-        <div className="col-md-11 col-12 ">
+      <div className="row mx-0 align-items-center justify-content-center py-md-5 py-3">
+        <div className="col-md-11 col-12">
           {/* Upperheading */}
           <VenuDetailsTopSection />
 
           {/* Badge tabs */}
-          <div className="row mx-0 my-3">
+          <div className="row mx-0 my-md-2 my-1">
             <div className="col-12">
-              <div className="d-flex overflow-auto flex-nowrap py-2 hide-scrollbar">
+              <div className="d-flex overflow-auto flex-nowrap py-1 hide-scrollbar">
                 {tabItems && tabItems.map((item, index) => (
                   <BadgeTag label={item.label} icon="" key={index} />
                 ))}
@@ -98,7 +98,7 @@ const VenueDetailsPage = () => {
           <VenuDetailsImageSection imageData={imageData} />
 
           {/* Tabs below image grid */}
-          <div className="row mx-0 my-3">
+          <div className="row mx-0 my-md-2 my-1">
             <div className="col-12">
               <Tab
                 tabs={sectionTabs}

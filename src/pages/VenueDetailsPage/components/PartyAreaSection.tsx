@@ -51,11 +51,11 @@ type TabProps = {
 const PartyAreaSection = ({ label, partyAreaTabs, activePartyTab, setActivePartyTab }: TabProps) => {
     return (
         <>
-            <div className="row mx-0 my-3">
+            <div className="row mx-0 my-md-5 my-3">
                 <div className="col-12 ">
                     <div className="mt-3">
                         <h4 className="party-area-heading">{label}</h4>
-                        <div className="row mx-0 my-3">
+                        <div className="row mx-0 my-md-2 my-1">
                             <div className="col-12 p-0">
                                 <Tab
                                     tabs={partyAreaTabs}

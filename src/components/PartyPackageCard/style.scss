@@ -20,3 +20,16 @@
 .package-includes{
     font-size: 12px;
 }
+
+.blur-login{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border: 1px solid #F1F1F1; 
+  z-index: 1;
+  border-radius: 20px;
+}

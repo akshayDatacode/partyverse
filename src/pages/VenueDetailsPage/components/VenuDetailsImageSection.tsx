@@ -13,11 +13,11 @@ const VenuDetailsImageSection = ({
 }) => {
   return (
     <>
-      <div className="row mx-0 my-3">
+      <div className="row mx-0 my-2">
         {imageData && imageData.map((data, index) => {
           return (
             <>
-              <div className="col-md-6 col-12 py-md-2 py-3" key={index}>
+              <div className="col-md-6 col-12 py-md-2 py-1" key={index}>
                 <Image
                   src={data.parentImage}
                   alt="Venue 1"

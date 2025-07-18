@@ -30,17 +30,22 @@ const VenueListingPage = () => {
           </div>
           <div className="col-12 col-md-10">
             <div className="row mx-0">
-              <div className="col-12 py-2 m-md-1 ">
+              <div className="col-12 py-3 m-md-1">
                 <div className="d-block d-lg-none mb-2" onClick={() => setShowFilters(true)}>
                   <Button label="Filters" />
                 </div>
                 <div className="venue-sentence">
                   Discover top curated places that deliver unforgettable party experiences
                 </div>
+                <div className="d-flex align-items-center justify-content-between me-4">
                 <div className="venue-sub-sentence">
                   Places which are perfect for your upcoming party.
                 </div>
-              </div>
+                <div className="text-nowrap py-2">
+                  60 Results found
+                </div>
+                </div>
+                </div> 
               <div className="col-12 py-2 ms-md-3 ms-1 d-flex gap-3 flex-wrap">
                 {["Budget per Guest 1000 - 1299","Buffet","North India"].map((item,index)=>{
                   return(

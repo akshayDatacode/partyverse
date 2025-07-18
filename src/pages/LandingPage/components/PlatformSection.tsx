@@ -2,10 +2,10 @@ import Button from "@/ui/Button";
 
 const PlatformSection = () => {
   return (
-    <div className="row mx-0 my-md-5 my-3 py-md-5 py-3  px-md-5 px-3  platform-section">
+    <div className="row mx-0 my-md-5 my-3 py-md-5 py-3 px-md-5 px-3 platform-section">
       <div className="col-md-9 col-12 p-md-4 p-4 platform-inner-section">
         <div className="row mx-0 d-flex align-item-center justify-content-center p-md-4">
-          <div className="col-lg-3 col-12 px-md-2 px-0 d-flex align-items-center justify-md-content-center justify-content-around gap-md-3">
+          <div className="col-lg-3 col-12 px-md-2 px-0 d-flex align-items-center justify-md-content-center justify-content-around gap-md-3 ">
             <Button label="Plan now!" backgroundColor="white" />
             <Button label="Let’s Talk" backgroundColor="transparent" />
           </div>

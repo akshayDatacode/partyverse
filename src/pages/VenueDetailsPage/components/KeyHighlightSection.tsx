@@ -51,7 +51,7 @@ const KeyHighlightSection = ({
           </div>
         </div>
         {/* video */}
-        <div className="col-xxl-10 col-lg-9 col-md-8 col-12 mx-0 px-0">
+        <div className="col-xxl-10 col-lg-9 col-md-8 col-12 mx-0 px-0 my-3">
           <div className="row mx-0 party-videos px-lg-5 px-0">
             {videoData.map((data, index) => {
               return (

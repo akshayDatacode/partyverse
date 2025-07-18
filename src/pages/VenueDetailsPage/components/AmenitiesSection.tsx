@@ -69,7 +69,7 @@ const AmenitiesData = [
 const AmenitiesSection = () => {
   return (
     <>
-      <div className="row mx-0 py-md-4 py-3 amenities">
+      <div className="row mx-0 py-md-5 py-3 amenities">
         <h4 className="amenities-heading py-2">Amenities</h4>
         {AmenitiesData && AmenitiesData.map((data, index) => {
           return (

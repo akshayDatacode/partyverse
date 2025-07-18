@@ -11,26 +11,24 @@ const QuickAction = () => {
         { number: 2, label: "Package Selected" },
         { number: 3, label: "Book" },
     ];
-
     return (
         <>
-            <div className="row mx-0 my-md-5 my-3 py-md-5 py-3 align-items-center justify-content-center ">
-                <div className="col-md-11 col-12 ms-3">
+            <div className="row mx-0 my-md-5 my-3 py-md-5 py-3 d-flex align-items-center justify-content-center">
+                <div className="col-md-11 col-12 ps-md-3 pe-md-0 px-4">
                     <div className="row mx-0 d-flex position-relative">
-                        <div className="col-3 position-relative px-0 ">
+                        <div className="col-md-3 col-12 position-relative px-0">
                             <Image
                                 src={PlaceImage}
                                 alt="place-image"
-                                className="image-fluid object-fit-cover d-block quick-action-image"
+                                className="img-fluid quick-action-image"
                             />
-                            <div className="position-absolute top-0 start-10 z-2 quick-action-image-badge px-3">
+                            <div className="position-absolute px-3 top-0 start-10 z-2 quick-action-image-badge">
                                 Pending birthday party
                             </div>
-                            <div className="position-absolute image-inner-shadow top-0 quick-action-image start-0 w-100 h-100"></div>
                         </div>
-                        <div className="col-9 border quick-action-overlap-right d-flex align-items-center justify-content-center border quick-action-data bg-white">
-                            <div className="row mx-0 d-flex align-items-center justify-content-between w-100">
-                                <div className="col-3 d-flex flex-column justify-content-center px-3 gap-3">
+                        <div className="col-md-9 col-12 p-3 d-flex align-items-center justify-content-center quick-action-data quick-action-overlap-right">
+                            <div className="row mx-0 d-flex align-items-center justify-content-between w-100 gap-md-0 gap-4">
+                                <div className="col-md-3 col-12 d-flex flex-column justify-content-center gap-3 px-3">
                                     <div>
                                         <div className="fw-medium fs-18 ls-0 lh-140 font-style-medium">
                                             The Eatery Royale
@@ -49,15 +47,15 @@ const QuickAction = () => {
                                             23/03/2025
                                         </span>
                                     </div>
-                                    <span className="fs-14 fw-normal ls-0 lh-100 font-style-regular text-decoration-underline">
+                                    <span className="fw-normal fs-14 ls-0 lh-100 font-style-regular text-decoration-underline">
                                         View details
                                     </span>
                                 </div>
-                                <div className="col-6 px-0">
-                                    <Stepper steps={steps} currentStep={3} />
+                                <div className="col-md-6 col-12 px-0 mx-0">
+                                    <Stepper steps={steps} currentStep={2}/>
                                 </div>
-                                <div className="col-3 d-flex flex-column align-items-center justify-content-center">
-                                    <Button label="Complete Booking" />
+                                <div className="col-md-3 col-12 d-flex flex-column align-items-center justify-content-center">
+                                    <Button label="Complete Booking"/>
                                     <div className="my-3 fw-normal text-decoration-underline fs-14 ls-0 lh-100 font-style-regular">
                                         Delete this draft party
                                     </div>

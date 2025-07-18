@@ -41,8 +41,8 @@
 }
 
 .stepper-number.active {
-  background-color: $primary;
-  color: $text-white;
+  background-color: #F0FFDE;
+  border: 2px solid #45D064;
 }
 
 .stepper-label {
@@ -62,3 +62,7 @@
   border-top: 2px dashed $primary;
   z-index: 1;
 }
+.stepper-line.completed{
+  border-color: #45D064 !important;
+}
+

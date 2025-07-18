@@ -15,6 +15,7 @@ const packages = [
     discountLabel: "Flat 20% off",
     tagLabel: "Recommended",
     vegetarian: true,
+    isLogin: true
   },
   {
     title: "Gold Package",
@@ -30,6 +31,7 @@ const packages = [
     discountLabel: "Flat 20% off",
     tagLabel: "Budget",
     vegetarian: false,
+    isLogin : false
   },
   {
     title: "Silver Package",
@@ -46,6 +48,7 @@ const packages = [
     discountLabel: "Flat 30% off",
     tagLabel: "Best Seller",
     vegetarian: true,
+    isLogin: false
   },
 ];
 
@@ -64,6 +67,7 @@ const PartyCardSection = () => {
                 discountLabel={pkg.discountLabel}
                 tagLabel={pkg.tagLabel}
                 vegetarian={pkg.vegetarian}
+                isLogin={pkg.isLogin}
               />
             </div>
           </div>
