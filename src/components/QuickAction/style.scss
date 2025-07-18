@@ -1,16 +1,16 @@
+@use "../../assets/scss/variables" as *;
+
 .quick-action-data {
     border-radius: 10px;
-    background-color: #ECEAFF !important;
-    z-index: 2;
+    background-color: $quick-action-bg-color !important;
 }
 
 .quick-action-image {
     border-radius: 10px;
-    z-index: 1;
 }
 
 .quick-action-image-badge {
-    background-color: #FF8E82;
+    background-color: $quick-action-image-badge-color;
     border-radius: 4px;
 }
 
@@ -29,5 +29,4 @@
     margin-left: 0%;
     margin-top: -3%;
     }
-
 }

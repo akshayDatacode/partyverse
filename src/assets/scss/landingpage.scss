@@ -21,28 +21,6 @@ body {
 }
 
 // Landingpage ----- Hero Section
-.hero-section {
-  //background-image: url('../images/herobackgroung.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-heading {
-  color: $text-black;
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.hero-content {
-  font-size: 16px;
-  color: $text-black;
-  font-weight: 500;
-}
-
 .hero-select {
   display: flex;
   align-items: center;

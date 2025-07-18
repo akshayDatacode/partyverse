@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+
 import filterIcon from "@/assets/images/Filter--Streamline-Ionic-Filled.svg.png";
 import VenueFilterItem from "@/components/VenueFilter/VenueFilterItem";
 
@@ -17,7 +18,7 @@ const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
           onClick={() => setShowFilters(false)}
         />
       )}
-      <div className="p-2 position-relative bg-white z-md-n1 z-3 ">
+      <section className="p-2 position-relative bg-white z-md-n1 z-3 ">
         <div className="pb-5">
           <div className="venue-filter-heading pb-2 d-flex justify-content-between">
             <div>
@@ -33,30 +34,30 @@ const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
           ))}
         </div>
         <div>
-          <div className="venue-filter-heading pb-3">
-            <Image src={filterIcon} alt="Filter Icon" height={20} width={20} className="me-2 mb-1" />
+          <div className="pb-3 venue-filter-heading">
+            <Image src={filterIcon} alt="Filter Icon" height={20} width={20} className="me-2 mb-1"/>
             Other Filters
           </div>
           <div className="pb-2">
-            <div className="venue-filter-sub-heading py-2">Budget per Guest</div>
+            <div className="py-2 venue-filter-sub-heading">Budget per Guest</div>
             {["₹500 - ₹999", "₹1000 - ₹1299", "₹1300 - ₹1599", "₹1600 - ₹1999", "₹2000 - ₹2499"].map((label, i) => (
-              <VenueFilterItem key={i} label={label} name={"budget"} />
+              <VenueFilterItem key={i} label={label} name={"budget"}/>
             ))}
           </div>
           <div className="pb-2">
-            <div className="venue-filter-sub-heading py-2">Restaurant Type</div>
+            <div className="py-2 venue-filter-sub-heading ">Restaurant Type</div>
             {["Fine Dine", "Casual Dining", "Buffet", "Others", "Pub", "Restro Club", "Night Club"].map((label, i) => (
               <VenueFilterItem key={i} label={label} name={'restaurant'} />
             ))}
           </div>
           <div className="pb-2">
-            <div className="venue-filter-sub-heading py-2">Cuisine</div>
+            <div className="py-2 venue-filter-sub-heading">Cuisine</div>
             {["Chinese", "North Indian", "South Indian", "Thai", "Restro Club", "Night Club"].map((label, i) => (
               <VenueFilterItem key={i} label={label} name={'cuisine'} />
             ))}
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

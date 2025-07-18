@@ -1,10 +1,11 @@
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+
 import { RootState } from "@/core/redux/store";
 import { useSelector } from "react-redux";
 import details from "@/assets/images/details.png";
 import logistics from "@/assets/images/logistics.png";
 import anticipate from "@/assets/images/anticipate.png";
-import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 
 const HowItWorkSection = () => {
   const { value } = useSelector((state: RootState) => state?.count);
@@ -52,12 +53,11 @@ const HowItWorkSection = () => {
                   <div
                     key={index}
                     onClick={() => handleStepClick(index)}
-                    className={`d-flex align-items-center mb-2 p-3 p-md-3 step-box ${
-                      index === activeStepIndex ? "active-step" : ""
-                    }`}
+                    className={`d-flex align-items-center mb-2 p-md-3 p-3 step-box ${index === activeStepIndex ? "active-step" : ""
+                      }`}
                   >
                     {/* Number Box */}
-                    <div className="d-flex justify-content-center align-items-center rounded-circle ratio ratio-1x1 step-number">
+                    <div className="d-flex justify-content-center align-items-center ratio ratio-1x1 step-number rounded-circle">
                       {index + 1}
                     </div>
                     <div className="d-flex flex-column justify-content-center align-items-start ps-4 custom-content">

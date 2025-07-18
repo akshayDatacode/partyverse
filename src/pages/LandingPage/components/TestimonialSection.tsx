@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import Button from "@/ui/Button";
 import User1 from "@/assets/images/testimonial-user1.jpg";
 import User2 from "@/assets/images/testimonial-user2.jpg";
@@ -8,7 +10,6 @@ import User6 from "@/assets/images/testimonial-user6.jpg";
 import User7 from "@/assets/images/testimonial-user7.jpg";
 import QuoteIcon from "@/assets/images/quote-icon.png";
 import MultiCarousel from "@/ui/Carousel/MultiCarousel";
-import Image from "next/image";
 
 const testimonials = [
   {
@@ -52,9 +53,9 @@ const TestimonialSection = () => {
   return (
     <>
       <section className="row mx-0 my-5 py-5 d-flex justify-content-center">
-        <div className="col-md-11 col-12 px-4 px-md-0">
-          <div className="row mx-0 ">
-            <div className="col-md-7 px-0 px-md-2">
+        <div className="col-md-11 col-12 px-md-0 px-4">
+          <div className="row mx-0">
+            <div className="col-md-7 px-md-2 px-0">
               <h1 className="custom-title">
                 What <span>people</span> say about us
               </h1>
@@ -63,8 +64,8 @@ const TestimonialSection = () => {
               </p>
               <Button label="Lets Plan your Party too" />
             </div>
-            <div className="col-md-5 col-12 mt-5 mt-md-0 px-md-3 px-0">
-              <div className="row mx-0 d-flex  justify-content-center align-items-center trusted-host">
+            <div className="col-md-5 col-12 mt-md-0 mt-5 px-md-3 px-0">
+              <div className="row mx-0 d-flex justify-content-center align-items-center trusted-host">
                 <div className="col-md-6 col-12 px-0">
                   {[User1, User2, User3, User4, User5].map((img, i) => (
                     <Image
@@ -100,7 +101,7 @@ const TestimonialSection = () => {
           >
             {testimonials.map((item, index) => (
               <div
-                className="bg-white p-md-5 p-4 rounded-4 mx-md-2 testimonial-card"
+                className="bg-white mx-md-2 p-md-5 p-4 rounded-4 testimonial-card"
                 key={index}
               >
                 <p className="fw-medium review-text">{item.text}</p>

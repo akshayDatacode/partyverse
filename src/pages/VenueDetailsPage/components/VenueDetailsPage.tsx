@@ -1,19 +1,19 @@
 import { useState } from "react";
 
-import "@/assets/scss/venuedetailspage.scss";
-import "bootstrap/dist/css/bootstrap.min.css";
 import Venue1 from "@/assets/images/venue-img1.jpg";
 import Venue2 from "@/assets/images/venue-img2.jpg";
 import Venue3 from "@/assets/images/venue-img3.jpg";
 import Venue4 from "@/assets/images/venue-img4.jpg";
+import Tab from "@/components/Tab";
+import BadgeTag from "@/components/BadgeTag";
 import VenuDetailsTopSection from "./VenueDetailsTopSection";
 import VenuDetailsImageSection from "./VenuDetailsImageSection";
 import PartySection from "./PartyAreaSection";
 import AmenitiesSection from "./AmenitiesSection";
 import SimilarPlaceSection from "./SimilarPlaceSection";
 import PartyPackageSection from "./PartyPackageSection";
-import Tab from "@/components/Tab";
-import BadgeTag from "@/components/BadgeTag";
+import "@/assets/scss/venuedetailspage.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const imageData = [{
   parentImage: Venue1,
@@ -78,7 +78,7 @@ const VenueDetailsPage = () => {
 
   return (
     <>
-      <div className="row mx-0 align-items-center justify-content-center py-md-5 py-3">
+      <section className="row mx-0 py-md-5 py-3 align-items-center justify-content-center">
         <div className="col-md-11 col-12">
           {/* Upperheading */}
           <VenuDetailsTopSection />
@@ -98,7 +98,7 @@ const VenueDetailsPage = () => {
           <VenuDetailsImageSection imageData={imageData} />
 
           {/* Tabs below image grid */}
-          <div className="row mx-0 my-md-2 my-1">
+          <div className="row my-md-2 mx-0 my-1">
             <div className="col-12">
               <Tab
                 tabs={sectionTabs}
@@ -128,7 +128,7 @@ const VenueDetailsPage = () => {
           {/*Similar Places */}
           <SimilarPlaceSection />
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -13,7 +13,7 @@ const VenuDetailsImageSection = ({
 }) => {
   return (
     <>
-      <div className="row mx-0 my-2">
+      <section className="row mx-0 my-2">
         {imageData && imageData.map((data, index) => {
           return (
             <>
@@ -42,7 +42,7 @@ const VenuDetailsImageSection = ({
             </>
           );
         })}
-      </div>
+      </section>
     </>
   );
 };

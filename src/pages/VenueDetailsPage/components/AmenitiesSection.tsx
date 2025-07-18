@@ -69,12 +69,12 @@ const AmenitiesData = [
 const AmenitiesSection = () => {
   return (
     <>
-      <div className="row mx-0 py-md-5 py-3 amenities">
-        <h4 className="amenities-heading py-2">Amenities</h4>
+      <section className="row mx-0 py-md-5 py-3 amenities">
+        <h4 className="py-2 amenities-heading">Amenities</h4>
         {AmenitiesData && AmenitiesData.map((data, index) => {
           return (
             <>
-              <div className="col-12 py-2 my-1" key={index}>
+              <div className="col-12 my-1 py-2" key={index}>
                 <h6 className="amenities-sub-heading">
                   {data.mainHeading}
                 </h6>
@@ -91,7 +91,7 @@ const AmenitiesSection = () => {
             </>
           );
         })}
-      </div>
+      </section>
     </>
   );
 };
