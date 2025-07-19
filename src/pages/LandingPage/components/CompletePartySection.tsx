@@ -1,7 +1,8 @@
 'use client';
 import { useState } from "react";
-import Tab from "@/components/Tab";
 import "bootstrap-icons/font/bootstrap-icons.css";
+
+import Tab from "@/components/Tab";
 
 // Data for each category
 const categoryData = {
@@ -148,22 +149,22 @@ const CompletePartySection = () => {
             <hr className="mt-3 mb-4 mx-0"
               style={{ borderTop: "1px solid rgb(203, 206, 209)" }}
             />
-            </div>
-            {/* Cards for the selected tab */}
-            <div className="row mx-0 my-3 px-0 d-flex justify-content-center">
-              {categoryData[activeCategory]?.map((item, index) => (
-                <div className="col-md-4 col-11 mb-4 px-0 px-md-3 mb-md-0" key={index}>
-                  <div className="p-md-5 p-4 w-100 h-100 party-cards">
-                    <h5 className="mb-2 party-heading">{item.title}</h5>
-                    <p className="mb-0 party-content">{item.description}</p>
-                    {'subtitle' in item && item.subtitle && <div className="d-flex align-items-center gap-2">
-                      <i className="bi bi-check-circle-fill" style={{ fontSize: "14px", color: " #6658DE" }} ></i>
-                      <small className="py-3" style={{ fontSize: "12px" }}>{item?.subtitle}</small>
-                    </div>}
-                  </div>
+          </div>
+          {/* Cards for the selected tab */}
+          <div className="row mx-0 my-3 px-0 d-flex justify-content-center">
+            {categoryData[activeCategory]?.map((item, index) => (
+              <div className="col-md-4 col-11 mb-md-0 mb-4 px-md-3 px-0" key={index}>
+                <div className="p-md-5 p-4 w-100 h-100 party-cards">
+                  <h5 className="mb-2 party-heading">{item.title}</h5>
+                  <p className="mb-0 party-content">{item.description}</p>
+                  {'subtitle' in item && item.subtitle && <div className="d-flex align-items-center gap-2">
+                    <i className="bi bi-check-circle-fill fs-12 text-highlight"></i>
+                    <small className="py-3 fs-12">{item?.subtitle}</small>
+                  </div>}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

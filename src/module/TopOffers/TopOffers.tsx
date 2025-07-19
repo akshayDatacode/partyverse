@@ -1,5 +1,6 @@
-import MultiCarousel from "@/ui/Carousel";
 import Image from "next/image";
+
+import MultiCarousel from "@/ui/Carousel";
 import Logistics from "@/assets/images/03acb0a591338c014fadb4d86a2158c5d77bef82.jpg";
 import "./style.scss";
 
@@ -49,7 +50,6 @@ const TopOffersData = [
 ]
 
 const TopOffers = () => {
-
   return (
     <div className="top-offers">
       <MultiCarousel
@@ -67,11 +67,11 @@ const TopOffers = () => {
               <div className="row mx-0 top-offer">
                 <div className="col-6 py-md-4 py-2 px-md-3 px-1">
                   <div className="row mx-0 justify-content-between ">
-                    <div className="pb-4 col-12">
+                    <div className="col-12 pb-4">
                     <div className="offer-tag">{offer.tag.toUpperCase()}</div>
                     <h1 className="offer-percent">{offer.percent}</h1>
                     </div>
-                    <div className="offer-valid col-12">*{offer.valid}</div>
+                    <div className="col-12 offer-valid">*{offer.valid}</div>
                   </div>
                 </div>
                 <div className="col-6 px-0 position-relative" >
@@ -82,12 +82,11 @@ const TopOffers = () => {
                   />
                   {/* Inner shadow overlay */}
                   <div
-                    className="position-absolute image-inner-shadow top-0 top-offer-image start-0 w-100 h-100"
+                    className="position-absolute top-0 start-0 w-100 h-100 image-inner-shadow top-offer-image"
                   ></div>
-
                   {/* Text */}
                   <span
-                    className="position-absolute top-offer-venue bottom-0 start-50 translate-middle-x text-white px-5 w-100 py-1 "
+                    className="position-absolute bottom-0 start-50 text-white px-5 w-100 py-1 translate-middle-x top-offer-venue"
                   >
                     {offer.venue}
                   </span>

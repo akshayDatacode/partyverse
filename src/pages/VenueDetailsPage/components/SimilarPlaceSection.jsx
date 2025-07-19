@@ -41,7 +41,7 @@ const SimilarPlaceSection = () => {
 
   return (
     <>
-      <div className="row mx-0 py-4">
+      <section className="row mx-0 py-4">
         <div className="col-12 mb-3">
           <h4>Similar Places</h4>
         </div>
@@ -50,7 +50,7 @@ const SimilarPlaceSection = () => {
             <VenueCard {...venue} />
           </div>
         ))}
-      </div>
+      </section>
     </>
   );
 };

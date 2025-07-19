@@ -20,7 +20,7 @@ const Tab = ({
 }: TabProps) => {
   return (
     <div className="tab-container">
-      <div className="tab-list d-flex overflow-auto flex-nowrap py-2 hide-scrollbar" data-tab-spacing={tabSpacing}>
+      <div className="d-flex overflow-auto flex-nowrap py-2 hide-scrollbar tab-list" data-tab-spacing={tabSpacing}>
         {tabs.map((tab, index) => (
           <button
             key={index}

@@ -1,5 +1,6 @@
-import Button from "@/ui/Button";
 import Image from "next/image";
+
+import Button from "@/ui/Button";
 import details from "@/assets/images/details.png";
 import logistics from "@/assets/images/logistics.png";
 import anticipate from "@/assets/images/anticipate.png";
@@ -50,17 +51,17 @@ const FreeManagerSection = () => {
     <>
       <section className="row mx-0 my-5 py-5 d-flex justify-content-center">
         <div className="col-md-11 col-12">
-          <div className="row mx-0  d-flex justify-content-between">
+          <div className="row mx-0 d-flex justify-content-between">
             <div className="col-md-5 col-12">
               <h1 className="custom-title">
                 Get<span> Free</span> Personal
                 <br /> <span>Event Manager</span>
               </h1>
-              <p className="mb-4 me-md-5 pe-md-5 fs-24 font-style-regular vertical-align-middle fw-normal lh-100 ls-0">
+              <p className="me-md-5 mb-4 pe-md-5 fs-24 font-style-regular vertical-align-middle fw-normal lh-100 ls-0">
                 Your dedicated event assistant takes care of everything so you
                 can enjoy a stress-free celebration.
               </p>
-              <Button label="Learn More About Our Team" />
+              <Button label="Learn More About Our Team"/>
             </div>
             <div className="col-md-6 col-12 d-flex flex-column gap-4 px-0 mt-5 mt-md-0">
               <MultiCarousel
@@ -99,7 +100,6 @@ const FreeManagerSection = () => {
                     </div>
                   </div>
                 ))}
-
               </MultiCarousel>
             </div>
           </div>

@@ -11,27 +11,23 @@
     background-color: $white !important;
     color: $text-primary !important;
     border: 1px solid $text-white !important;
-    font-weight: 700;
-    font-size: 16px;
 }
 
 .bg-transparent-btn {
     background-color: transparent !important;
     border: 1px solid $text-white !important;
-    font-weight: 700;
-    font-size: 16px;
 }
 
 .border-primary {
-    border: 1px solid #6658DE !important;
+    border: 1px solid $primary !important;
 }
 
 /*responsive*/
 @media screen and (max-width:992px) {
     .bg-white-btn{
-        font-size: 14px;
+        font-size: $font-size-sm;
     }
     .bg-transparent-btn{
-        font-size: 14px;
+        font-size: $font-size-sm;
     }
 }

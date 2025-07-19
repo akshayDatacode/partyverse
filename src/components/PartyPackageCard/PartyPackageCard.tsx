@@ -1,7 +1,8 @@
 import Image from "next/image";
-import "./style.scss";
+
 import Button from "@/ui/Button";
 import vegeterianIcon from "@/assets/images/Group 71.png";
+import "./style.scss";
 
 type PackageItem = {
   quantity: number;
@@ -33,7 +34,7 @@ const PartyPackageCard = ({
     <div className="p-3 m-md-2">
       {/* Title & Tag */}
       <div className="row mx-0">
-        <div className="col-6 px-0 px-md-2 d-flex align-item-center">
+        <div className="col-6 px-md-2 px-0 d-flex align-item-center">
           {vegetarian && <span className="d-flex align-items-center justify-content-center me-2"><Image src={vegeterianIcon} alt="vegeraterian-icon" /></span>}
           <h5 className="m-0 fw-bold d-flex align-items-center">{title}</h5>
         </div>
@@ -48,9 +49,9 @@ const PartyPackageCard = ({
 
       {/* Items */}
       <div className="row mx-0 position-relative">
-        <div className={`col-6 px-0 px-md-2 pb-5 mb-4 ${isLogin?"pt-5":""}`}>
+        <div className={`col-6 px-md-2 px-0 pb-5 mb-4 ${isLogin?"pt-2":""}`}>
           <div className="my-2 package-includes">Includes</div>
-          <ul className="list-unstyled my-2">
+          <ul className="my-2 list-unstyled">
             {items && items.map((item, id) => (
               <li className="mb-3">
                 <span key={id} className="text-dark list-content">
@@ -83,16 +84,17 @@ const PartyPackageCard = ({
           {/* Action Buttons */}
           <div className="mt-2 d-flex">
             <div className="me-2">
-              <Button label="View Menu" backgroundColor="white" borderColor="primary" />
+              <Button label="View Menu" backgroundColor="white" borderColor="primary"/>
             </div>
             <div>
               <Button label="Book Now" />
             </div>
           </div>
         </div>
+
         {/* Blur Part of card */}
         { isLogin &&
-        <div className="blur-login d-flex flex-column align-items-center justify-content-center gap-3 fw-bolder mt-3">
+        <div className="mt-3 d-flex flex-column align-items-center justify-content-center gap-3 fw-bolder blur-login">
           <div className="text-highlight fs-16 lh-100 ls-0">
             Login to View Packages
           </div>

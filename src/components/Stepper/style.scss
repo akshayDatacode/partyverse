@@ -41,8 +41,8 @@
 }
 
 .stepper-number.active {
-  background-color: #F0FFDE;
-  border: 2px solid #45D064;
+  background-color: $stepper-active-bg-color;
+  border: 2px solid $light-green-color;
 }
 
 .stepper-label {
@@ -63,6 +63,6 @@
   z-index: 1;
 }
 .stepper-line.completed{
-  border-color: #45D064 !important;
+  border-color: $light-green-color !important;
 }
 

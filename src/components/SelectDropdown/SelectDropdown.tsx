@@ -9,7 +9,7 @@ type SelectDropdownProps = {
 const SelectDropdown = ({ label,place_holder }: SelectDropdownProps) => {
   return (
     <div className="">
-      <label className="label text-highlight w-100 text-start px-2" htmlFor="select">{label}</label>
+      <label className="w-100 text-start px-2 fw-medium lh-100 ls-0 fs-14 text-highlight" htmlFor="select">{label}</label>
       <div className="">
         <SelectInput place_holder={place_holder} />
       </div>

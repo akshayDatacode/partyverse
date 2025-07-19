@@ -1,10 +1,12 @@
 import Image from "next/image";
-import "./style.scss";
+import type { StaticImageData } from "next/image";
+import { BadgePercent } from "lucide-react";
+
 import Venuecard from "@/assets/images/venuecards.png";
 import Logistic from "@/assets/images/logistics.png";
 import MultiCarousel from "@/ui/Carousel";
-import type { StaticImageData } from "next/image";
-import { BadgePercent } from "lucide-react";
+import "./style.scss";
+
 type VenueCardProps = {
   image?: string | StaticImageData;
   badgeType?:
@@ -94,7 +96,7 @@ const VenueCard = ({
             />
           </MultiCarousel>
           {discount && (
-            <span className="fw-bold w-75 position-absolute bottom-0 start-0 ps-2 pe-2 mb-3 discount-badge d-flex align-items-center">
+            <span className="fw-bold w-75 position-absolute bottom-0 start-0 ps-2 pe-2 mb-3 d-flex align-items-center discount-badge">
               <BadgePercent size={18} fill="white" color="#6658DE" className="me-2" />
               {` Flat ${discount} off`}
             </span>

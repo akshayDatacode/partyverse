@@ -55,7 +55,7 @@ const packages = [
 const PartyCardSection = () => {
   return (
     <>
-      <div className="row mx-0 pb-3 ">
+      <section className="row mx-0 pb-3 ">
         {packages && packages.map((pkg, index) => (
           <div key={index} className="col-md-6 col-12 my-1">
             <div className="party-package-card my-2">
@@ -72,7 +72,7 @@ const PartyCardSection = () => {
             </div>
           </div>
         ))}
-      </div>
+      </section>
     </>
   );
 };
