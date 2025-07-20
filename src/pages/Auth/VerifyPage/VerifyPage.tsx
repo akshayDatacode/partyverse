@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import { useRef, useState,useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import Logo from "../../../assets/images/partyverse.png";
 import Button from "@/ui/Button";
 import "./style.scss";
@@ -10,21 +10,22 @@ const VerifyPage = () => {
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
   const [time, setTime] = useState(0);
 
-   useEffect(() => {
-    const stopTime = setInterval(() => {
-      setTime((prevTime) => {
-        if (prevTime < 30) {
-          return prevTime + 1;
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTime((prev) => {
+        if (prev < 30) {
+          return prev + 1;
         } else {
-          clearInterval(stopTime);
-          return prevTime; // Don't increment past 30
+          clearInterval(intervalId);
+          return prev;
         }
       });
     }, 1000);
 
-    // Optional cleanup
-    return () => clearInterval(stopTime);
+    return () => clearInterval(intervalId); // cleanup
   }, []);
+
+
 
   const handleOtpChange = (value: string, index: number) => {
     if (!/^\d?$/.test(value)) return;
