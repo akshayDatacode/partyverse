@@ -1,5 +1,6 @@
 import VenueCard from "@/components/VenueCard";
 import Venue from "@/assets/images/venuecards.png";
+import Link from "next/link";
 
 const SimilarPlaceSection = () => {
   const venues = [
@@ -47,7 +48,9 @@ const SimilarPlaceSection = () => {
         </div>
         {venues && venues.map((venue, index) => (
           <div key={index} className="col-12 col-md-6 col-lg-4 mb-4">
+            <Link href={`/venues/${index + 1}`}  className="text-decoration-none">
             <VenueCard {...venue} />
+            </Link>
           </div>
         ))}
       </section>

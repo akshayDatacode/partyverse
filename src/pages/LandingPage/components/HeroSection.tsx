@@ -1,5 +1,6 @@
 'use client';
 import { useEffect } from "react";
+import Link from "next/link";
 
 import Stepper from "@/components/Stepper"
 import SelectPartyFilter from "@/module/SearchPartyFilter"
@@ -67,7 +68,9 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="col-12 pt-4">
+             <Link href="/venues" className="text-decoration-none">
             <Button label="Search Party Places" />
+            </Link>
           </div>
         </div>
       </div>

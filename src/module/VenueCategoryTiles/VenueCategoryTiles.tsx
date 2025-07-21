@@ -1,6 +1,7 @@
 import VenueCard from "@/components/VenueCard";
 import MultiCarousel from "@/ui/Carousel";
 import Button from "@/ui/Button";
+import Link from "next/link";
 import "./style.scss";
 
 const VenueCategoryTiles = ({
@@ -75,7 +76,9 @@ const VenueCategoryTiles = ({
         {venueList &&
           venueList.map((venue, index) => (
             <div key={index} className="me-md-4 ms-md-0 mx-0">
+               <Link href={`/venues/${index + 1}`}  className="text-decoration-none">
               <VenueCard venueName={venue.title} />
+              </Link>
             </div>
           ))}
       </MultiCarousel>
