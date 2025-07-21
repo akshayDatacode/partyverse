@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 import Button from "@/ui/Button";
 import vegeterianIcon from "@/assets/images/Group 71.png";
 import "./style.scss";
@@ -98,7 +98,9 @@ const PartyPackageCard = ({
           <div className="text-highlight fs-16 lh-100 ls-0">
             Login to View Packages
           </div>
+          <Link href="/login" className="text-decoration-none">
           <Button label="Login" />
+          </Link>
         </div>
         }
       </div>

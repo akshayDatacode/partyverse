@@ -3,9 +3,12 @@ import Image from "next/image";
 
 import { RootState } from "@/core/redux/store";
 import { useSelector } from "react-redux";
-import details from "@/assets/images/details.png";
-import logistics from "@/assets/images/logistics.png";
-import anticipate from "@/assets/images/anticipate.png";
+import DiscoverPlace from '@/assets/images/discoverplace.png';
+import ChoosePackage from '@/assets/images/choosepackage.png';
+import BookInstantly from '@/assets/images/bookinstantly.png';
+import CustomAddOn from '@/assets/images/custom-addon.png';
+
+
 
 const HowItWorkSection = () => {
   const { value } = useSelector((state: RootState) => state?.count);
@@ -17,7 +20,7 @@ const HowItWorkSection = () => {
     "Complete Your Party with Custom Add-ons Services",
   ];
 
-  const images = [details, logistics, anticipate, logistics];
+  const images = [DiscoverPlace, ChoosePackage, BookInstantly, CustomAddOn];
 
   const [activeStepIndex, setActiveStepIndex] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -71,7 +74,7 @@ const HowItWorkSection = () => {
               <Image
                 src={images[activeStepIndex]}
                 alt={`Step ${activeStepIndex + 1}`}
-                className="img-fluid rounded shadow"
+                className="img-fluid"
                 style={{
                   maxHeight: "400px",
                   width: "840px",

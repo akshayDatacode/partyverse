@@ -1,5 +1,5 @@
 'use client';
-
+import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import * as Yup from "yup";
@@ -128,7 +128,7 @@ const SignupPage = () => {
               <Button label="Continue" type="submit" />
             </div>
           </form>
-
+            <div className="text-center py-3"><Link href={"/login"} className="text-decorartion-none fw-normal text-decoration-underline fs-14 lh-120 ls-0 text-center login-label">already have an account?</Link></div>
           {/* Optional error/info message */}
           <div className="fw-normal fs-14 lh-120 ls-0 text-center py-3 signup-label">
             {(errors.fullName && <div className="text-danger fs-12 mt-1">{errors.fullName}</div>)||

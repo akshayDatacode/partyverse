@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 import Button from "@/ui/Button";
 import User1 from "@/assets/images/testimonial-user1.jpg";
 import User2 from "@/assets/images/testimonial-user2.jpg";
@@ -62,7 +62,9 @@ const TestimonialSection = () => {
               <p className="custom-content">
                 we don’t overpower with words of us, we are powered by people
               </p>
+               <Link href="/venues" className="text-decoration-none">
               <Button label="Lets Plan your Party too" />
+              </Link>
             </div>
             <div className="col-md-5 col-12 mt-md-0 mt-5 px-md-3 px-0">
               <div className="row mx-0 d-flex justify-content-center align-items-center trusted-host">

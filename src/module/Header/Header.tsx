@@ -20,7 +20,9 @@ const Header = () => {
             <SelectDropdown label="City" place_holder="Indore" />
           </div>
           <div className="my-3 mx-2 d-md-block d-none">
+            <Link href="/login" className="text-decoration-none">
             <Button label="Login/Sign up"/>
+            </Link>
           </div>
           <div className="d-md-none d-inline">
             <i className="bi bi-list fs-2"></i>
