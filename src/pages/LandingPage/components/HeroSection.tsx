@@ -1,24 +1,33 @@
-'use client';
-import { useEffect } from "react";
+"use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
-import Stepper from "@/components/Stepper"
-import SelectPartyFilter from "@/module/SearchPartyFilter"
-import Button from "@/ui/Button"
+import Stepper from "@/components/Stepper";
+import SelectPartyFilter from "@/module/SearchPartyFilter";
+import Button from "@/ui/Button";
 import axios from "@/core/axios";
 import { useAppDispatch } from "@/core/redux/store";
 import { createIncreaseCount } from "../actions/operations";
+import FilterDrawer from "@/components/FilterDrawer";
 
 const HeroSection = () => {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
+  const [showDrawer, setShowDrawer] = useState(false);
+  const [showFilters, setShowFilters] = useState(true);
+  const handleOpen = () => {
+    setShowDrawer(true);
+  };
+
+  const handleClose = () => {
+    setShowDrawer(false);
+  };
 
   useEffect(() => {
-    axios.get('/api/landing-page-data')
-      .then(response => {
-        console.log("Landing page data:", response.data);
-      })
-    dispatch(createIncreaseCount(342))
-  }, [])
+    axios.get("/api/landing-page-data").then((response) => {
+      console.log("Landing page data:", response.data);
+    });
+    dispatch(createIncreaseCount(342));
+  }, []);
 
   const steps = [
     { number: 1, label: "Search" },
@@ -54,11 +63,18 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="col-12 py-3 fw-bold text-dark fs-24 lh-100 ls-0">
-            Your <span className="text-highlight">Universe</span> of Stress-Free <span className="text-highlight">Celebrations</span>!
+            Your <span className="text-highlight">Universe</span> of Stress-Free{" "}
+            <span className="text-highlight">Celebrations</span>!
           </div>
           <div className="col-12 py-3 text-dark fw-medium fs-16 lh-100 ls-0">
-            <p className="my-0">We’re here to take the chaos out of parties and leave only the fun.</p>
-            <p className="my-0">From birthdays and anniversaries to surprise proposals, kitty parties, get together, house parties etc.</p>
+            <p className="my-0">
+              We’re here to take the chaos out of parties and leave only the
+              fun.
+            </p>
+            <p className="my-0">
+              From birthdays and anniversaries to surprise proposals, kitty
+              parties, get together, house parties etc.
+            </p>
           </div>
           <div className="col-12 py-4">
             <div className="row mx-0 w-100 align-items-center justify-content-center">
@@ -68,14 +84,24 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="col-12 pt-4">
-             <Link href="/venues" className="text-decoration-none">
-            <Button label="Search Party Places" />
+            <Link
+              href="/"
+              className="text-decoration-none"
+              onClick={handleOpen}
+            >
+              <Button label="Search Party Places" />
             </Link>
+            <FilterDrawer
+              open={showDrawer}
+              onClose={handleClose}
+              showFilters={showFilters}
+              setShowFilters={setShowFilters}
+            />
           </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
