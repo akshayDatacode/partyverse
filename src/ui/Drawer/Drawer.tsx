@@ -8,6 +8,7 @@ type DrawerProps = {
   placement?: "top" | "right" | "bottom" | "left";
   title?: string;
   width?: number | string;
+  height?:string | number;
   extra?: ReactNode;
 };
 
@@ -18,6 +19,7 @@ const Drawer = ({
   placement = "bottom",
   title,
   width = 400,
+  height=500,
   extra,
 }: DrawerProps) => {
   return (
@@ -28,6 +30,7 @@ const Drawer = ({
         onClose={onClose}
         open={open}
         width={width}
+        height={height}
         extra={extra}
       >
         {children}
