@@ -6,7 +6,7 @@ import VenuListFilter from "./VenuListFilter";
 import VenueCard from "@/components/VenueCard";
 import Button from "@/ui/Button";
 import VenueFilterBadge from "@/components/VenueFilter/VenueFilterBadge";
-
+import FilterDrawer from "@/components/FilterDrawer"
 const VenueList = [
   { title: "Venue 1", description: "Description for Venue 1" },
   { title: "Venue 2", description: "Description for Venue 2" },
@@ -17,6 +17,7 @@ const VenueList = [
 
 const VenueListingPage = () => {
   const [showFilters, setShowFilters] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   return (
     <div className="row mx-0">
@@ -43,7 +44,7 @@ const VenueListingPage = () => {
                 <div className="">
                   <div
                     className="d-block d-lg-none mb-2"
-                    onClick={() => setShowFilters(true)}
+                   onClick={() => setDrawerOpen(true)}
                   >
                     <Button label="Filters" />
                   </div>
@@ -83,6 +84,12 @@ const VenueListingPage = () => {
           </div>
         </div>
       </div>
+       <FilterDrawer
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        showFilters={showFilters}
+        setShowFilters={setShowFilters}
+      />
     </div>
   );
 };
