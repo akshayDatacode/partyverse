@@ -25,9 +25,6 @@ const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
               <Image src={filterIcon} alt="Filter Icon" height={20} width={20} className="me-2 mb-1" />
               Top Filters
             </div>
-            <div className="text-danger d-lg-none" onClick={() => setShowFilters(false)}>
-              X
-            </div>
           </div>
           {["Fine Dine", "Casual Dining", "Pure Veg"].map((label, i) => (
             <VenueFilterItem key={i} label={label} name={'topFilter'} />

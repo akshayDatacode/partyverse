@@ -8,20 +8,10 @@ import Button from "@/ui/Button";
 import axios from "@/core/axios";
 import { useAppDispatch } from "@/core/redux/store";
 import { createIncreaseCount } from "../actions/operations";
-import FilterDrawer from "@/components/FilterDrawer";
 
 const HeroSection = () => {
   const dispatch = useAppDispatch();
-  const [showDrawer, setShowDrawer] = useState(false);
-  const [showFilters, setShowFilters] = useState(true);
-  const handleOpen = () => {
-    setShowDrawer(true);
-  };
-
-  const handleClose = () => {
-    setShowDrawer(false);
-  };
-
+ 
   useEffect(() => {
     axios.get("/api/landing-page-data").then((response) => {
       console.log("Landing page data:", response.data);
@@ -85,18 +75,11 @@ const HeroSection = () => {
           </div>
           <div className="col-12 pt-4">
             <Link
-              href="/"
+              href="/venues"
               className="text-decoration-none"
-              onClick={handleOpen}
             >
               <Button label="Search Party Places" />
             </Link>
-            <FilterDrawer
-              open={showDrawer}
-              onClose={handleClose}
-              showFilters={showFilters}
-              setShowFilters={setShowFilters}
-            />
           </div>
         </div>
       </div>
