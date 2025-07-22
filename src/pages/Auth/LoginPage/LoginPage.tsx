@@ -44,14 +44,14 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="row mx-0 h-100 w-100 bg-white px-5 py-5 login">
-      <div className="col-12 text-white px-3">
-        <Image src={Logo} alt="logo" className="mb-5 mt-3" />
+    <div className="row mx-0 bg-white login align-items-center justify-content-around px-5">
+      <div className="col-12 text-white">
+        <Image src={Logo} alt="logo" className="mb-5 mt-0" />
         <div className="text-dark">
           <div className="fw-bold py-1 pt-3 lh-100 ls-0 fs-21">Let’s begin planning your party.</div>
           <div className="fw-normal py-1 pb-3 fs-16 lh-100 ls-0">Enter your email id and password</div>
           <form onSubmit={handleSubmit}>
-            <div className="custom-input-wrapper my-4 px-2">
+            <div className="custom-input-wrapper my-4">
               <label className="custom-label" htmlFor="email">Email</label>
               <input
                 type="email"
@@ -61,9 +61,8 @@ const LoginPage = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              
             </div>
-            <div className="custom-input-wrapper my-4 px-2">
+            <div className="custom-input-wrapper my-4">
               <label className="custom-label" htmlFor="password">Password</label>
               <input
                 type="password"

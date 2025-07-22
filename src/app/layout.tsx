@@ -1,19 +1,19 @@
+// This is still a Server Component
+
 import axios from "axios";
-import { ToastContainer } from 'react-toastify';
 import { setupAxios } from "@/core/auth/AuthHelpers";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
 import "./globals.css";
-import 'bootstrap/dist/css/bootstrap.css'
-import '@/assets/scss/style.scss'
-import '@/assets/scss/landingpage.scss'
-import '@/assets/scss/venueList.scss'
+import 'bootstrap/dist/css/bootstrap.css';
+import '@/assets/scss/style.scss';
+import '@/assets/scss/landingpage.scss';
+import '@/assets/scss/venueList.scss';
 import 'react-toastify/dist/ReactToastify.css';
+
 import Providers from "@/core/Providers";
-import Header from "@/module/Header";
-import Footer from "@/module/Footer";
-// import Providers from "@/core/Providers";
+import ShowHeaderAndFooter from "@/components/ShowHeaderAndFooter"; // ✅ Import the new client component
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,14 +33,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-
-  //Initialize Axios with the setup
+}) {
   const axiosInstance = axios.create({
     baseURL: process.env.REACT_APP_API_BASE_URL || 'https://api.example.com',
-    timeout: 10000, // Set a timeout for requests
+    timeout: 10000,
   });
   setupAxios(axiosInstance);
 
@@ -48,10 +46,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Providers>
-          <Header/>
-          {children}
-          <Footer/>
-          <ToastContainer />
+          <ShowHeaderAndFooter>{children}</ShowHeaderAndFooter> {/* ✅ Wrap in client component */}
         </Providers>
       </body>
     </html>
