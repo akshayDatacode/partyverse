@@ -56,14 +56,14 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="row mx-0 h-100 w-100 bg-white signup align-item-start justify-content-start mx-5 px-5">
+    <div className="row mx-0 bg-white signup align-items-center justify-content-around px-5 py-3">
       <div className="col-12 text-white">
-        <div className="py-3">
+        <div className="">
           <Image src={Logo} alt="logo" />
         </div>
         <div className="text-dark">
-          <div className="fw-bold lh-100 ls-0 fs-21 pt-2 pb-4">Create Account</div>
-          <form onSubmit={handleSubmit}>
+          <div className="fw-bold py-1 lh-100 ls-0 fs-21">Create Account</div>
+          <form onSubmit={handleSubmit} className="pt-3">
             <div className="custom-input-wrapper">
               <label className="custom-label" htmlFor="name">Your Full Name</label>
               <input
@@ -123,14 +123,13 @@ const SignupPage = () => {
                 onChange={(e) => setPhoneNumber(e.target.value)}
               />
             </div>
-
-            <div className="py-2 text-center">
+            <div className="text-center pb-2">
               <Button label="Continue" type="submit" />
             </div>
           </form>
-            <div className="text-center py-3"><Link href={"/login"} className="text-decorartion-none fw-normal text-decoration-underline fs-14 lh-120 ls-0 text-center login-label">already have an account?</Link></div>
+            <div className="text-center"><Link href={"/login"} className="text-decorartion-none fw-normal text-decoration-underline fs-14 lh-120 ls-0 text-center login-label">already have an account?</Link></div>
           {/* Optional error/info message */}
-          <div className="fw-normal fs-14 lh-120 ls-0 text-center py-3 signup-label">
+          <div className="fw-normal fs-14 lh-120 ls-0 text-center signup-label">
             {(errors.fullName && <div className="text-danger fs-12 mt-1">{errors.fullName}</div>)||
             (errors.email && <div className="text-danger fs-12 mt-1">{errors.email}</div>)||
             (errors.password && <div className="text-danger fs-12 mt-1">{errors.password}</div>)||

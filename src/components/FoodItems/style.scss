@@ -1,0 +1,12 @@
+@use "../../assets//scss/variables" as *;
+
+.food-card-subtitle{
+    color: #4D4D4D;
+}
+.food-card{
+    border-radius: 20px;
+    border-top: 15px solid $primary;
+    border-left: 1px solid $primary;
+    border-right: 1px solid $primary;
+    border-bottom: 1px solid $primary;
+}
