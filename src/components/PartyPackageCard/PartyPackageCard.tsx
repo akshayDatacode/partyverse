@@ -84,7 +84,7 @@ const PartyPackageCard = ({
           {/* Action Buttons */}
           <div className="mt-2 d-flex">
             <div className="me-2">
-              <Button label="View Menu" backgroundColor="white" borderColor="primary"/>
+              <Link href={"/menue"}><Button label="View Menu" backgroundColor="white" borderColor="primary"/></Link>
             </div>
             <div>
               <Button label="Book Now" />
