@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import filterIcon from "@/assets/images/Filter--Streamline-Ionic-Filled.svg.png";
 import VenueFilterItem from "@/components/VenueFilter/VenueFilterItem";
+import { useState } from "react";
 
 type Props = {
   setShowFilters: React.Dispatch<React.SetStateAction<boolean>>;
@@ -10,6 +11,15 @@ type Props = {
 };
 
 const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
+  const [selectedFilters, setSelectedFilters] = useState<Record<string, string>>({});
+
+  const handleFilterChange = (category: string, value: string) => {
+    setSelectedFilters((prevFilters) => ({
+      ...prevFilters,
+      [category]: value,
+    }));
+  };
+
   return (
     <>
       {showFilters && (
@@ -18,6 +28,7 @@ const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
           onClick={() => setShowFilters(false)}
         />
       )}
+      <pre>{JSON.stringify(selectedFilters, null, 2)}</pre>
       <section className="p-2 position-relative bg-white z-md-n1 z-3 ">
         <div className="pb-5">
           <div className="venue-filter-heading pb-2 d-flex justify-content-between">
@@ -27,30 +38,39 @@ const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
             </div>
           </div>
           {["Fine Dine", "Casual Dining", "Pure Veg"].map((label, i) => (
-            <VenueFilterItem key={i} label={label} name={'topFilter'} />
+            <VenueFilterItem
+              key={i} label={label} name={'topFilter'}
+              onChange={() => handleFilterChange("topFilter", label)}
+            />
           ))}
         </div>
         <div>
           <div className="pb-3 venue-filter-heading">
-            <Image src={filterIcon} alt="Filter Icon" height={20} width={20} className="me-2 mb-1"/>
+            <Image src={filterIcon} alt="Filter Icon" height={20} width={20} className="me-2 mb-1" />
             Other Filters
           </div>
           <div className="pb-2">
             <div className="py-2 venue-filter-sub-heading">Budget per Guest</div>
             {["₹500 - ₹999", "₹1000 - ₹1299", "₹1300 - ₹1599", "₹1600 - ₹1999", "₹2000 - ₹2499"].map((label, i) => (
-              <VenueFilterItem key={i} label={label} name={"budget"}/>
+              <VenueFilterItem key={i} label={label} name={"budget"} 
+              onChange={() => handleFilterChange("budget", label)}
+              />
             ))}
           </div>
           <div className="pb-2">
             <div className="py-2 venue-filter-sub-heading ">Restaurant Type</div>
             {["Fine Dine", "Casual Dining", "Buffet", "Others", "Pub", "Restro Club", "Night Club"].map((label, i) => (
-              <VenueFilterItem key={i} label={label} name={'restaurant'} />
+              <VenueFilterItem key={i} label={label} name={'restaurant'} 
+              onChange={() => handleFilterChange("restaurant", label)}
+              />
             ))}
           </div>
           <div className="pb-2">
             <div className="py-2 venue-filter-sub-heading">Cuisine</div>
             {["Chinese", "North Indian", "South Indian", "Thai", "Restro Club", "Night Club"].map((label, i) => (
-              <VenueFilterItem key={i} label={label} name={'cuisine'} />
+              <VenueFilterItem key={i} label={label} name={'cuisine'} 
+              onChange={() => handleFilterChange("cuisine", label)}
+              />
             ))}
           </div>
         </div>
