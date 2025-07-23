@@ -2,7 +2,9 @@ import VenueCard from "@/components/VenueCard";
 import MultiCarousel from "@/ui/Carousel";
 import Button from "@/ui/Button";
 import Link from "next/link";
+import Tabs from "@/components/Tab"
 import "./style.scss";
+import { useState } from "react";
 
 const VenueCategoryTiles = ({
   venueList = [
@@ -30,6 +32,17 @@ const VenueCategoryTiles = ({
   categoryTitle = "Top Locations",
   description = "The Collection that is top notch among all the platforms.",
 }) => {
+   const [activeTabIndex, setActiveTabIndex] = useState(0);
+
+  // Tab labels and logic
+  const tabs = [
+    { label: "Area 1", onClick: () => {} },
+    { label: "Area 2", onClick: () => {} },
+    { label: "Area 3", onClick: () => {} },
+    { label: "Area 4", onClick: () => {} },
+    { label: "Area 5", onClick: () => {} },
+  ];
+
   const VenueCategoryTilesResponsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -64,6 +77,13 @@ const VenueCategoryTiles = ({
           <Button label="View All" backgroundColor="white" />
         </div>
       </div>
+      {
+        categoryTitle=="Top Locations" &&  <Tabs
+        tabs={tabs}
+        activeTabIndex={activeTabIndex}
+        onTabChange={setActiveTabIndex}
+      />
+      }
 
       <MultiCarousel
         showDots={false}
