@@ -122,10 +122,10 @@ const VenueCard = ({
 
           {/* Capacity + Packages */}
           <div className="d-flex gap-2 flex-wrap mb-2">
-            <span className="badge capacity">
+            <span className="p-1 capacity">
               Max Capacity <strong>{capacity}</strong>
             </span>
-            <span className="badge capacity">
+            <span className="p-1 capacity">
               <strong>{packages}</strong> Packages
             </span>
           </div>

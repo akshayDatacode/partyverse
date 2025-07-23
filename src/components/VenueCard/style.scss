@@ -107,3 +107,12 @@
     }
   }
 }
+
+
+@media (max-width: 576px) {
+  .venue-card{
+    .capacity{
+      font-size: 10px;
+    }
+  }
+}
