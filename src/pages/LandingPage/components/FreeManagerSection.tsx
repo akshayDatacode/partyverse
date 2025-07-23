@@ -57,7 +57,7 @@ const FreeManagerSection = () => {
                 Get<span> Free</span> Personal
                 <br /> <span>Event Manager</span>
               </h1>
-              <p className="me-md-5 mb-4 pe-md-5 fs-24 font-style-regular vertical-align-middle fw-normal lh-100 ls-0">
+              <p className="me-md-5 mb-4 pe-md-5 fs-md-24 font-style-regular vertical-align-middle fw-normal lh-100 ls-0">
                 Your dedicated event assistant takes care of everything so you
                 can enjoy a stress-free celebration.
               </p>
@@ -83,7 +83,7 @@ const FreeManagerSection = () => {
                       <div className="d-flex align-items-center gap-2 mb-2">
                         <h3 className="mb-0 fw-semibold">{item.title}</h3>
                       </div>
-                      <p className="mb-2 fw-normal fs-24 lh-100 ls-0 font-style-regular">
+                      <p className="mb-2 fw-normal fs-md-24 lh-100 ls-0 font-style-regular">
                         {item.desc}
                       </p>
                       <Image
