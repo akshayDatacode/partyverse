@@ -8,9 +8,11 @@ import Button from "@/ui/Button";
 import axios from "@/core/axios";
 import { useAppDispatch } from "@/core/redux/store";
 import { createIncreaseCount } from "../actions/operations";
+import SearchDrawer from "@/components/SearchDrawer";
 
 const HeroSection = () => {
   const dispatch = useAppDispatch();
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
  
   useEffect(() => {
     axios.get("/api/landing-page-data").then((response) => {
@@ -66,23 +68,40 @@ const HeroSection = () => {
               parties, get together, house parties etc.
             </p>
           </div>
-          <div className="col-12 py-4">
+          <div className="col-12 py-4 d-none d-md-block">
             <div className="row mx-0 w-100 align-items-center justify-content-center">
-              <div className="col-lg-9 col-12 bg-white">
+              <div className=" col-lg-9 col-12 bg-white">
                 <SelectPartyFilter />
               </div>
             </div>
           </div>
-          <div className="col-12 pt-4">
+          <div className="col-12 p-0">
+             {/* Mobile View Button (Opens Drawer) */}
+              <div className="d-block d-md-none">
+                <Link
+              href="/"
+              className="text-decoration-none"
+              onClick={() => setIsDrawerOpen(true)} 
+            >
+             <Button label="Search Party Places"/>
+              </Link>
+              </div>
+
+               {/* Desktop View Button (Link Navigation) */}
+             <div className="d-none d-md-block">
             <Link
               href="/venues"
               className="text-decoration-none"
             >
               <Button label="Search Party Places" />
             </Link>
+            </div>
           </div>
         </div>
       </div>
+
+        {/* Search Drawer for mobile */}
+      <SearchDrawer open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
     </section>
   );
 };
