@@ -12,8 +12,9 @@ const SearchDrawer = ({ open, onClose }: Props) => {
       <Drawer
        open={open} 
        onClose={onClose} 
-       title="Search Party places" 
+      //  title="Search Party places" 
        width="100%">
+         <h1 className="fw-bold text-center mb-4">Search Party places</h1>
         <SelectPartyFilter />
       </Drawer>
     </>
