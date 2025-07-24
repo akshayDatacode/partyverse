@@ -92,6 +92,23 @@ input[type="radio"]:checked::before {
   display: none;
 }
 
+.filter-badges-wrapper {
+  white-space: nowrap;
+
+  // Optional: Add smooth scrolling behavior
+  scroll-behavior: smooth;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;    /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+
+
 /*responsive*/
 @media screen and (max-width:992px) {
   .venu-filter-list {

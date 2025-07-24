@@ -19,9 +19,10 @@ const FilterDrawer = ({
       <Drawer
         open={open}
         onClose={onClose}
-        title="Filter Venues"
+        // title="Filter Venues"
         width="100%"
       >
+        <h1 className="fw-bold text-center mb-4">Filters</h1>
         <VenuListFilter
           showFilters={showFilters}
           setShowFilters={setShowFilters}

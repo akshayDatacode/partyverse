@@ -6,7 +6,7 @@ type DrawerProps = {
   open: boolean;
   onClose: () => void;
   placement?: "top" | "right" | "bottom" | "left";
-  title?: string;
+  // title?: string;
   width?: number | string;
   height?:string | number;
   extra?: ReactNode;
@@ -17,7 +17,7 @@ const Drawer = ({
   open,
   onClose,
   placement = "bottom",
-  title,
+  // title,
   width = 400,
   height=500,
   extra,
@@ -25,7 +25,7 @@ const Drawer = ({
   return (
     <>
       <AntDrawer
-        title={title}
+        // title={title}
         placement={placement}
         onClose={onClose}
         open={open}
