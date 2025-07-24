@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import filterIcon from "@/assets/images/Filter--Streamline-Ionic-Filled.svg.png";
 import VenueFilterItem from "@/components/VenueFilter/VenueFilterItem";
-import BadgeTag from "@/components/BadgeTag";
+import VenueFilterBadge from "@/components/VenueFilter/VenueFilterBadge";
 import { useState } from "react";
 
 type Props = {
@@ -36,7 +36,7 @@ const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
       {/* <pre>{JSON.stringify(selectedFilters, null, 2)}</pre> */}
       <div className="filter-badges-wrapper d-flex gap-2 overflow-auto flex-nowrap hide-scrollbar mb-3 px-2">
         {Object.entries(selectedFilters).map(([key, value], i) => (
-          <BadgeTag
+          <VenueFilterBadge
             key={i}
             label={value}
             onClick={() => {
