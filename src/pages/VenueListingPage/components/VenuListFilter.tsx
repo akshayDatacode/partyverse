@@ -51,27 +51,39 @@ const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
           </div>
           <div className="pb-2">
             <div className="py-2 venue-filter-sub-heading">Budget per Guest</div>
+            <div className="row">
             {["₹500 - ₹999", "₹1000 - ₹1299", "₹1300 - ₹1599", "₹1600 - ₹1999", "₹2000 - ₹2499"].map((label, i) => (
+               <div className="col-6 col-md-12 mb-2 mb-md-1" key={i}>
               <VenueFilterItem key={i} label={label} name={"budget"} 
               onChange={() => handleFilterChange("budget", label)}
               />
+                 </div> 
             ))}
+          </div>
           </div>
           <div className="pb-2">
             <div className="py-2 venue-filter-sub-heading ">Restaurant Type</div>
-            {["Fine Dine", "Casual Dining", "Buffet", "Others", "Pub", "Restro Club", "Night Club"].map((label, i) => (
+               <div className="row">
+              {["Fine Dine", "Casual Dining", "Buffet", "Others", "Pub", "Restro Club", "Night Club"].map((label, i) => (
+              <div className="col-6 col-md-12 mb-2 mb-md-1" key={i}>
               <VenueFilterItem key={i} label={label} name={'restaurant'} 
               onChange={() => handleFilterChange("restaurant", label)}
               />
+              </div> 
             ))}
+          </div>
           </div>
           <div className="pb-2">
             <div className="py-2 venue-filter-sub-heading">Cuisine</div>
+             <div className="row">
             {["Chinese", "North Indian", "South Indian", "Thai", "Restro Club", "Night Club"].map((label, i) => (
+              <div className="col-6 col-md-12 mb-2 mb-md-1" key={i}>
               <VenueFilterItem key={i} label={label} name={'cuisine'} 
               onChange={() => handleFilterChange("cuisine", label)}
               />
+              </div>
             ))}
+          </div>
           </div>
         </div>
       </section>
