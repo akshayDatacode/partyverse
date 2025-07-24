@@ -64,3 +64,14 @@
     outline: none;
   }
 }
+
+@media screen and (max-width: 767px){
+    .verify{
+        width: 90vw !important;
+        height: 80vh !important;
+    }
+    .otp-box{
+       width: 30px;
+       height: 40px; 
+    }
+}

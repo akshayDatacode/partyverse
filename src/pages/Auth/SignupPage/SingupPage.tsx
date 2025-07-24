@@ -56,7 +56,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="row mx-0 bg-white signup align-items-center justify-content-around px-5 py-3">
+    <div className="row mx-0 bg-white signup align-items-center justify-content-around px-md-5 px-3 py-3">
       <div className="col-12 text-white">
         <div className="">
           <Image src={Logo} alt="logo" />

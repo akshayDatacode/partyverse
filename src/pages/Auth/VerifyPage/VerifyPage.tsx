@@ -54,7 +54,7 @@ const VerifyPage = () => {
   };
 
   return (
-    <div className="row mx-0 bg-white verify align-items-center justify-content-around px-5">
+    <div className="row mx-0 bg-white verify align-items-center justify-content-around px-md-5 px-3">
       <div className="col-12 text-white pt-3 pb-5">
         <Image src={Logo} alt="logo" className="mb-5 mt-3" />
         <div className="text-dark py-4">

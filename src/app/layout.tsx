@@ -13,7 +13,7 @@ import '@/assets/scss/venueList.scss';
 import 'react-toastify/dist/ReactToastify.css';
 
 import Providers from "@/core/Providers";
-import ShowHeaderAndFooter from "@/components/ShowHeaderAndFooter"; // ✅ Import the new client component
+import ShowHeaderAndFooter from "@/components/ShowHeaderAndFooter"; 
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -46,7 +46,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Providers>
-          <ShowHeaderAndFooter>{children}</ShowHeaderAndFooter> {/* ✅ Wrap in client component */}
+          <ShowHeaderAndFooter>{children}</ShowHeaderAndFooter> 
         </Providers>
       </body>
     </html>

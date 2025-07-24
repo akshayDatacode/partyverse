@@ -44,7 +44,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="row mx-0 bg-white login align-items-center justify-content-around px-5">
+    <div className="row mx-0 bg-white login align-items-center justify-content-around px-md-5 px-3">
       <div className="col-12 text-white">
         <Image src={Logo} alt="logo" className="mb-5 mt-0" />
         <div className="text-dark">
