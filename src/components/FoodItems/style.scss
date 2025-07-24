@@ -3,10 +3,23 @@
 .food-card-subtitle{
     color: #4D4D4D;
 }
+
 .food-card{
     border-radius: 20px;
     border-top: 15px solid $primary;
     border-left: 1px solid $primary;
     border-right: 1px solid $primary;
     border-bottom: 1px solid $primary;
+}
+
+.food-card-radio{
+    width: 30px !important;
+    height: 30px !important;
+}
+
+@media screen and (max-width: 992px) {
+    .food-card-radio{
+    width: 30px !important;
+    height: 25px !important;
+    }
 }

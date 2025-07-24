@@ -9,8 +9,8 @@ const AuthLayout = ({ children }: { children: ReactNode }) => {
             <div className="col-5 d-flex align-items-center justify-content-center">
                 {children}
             </div>
-            <div className="col-7 d-flex align-items-end justify-content-center">
-                <div className="mb-5 pb-3 ms-5">
+            <div className="col-7 d-flex align-items-end justify-content-center position-relative">
+                <div className="mb-5 pb-5 ms-5 position-absolute start-0">
                     <div className="text-highlight text-nowrap text-center fw-bold lh-100 ls-0 auth-text">Your universe</div>
                     <div className="text-white text-nowrap text-center fw-bold lh-100 ls-0 auth-subText">of stress-free celebrations!</div>
                 </div>

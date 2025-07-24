@@ -8,9 +8,10 @@ import { ToastContainer } from 'react-toastify';
 export default function LayoutClient({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()??"";
 
-  const hideLayoutFor = ["/login", "/signup", "/verify"];
-  const shouldShowFooter = !hideLayoutFor.includes(pathname);
-  const shouldShowHeader = !hideLayoutFor.includes(pathname);
+  const hideLayoutForHeader = ["/login", "/signup", "/verify"];
+  const hideLayoutForFooter = ["/login", "/signup", "/verify","/menue"]
+  const shouldShowFooter = !hideLayoutForFooter.includes(pathname);
+  const shouldShowHeader = !hideLayoutForHeader.includes(pathname);
 
 
   return (
