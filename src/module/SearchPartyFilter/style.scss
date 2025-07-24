@@ -2,6 +2,16 @@
 
 .select-party{
   border: 1px solid #C6CFF7;
+  
+
+  @media (max-width: 767px) {
+    border: none;
+     &:hover,
+    &:focus-within {
+      border: 1px solid $primary; 
+      border-radius: 8.87px;
+    }
+  }
 }
 .select-start {
   border-top-left-radius: 10px;

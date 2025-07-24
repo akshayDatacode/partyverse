@@ -14,12 +14,12 @@ const SelectPartyFilter = ({ actionEvent = false }: SelectProps) => {
         {lab: "Occasion", placeholder: "Get Together"},
          ].map((item, index) => {
         return (
-          <div className={`col-6 ${actionEvent ? "col-md-2" : "col-md-3"} text-center select-party p-3 ${index===0 ? "select-start":""}`} key={index}>
+          <div className={`col-6 ${actionEvent ? "col-md-2" : "col-md-3"} text-center select-party p-md-3 p-1 ${index===0 ? "select-start":""}`} key={index}>
             <SelectDropdown label={item.lab} place_holder={item.placeholder} />
           </div>
         )
       })}
-      <div className={`text-center py-3 position-relative select-party col-6 ${actionEvent ? "col-md-2" : "select-end col-md-3"}`}>
+      <div className={`text-center py-md-3 p-1 position-relative select-party col-6 ${actionEvent ? "col-md-2" : "select-end col-md-3"}`}>
         <SelectDropdown label="Number of Guests" place_holder="100" />
         <div className="position-absolute bg-dark text-white fw-medium px-2 py-1 fs-10 tentative-number lh-100 ls-0 font-style-medium">just a tentative number!</div>
       </div>
