@@ -6,7 +6,10 @@ import VenuListFilter from "./VenuListFilter";
 import VenueCard from "@/components/VenueCard";
 import Button from "@/ui/Button";
 import VenueFilterBadge from "@/components/VenueFilter/VenueFilterBadge";
-import FilterDrawer from "@/components/FilterDrawer"
+import FilterDrawer from "@/components/FilterDrawer";
+import { useAppDispatch, useAppSelector } from "@/core/redux/store";
+import { removeFilter } from "@/pages/LandingPage/reducer/filterSlice";
+
 const VenueList = [
   { title: "Venue 1", description: "Description for Venue 1" },
   { title: "Venue 2", description: "Description for Venue 2" },
@@ -18,6 +21,11 @@ const VenueList = [
 const VenueListingPage = () => {
   const [showFilters, setShowFilters] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const dispatch = useAppDispatch();
+  const selectedFilters = useAppSelector(
+    (state) => state.filter.selectedFilters
+  );
 
   return (
     <div className="row mx-0">
@@ -44,7 +52,7 @@ const VenueListingPage = () => {
                 <div className="">
                   <div
                     className="d-block d-lg-none mb-2"
-                   onClick={() => setDrawerOpen(true)}
+                    onClick={() => setDrawerOpen(true)}
                   >
                     <Button label="Filters" />
                   </div>
@@ -58,12 +66,19 @@ const VenueListingPage = () => {
                 </div>
                 <div className="text-nowrap py-2">60 Results found</div>
               </div>
-              <div className="col-12 ms-md-3 ms-1 py-2 d-flex gap-3 flex-wrap">
-                {["Budget per Guest 1000 - 1299", "Buffet", "North India"].map(
+              {/* badges */}
+              <div className="col-12 ms-md-3 ms-1 py-2 d-none d-md-flex gap-3 flex-wrap">
+                {/* {["Budget per Guest 1000 - 1299", "Buffet", "North India"].map(
                   (item, index) => {
                     return <VenueFilterBadge label={item} key={index} />;
                   }
-                )}
+                )} */}
+                {Object.entries(selectedFilters).map(([key, value], i) => (
+                  <VenueFilterBadge 
+                  label={value} 
+                  key={i} 
+                  onClick={() => dispatch(removeFilter(key))}/>
+                ))}
               </div>
               <div className="col-12 mb-5">
                 <div className="row mx-0 mt-3 ps-md-4 p-0 venue-filter-cards">
@@ -73,8 +88,14 @@ const VenueListingPage = () => {
                         key={index}
                         className="col-lg-4 col-md-6 col-12 mx-0 px-0 py-3 p-md-3"
                       >
-                         <Link href={`/venues/${index + 1}`}  className="text-decoration-none">
-                        <VenueCard badgeType={"roof"} venueName={venue.title} />
+                        <Link
+                          href={`/venues/${index + 1}`}
+                          className="text-decoration-none"
+                        >
+                          <VenueCard
+                            badgeType={"roof"}
+                            venueName={venue.title}
+                          />
                         </Link>
                       </div>
                     ))}
@@ -84,7 +105,7 @@ const VenueListingPage = () => {
           </div>
         </div>
       </div>
-       <FilterDrawer
+      <FilterDrawer
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         showFilters={showFilters}

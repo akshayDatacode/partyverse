@@ -46,7 +46,7 @@ const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
 
       {/* Badges */}
       {/* <pre>{JSON.stringify(selectedFilters, null, 2)}</pre> */}
-      <div className="filter-badges-wrapper d-flex gap-2 overflow-auto flex-nowrap hide-scrollbar mb-3 px-2">
+      <div className="filter-badges-wrapper d-md-none d-flex gap-2 overflow-auto flex-nowrap hide-scrollbar mb-3 px-2">
         {Object.entries(selectedFilters).map(([key, value], i) => (
           <VenueFilterBadge
             key={i}
