@@ -20,6 +20,8 @@
 
 .border-primary {
     border: 1px solid $primary !important;
+    background-color: white !important;
+    color: $primary;
 }
 
 /*responsive*/
