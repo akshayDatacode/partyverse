@@ -4,7 +4,12 @@ import Image from "next/image";
 import filterIcon from "@/assets/images/Filter--Streamline-Ionic-Filled.svg.png";
 import VenueFilterItem from "@/components/VenueFilter/VenueFilterItem";
 import VenueFilterBadge from "@/components/VenueFilter/VenueFilterBadge";
-import { useState } from "react";
+// import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "@/core/redux/store";
+import {
+  setFilter,
+  removeFilter,
+} from "@/pages/LandingPage/reducer/filterSlice";
 
 type Props = {
   setShowFilters: React.Dispatch<React.SetStateAction<boolean>>;
@@ -12,15 +17,22 @@ type Props = {
 };
 
 const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
-  const [selectedFilters, setSelectedFilters] = useState<
-    Record<string, string>
-  >({});
+  // const [selectedFilters, setSelectedFilters] = useState<
+  //   Record<string, string>
+  // >({});
+  const dispatch = useAppDispatch();
+  const selectedFilters = useAppSelector(
+    (state) => state.filter.selectedFilters
+  );
 
+  // const handleFilterChange = (category: string, value: string) => {
+  //   setSelectedFilters((prevFilters) => ({
+  //     ...prevFilters,
+  //     [category]: value,
+  //   }));
+  // };
   const handleFilterChange = (category: string, value: string) => {
-    setSelectedFilters((prevFilters) => ({
-      ...prevFilters,
-      [category]: value,
-    }));
+    dispatch(setFilter({ category, value }));
   };
 
   return (
@@ -39,15 +51,15 @@ const VenuListFilter = ({ setShowFilters, showFilters }: Props) => {
           <VenueFilterBadge
             key={i}
             label={value}
-            onClick={() => {
-              const updatedFilters = { ...selectedFilters };
-              delete updatedFilters[key]; // Remove clicked filter
-              setSelectedFilters(updatedFilters);
-            }}
+            // onClick={() => {
+            //   const updatedFilters = { ...selectedFilters };
+            //   delete updatedFilters[key]; // Remove clicked filter
+            //   setSelectedFilters(updatedFilters);
+            // }}
+            onClick={() => dispatch(removeFilter(key))}
           />
         ))}
       </div>
-
 
       {/* filters  */}
       <section className="p-2 position-relative bg-white z-md-n1 z-3 ">
