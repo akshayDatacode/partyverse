@@ -1,30 +1,55 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-const MenuSelectionItemSection = () => {
-    const foodData = [
-       {item:"1 Welcome Drinks"},
-        {item:"Starter"},
-        {item:"Salads"},
-        {item:"Main Course"},
-        {item:"Desserts"}
-    ]
-    const [itemChecked,setItemChecked]=useState(0);
-    return (
-        <section className="my-4">
-        <div className="fw-bold fs-17">Your Menu Selected Items</div>
-        <div className="py-3">
-        {foodData.map((data,index)=>{
-            return(
-                <div className="py-1">
-                <span key={index} className={`foodItems fs-14 py-1 px-2 lh-100 ls-0 ${index === itemChecked ? "checked-bg": ""}`}>
-                   <input type="radio" checked={ itemChecked === index } onChange={()=>setItemChecked(index)} className={`radio-button p-1 ${index === itemChecked ? "checked-bg-radio": ""}`} name="food-items" id={`food-item-${index}`}/>
-                   <label htmlFor={`food-item-${index}`} className={`px-2`}> {data.item} </label> 
+type FoodDataProps = {
+  category: string,
+  FoodItems: FoodItems[]
+}
+type FoodItems = {
+  foodName: string,
+  foodDescription: string,
+  badgeTitle: string,
+  selected: boolean
+}
+type Props = {
+  FoodData: FoodDataProps[];
+  selectedCategory: number;
+  setSelectedCategory: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const MenuSelectionItemSection = ({ FoodData, selectedCategory, setSelectedCategory }: Props) => {
+
+  return (
+    <section className="my-4">
+      <div className="fw-bold fs-17">Your Menu Selected Items</div>
+      <div className="py-3">
+        {FoodData.map((data, index) => {
+          return (
+            <div>
+              <div className="my-1">
+                <span key={index} className={`foodItems fs-14 py-1 px-2 lh-100 ls-0 ${index === selectedCategory ? "checked-bg" : ""}`}>
+                  <input type="radio" checked={selectedCategory === index} onChange={() => setSelectedCategory(index)} className={`radio-button p-1 ${index === selectedCategory ? "checked-bg-radio" : ""}`} name="food-items" id={`food-item-${index}`} />
+                  <label htmlFor={`food-item-${index}`} className={`px-2`}> {data.category} {(() => {
+                    const selectedCount = data?.FoodItems.filter(item => item.selected).length || 0;
+                    return selectedCount > 0 ? selectedCount : "";
+                  })()}</label>
                 </span>
-                </div>
-            )
+              </div>
+              <div className="py-1 d-flex flex-wrap">
+                {data?.FoodItems.map((item, i) =>
+                  item?.selected && (
+                    <div className="mb-md-2">
+                    <span className="fw-normal m-1 py-md-1 px-2  fs-16 lh-100 ls-0 menu-item-badge" key={i}>
+                      {item.foodName}
+                    </span>
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+          )
         })}
-        </div>
-        </section>
-    )
+      </div>
+    </section>
+  )
 }
 export default MenuSelectionItemSection;

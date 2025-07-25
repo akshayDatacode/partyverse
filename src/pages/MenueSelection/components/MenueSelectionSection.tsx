@@ -1,7 +1,23 @@
 import MenuSelectionItemsSection from "./MenuSelectedItemsSection";
 import "../../../assets/scss/menuSelection.scss";
 
-const MenuSelectionSection = () => {
+type FoodDataProps = {
+    category: string,
+    FoodItems: FoodItems[]
+}
+type FoodItems = {
+    foodName: string,
+    foodDescription: string,
+    badgeTitle: string,
+    selected: boolean
+}
+type Props = {
+  FoodData: FoodDataProps[];
+  selectedCategory: number;
+  setSelectedCategory: React.Dispatch<React.SetStateAction<number>>;
+};
+const MenuSelectionSection = ({FoodData, selectedCategory, setSelectedCategory}:
+    Props) => {
     return (
         <section className="m-md-5 m-2">
             <div className="fw-bold fs-33 lh-100 ls-0">Menu Selection</div>
@@ -10,7 +26,7 @@ const MenuSelectionSection = () => {
                 <span className="price-cancel me-1">₹500</span>
                 <span className="fw-bold"> ₹450 / Guest </span>
             </div>
-            <div><MenuSelectionItemsSection/></div>
+            <div><MenuSelectionItemsSection FoodData = {FoodData} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} /></div>
         </section>
     )
 }
