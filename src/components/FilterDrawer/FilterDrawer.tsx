@@ -1,5 +1,6 @@
 import VenuListFilter from "@/pages/VenueListingPage/components/VenuListFilter";
 import Drawer from "@/ui/Drawer";
+import Button from "@/ui/Button";
 
 type Props = {
   open: boolean;
@@ -27,6 +28,9 @@ const FilterDrawer = ({
           showFilters={showFilters}
           setShowFilters={setShowFilters}
         />
+          <div className=" col-12  d-md-none d-block mt-4 pt-4">
+          <Button label="Search Now" fullWidth borderRadius="rounded-5" padding="py-3"/>
+        </div>
       </Drawer>
     </>
   );
