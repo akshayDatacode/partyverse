@@ -27,8 +27,8 @@ const SelectPartyFilter = ({ actionEvent = false }: SelectProps) => {
         <div className="col-6 col-md-2 px-0 py-3 text-center d-flex align-items-center justify-content-center select-end select-party">
           <Button label="Edit Search" />
         </div> ):(
-            <div className=" col-12  d-md-none d-block mt-5">
-          <Button label="Search Now" />
+            <div className=" col-12  d-md-none d-block mt-5 pt-5">
+          <Button label="Search Now" fullWidth borderRadius="rounded-5" padding="py-3"/>
         </div>
         )
       }
