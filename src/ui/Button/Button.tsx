@@ -1,7 +1,7 @@
 import "./button.scss";
 
 type ButtonProps = {
-  label: string;
+  label: React.ReactNode | string;
   backgroundColor?: string;
   borderColor?: string;
   type?: "button" | "submit" | "reset";

@@ -1,0 +1,70 @@
+@use "../scss/variables" as *;
+
+.aside-section {
+    height: calc(100vh - 80px);
+    width: 250px;
+    position: fixed;
+    left: 0;
+    background-color: white;
+}
+
+.twice-squareIcon {
+    border-radius: 50%;
+    background-color: $white;
+    right: -5%;
+}
+
+.aside-options:hover {
+    background-color: #F2F1FF !important;
+    color: $primary !important;
+}
+
+.party-image {
+    border-radius: 10px;
+}
+
+.normal-badge {
+    color: $primary;
+    background-color: #F5F4FF;
+    border-radius: 8px;
+}
+
+.bill-heading {
+    background-color: #EEF1FF !important;
+    border-radius: 10px;
+}
+
+.note {
+    color: #FF3737;
+}
+
+.custom-checkbox {
+    width: 41px;
+    height: 41px;
+    appearance: none; // removes default checkbox styles
+    -webkit-appearance: none;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+
+    &:checked {
+        background-color: #fff; // white background when checked
+        border: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background-image: url("../images/Vector\ \(11\).png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

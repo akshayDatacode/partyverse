@@ -1,10 +1,10 @@
 'use client';
+import { useState } from "react";
 
 import FoodItems from "@/components/FoodItems/FoodItems";
 import MenuSelectionSection from "./MenueSelectionSection";
 import NoteSection from "./NoteSection";
 import MenuFooter from "./MenuFooter";
-import { useState } from "react";
 
 const FoodMenuData = [
   {
@@ -131,19 +131,20 @@ const FoodMenuData = [
 ];
 
 const MenuSelection = () => {
-    const [selectedCategory,setSelectedCategory] = useState(0);
-    const [FoodData, setFoodData] = useState(FoodMenuData);
-    return (
-         <section className="row mx-0">
-            <div className="col-md-5 col-12">
-                <MenuSelectionSection FoodData={FoodData} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
-            </div>
-            <div className="col-md-7 col-12 mt-md-3 mt-0">
-               <FoodItems FoodData={FoodData} setFoodData={setFoodData} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
-               <NoteSection/>
-            </div>
-            <MenuFooter/>
-         </section>
-    )
+  const [selectedCategory, setSelectedCategory] = useState(0);
+  const [FoodData, setFoodData] = useState(FoodMenuData);
+  return (
+    <section className="row mx-0">
+      <div className="col-md-5 col-12">
+        <MenuSelectionSection FoodData={FoodData} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+      </div>
+      <div className="col-md-7 col-12 mt-md-3 mt-0">
+        <FoodItems FoodData={FoodData} setFoodData={setFoodData} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+        <NoteSection />
+      </div>
+      <MenuFooter />
+    </section>
+  )
 }
+
 export default MenuSelection;
